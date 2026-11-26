@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Cite this atlas for its taxonomy or diagrams. Cite the original studies for their results."
+title: "Loop Transformer Atlas: A Bilingual Field Guide to Recurrent Depth"
+authors:
+  - name: "Loop Transformer Atlas contributors"
+repository-code: "https://github.com/hyfine/loop-transformer-atlas"
+url: "https://hyfine.github.io/loop-transformer-atlas/"
+date-released: 2026-11-26
+version: "2026.11.26"
+keywords:
+  - recurrent depth
+  - looped transformers
+  - adaptive computation

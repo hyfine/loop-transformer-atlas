@@ -1,0 +1,3771 @@
+[
+ {
+  "title": "Universal Transformers",
+  "url": "https://arxiv.org/abs/1807.03819",
+  "year": 2019,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Universal Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+  "url": "https://arxiv.org/abs/2502.05171",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
+  "titleReview": false
+ },
+ {
+  "title": "Training-Free Looped Transformers",
+  "url": "https://arxiv.org/abs/2605.23872",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Training-Free Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling",
+  "url": "https://arxiv.org/abs/2606.18023",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling",
+  "titleReview": false
+ },
+ {
+  "title": "Loop the Loopies!",
+  "url": "https://arxiv.org/abs/2607.16051",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Loop the Loopies!",
+  "titleReview": false
+ },
+ {
+  "title": "A Survey on Latent Reasoning",
+  "url": "https://arxiv.org/abs/2507.06203",
+  "year": 2025,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Surveys"
+  ],
+  "observedTitle": "A Survey on Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Neural GPUs Learn Algorithms",
+  "url": "https://arxiv.org/abs/1511.08228",
+  "year": 2016,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Neural GPUs Learn Algorithms",
+  "titleReview": false
+ },
+ {
+  "title": "Adaptive Computation Time for Recurrent Neural Networks",
+  "url": "https://arxiv.org/abs/1603.08983",
+  "year": 2016,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Adaptive Computation Time for Recurrent Neural Networks",
+  "titleReview": false
+ },
+ {
+  "title": "Deep Equilibrium Models",
+  "url": "https://arxiv.org/abs/1909.01377",
+  "year": 2019,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Deep Equilibrium Models",
+  "titleReview": false
+ },
+ {
+  "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations",
+  "url": "https://arxiv.org/abs/1909.11942",
+  "year": 2020,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations",
+  "titleReview": false
+ },
+ {
+  "title": "PonderNet: Learning to Ponder",
+  "url": "https://arxiv.org/abs/2107.05407",
+  "year": 2021,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "PonderNet: Learning to Ponder",
+  "titleReview": false
+ },
+ {
+  "title": "Can You Learn an Algorithm? Generalizing from Easy to Hard Problems with Recurrent Networks",
+  "url": "https://arxiv.org/abs/2106.04537",
+  "year": 2021,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Can You Learn an Algorithm? Generalizing from Easy to Hard Problems with Recurrent Networks",
+  "titleReview": false
+ },
+ {
+  "title": "End-to-end Algorithm Synthesis with Recurrent Networks: Logical Extrapolation Without Overthinking",
+  "url": "https://arxiv.org/abs/2202.05826",
+  "year": 2022,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "End-to-end Algorithm Synthesis with Recurrent Networks: Logical Extrapolation Without Overthinking",
+  "titleReview": false
+ },
+ {
+  "title": "Path Independent Equilibrium Models Can Better Exploit Test-Time Computation",
+  "url": "https://arxiv.org/abs/2211.09961",
+  "year": 2022,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Path Independent Equilibrium Models Can Better Exploit Test-Time Computation",
+  "titleReview": false
+ },
+ {
+  "title": "Lessons on Parameter Sharing across Layers in Transformers",
+  "url": "https://arxiv.org/abs/2104.06022",
+  "year": 2023,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Lessons on Parameter Sharing across Layers in Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Sparse Universal Transformer",
+  "url": "https://arxiv.org/abs/2310.07096",
+  "year": 2023,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors"
+  ],
+  "observedTitle": "Sparse Universal Transformer",
+  "titleReview": false
+ },
+ {
+  "title": "CoTFormer: A Chain-of-Thought Driven Architecture with Budget-Adaptive Computation Cost at Inference",
+  "url": "https://arxiv.org/abs/2310.10845",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "CoTFormer: A Chain-of-Thought Driven Architecture with Budget-Adaptive Computation Cost at Inference",
+  "titleReview": false
+ },
+ {
+  "title": "MoEUT: Mixture-of-Experts Universal Transformers",
+  "url": "https://arxiv.org/abs/2405.16039",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors",
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "MoEUT: Mixture-of-Experts Universal Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Relaxed Recursive Transformers: Effective Parameter Sharing with Layer-wise LoRA",
+  "url": "https://arxiv.org/abs/2410.20672",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Foundations & Precursors",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Relaxed Recursive Transformers: Effective Parameter Sharing with Layer-wise LoRA",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers as Programmable Computers",
+  "url": "https://arxiv.org/abs/2301.13196",
+  "year": 2023,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Looped Transformers as Programmable Computers",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers are Better at Learning Learning Algorithms",
+  "url": "https://arxiv.org/abs/2311.12424",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Looped Transformers are Better at Learning Learning Algorithms",
+  "titleReview": false
+ },
+ {
+  "title": "Simulation of Graph Algorithms with Looped Transformers",
+  "url": "https://arxiv.org/abs/2402.01107",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Simulation of Graph Algorithms with Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Can Looped Transformers Learn to Implement Multi-step Gradient Descent for In-context Learning?",
+  "url": "https://arxiv.org/abs/2410.08292",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Can Looped Transformers Learn to Implement Multi-step Gradient Descent for In-context Learning?",
+  "titleReview": false
+ },
+ {
+  "title": "On the Role of Depth and Looping for In-Context Learning with Task Diversity",
+  "url": "https://arxiv.org/abs/2410.21698",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "On the Role of Depth and Looping for In-Context Learning with Task Diversity",
+  "titleReview": false
+ },
+ {
+  "title": "Looped ReLU MLPs May Be All You Need as Practical Programmable Computers",
+  "url": "https://arxiv.org/abs/2410.09375",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Looped ReLU MLPs May Be All You Need as Practical Programmable Computers",
+  "titleReview": false
+ },
+ {
+  "title": "On Expressive Power of Looped Transformers: Theoretical Analysis and Enhancement via Timestep Encoding",
+  "url": "https://arxiv.org/abs/2410.01405",
+  "year": 2024,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "On Expressive Power of Looped Transformers: Theoretical Analysis and Enhancement via Timestep Encoding",
+  "titleReview": false
+ },
+ {
+  "title": "Bypassing the Exponential Dependency: Looped Transformers Efficiently Learn In-context by Multi-step Gradient Descent",
+  "url": "https://arxiv.org/abs/2410.11268",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Bypassing the Exponential Dependency: Looped Transformers Efficiently Learn In-context by Multi-step Gradient Descent",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers for Length Generalization",
+  "url": "https://arxiv.org/abs/2409.15647",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Looped Transformers for Length Generalization",
+  "titleReview": false
+ },
+ {
+  "title": "Reasoning with Latent Thoughts: On the Power of Looped Transformers",
+  "url": "https://arxiv.org/abs/2502.17416",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Reasoning with Latent Thoughts: On the Power of Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "To CoT or To Loop? A Formal Comparison Between Chain-of-Thought and Looped Transformers",
+  "url": "https://arxiv.org/abs/2505.19245",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "To CoT or To Loop? A Formal Comparison Between Chain-of-Thought and Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "What Makes Looped Transformers Perform Better Than Non-Recursive Ones",
+  "url": "https://arxiv.org/abs/2510.10089",
+  "year": 2025,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "What Makes Looped Transformers Perform Better Than Non-Recursive Ones",
+  "titleReview": false
+ },
+ {
+  "title": "Loop, Think, & Generalize: Implicit Reasoning in Recurrent-Depth Transformers",
+  "url": "https://arxiv.org/abs/2604.07822",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Loop, Think, & Generalize: Implicit Reasoning in Recurrent-Depth Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Thinking Deeper, Not Longer: Depth-Recurrent Transformers for Compositional Generalization",
+  "url": "https://arxiv.org/abs/2603.21676",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Thinking Deeper, Not Longer: Memory-Efficient Latent Chain-of-Thought with Depth-Recurrent Transformers for Compositional Generalization",
+  "titleReview": false
+ },
+ {
+  "title": "SpiralFormer: Looped Transformers Can Learn Hierarchical Dependencies via Multi-Resolution Recursion",
+  "url": "https://arxiv.org/abs/2602.11698",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "SpiralFormer: Looped Transformers Can Learn Hierarchical Dependencies via Multi-Resolution Recursion",
+  "titleReview": false
+ },
+ {
+  "title": "Stability and Generalization in Looped Transformers",
+  "url": "https://arxiv.org/abs/2604.15259",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Stability and Generalization in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Length Generalization with Log-Depth Recurrent Units",
+  "url": "https://arxiv.org/abs/2605.26035",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Length Generalization with Log-Depth Recurrent Units",
+  "titleReview": false
+ },
+ {
+  "title": "Chain-of-Thought and Compressed Looped Transformers: A Memory-Budget Separation",
+  "url": "https://arxiv.org/abs/2605.30757",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Chain-of-Thought and Compressed Looped Transformers: A Memory-Budget Separation",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers with Layer Normalization Provably Learn the Power Method",
+  "url": "https://arxiv.org/abs/2606.00605",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Looped Transformers with Layer Normalization Provably Learn the Power Method",
+  "titleReview": false
+ },
+ {
+  "title": "DiscoLoop: Looping Discrete Embeddings and Continuous Hidden States for Multi-hop Reasoning",
+  "url": "https://arxiv.org/abs/2607.00341",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "DiscoLoop: Looping Discrete Embeddings and Continuous Hidden States for Multi-hop Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers",
+  "url": "https://arxiv.org/abs/2607.20594",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Universal Transformers Need Memory: Depth-State Trade-offs in Adaptive Recursive Reasoning",
+  "url": "https://arxiv.org/abs/2604.21999",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Universal Transformers Need Memory: Depth-State Trade-offs in Adaptive Recursive Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Universal Transformers for Circuit Computations: Perfect Length Generalization in Tiny Transformers",
+  "url": "https://arxiv.org/abs/2608.31067",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Universal Transformers for Circuit Computations: Perfect Length Generalization in Tiny Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Scaling Latent Reasoning via Looped Language Models",
+  "url": "https://arxiv.org/abs/2510.25741",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Scaling Latent Reasoning via Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Parallel Loop Transformer for Efficient Test-Time Computation Scaling",
+  "url": "https://arxiv.org/abs/2510.24824",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Parallel Loop Transformer for Efficient Test-Time Computation Scaling",
+  "titleReview": false
+ },
+ {
+  "title": "Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Model",
+  "url": "https://arxiv.org/abs/2607.22083",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Model",
+  "titleReview": false
+ },
+ {
+  "title": "SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.01343",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models",
+  "url": "https://arxiv.org/abs/2604.21106",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Latent Recurrent Transformer: Architecture Exploration, Training Strategies, and Scaling Behavior",
+  "url": "https://arxiv.org/abs/2605.26797",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Latent Recurrent Transformer: Architecture Exploration, Training Strategies, and Scaling Behavior",
+  "titleReview": false
+ },
+ {
+  "title": "Depth-Recurrent Attention Mixtures: Giving Latent Reasoning the Attention it Deserves",
+  "url": "https://arxiv.org/abs/2601.21582",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Depth-Recurrent Attention Mixture (Dreamer): Giving Latent Reasoning the Attention it Deserves",
+  "titleReview": false
+ },
+ {
+  "title": "Hyperloop Transformers",
+  "url": "https://arxiv.org/abs/2604.21254",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Hyperloop Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "A Dual-Path Architecture for Scaling Compute and Capacity in LLMs",
+  "url": "https://arxiv.org/abs/2605.30202",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "A Dual-Path Architecture for Scaling Compute and Capacity in LLMs",
+  "titleReview": false
+ },
+ {
+  "title": "Adaptive Loops and Memory in Transformers: Think Harder or Know More?",
+  "url": "https://arxiv.org/abs/2603.08391",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Adaptive Loops and Memory in Transformers: Think Harder or Know More?",
+  "titleReview": false
+ },
+ {
+  "title": "Allocating Recurrent Compute in Looped Language Models",
+  "url": "https://arxiv.org/abs/2608.18230",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Allocating Recurrent Compute in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Gated Recurrent Transformers: Expressive Depth through Recurrent Modulation",
+  "url": "https://arxiv.org/abs/2608.15062",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Gated Recurrent Transformers: Expressive Depth through Recurrent Modulation",
+  "titleReview": false
+ },
+ {
+  "title": "Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models",
+  "url": "https://arxiv.org/abs/2607.08186",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+  "url": "https://arxiv.org/abs/2510.14961",
+  "year": 2025,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Memory-Efficient Looped Transformer: Decoupling Compute from Memory in Looped Language Models",
+  "url": "https://arxiv.org/abs/2605.07721",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Memory-Efficient Looped Transformer: Decoupling Compute from Memory in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
+  "url": "https://arxiv.org/abs/2607.15456",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LT2: Linear-Time Looped Transformers",
+  "url": "https://arxiv.org/abs/2605.20670",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LT2: Linear-Time Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LoopQ: Quantization for Recursive Transformers",
+  "url": "https://arxiv.org/abs/2605.16343",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopQ: Quantization for Looped Language Models",
+  "titleReview": true
+ },
+ {
+  "title": "CHASE: Cache-Hole-Adapted Skip Exit for Looped State-Space Language Models",
+  "url": "https://arxiv.org/abs/2607.10110",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "CHASE: Cache-Hole-Adapted Skip Exit for Looped State-Space Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+  "url": "https://arxiv.org/abs/2608.13987",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead",
+  "titleReview": false
+ },
+ {
+  "title": "On the Residual Scaling of Looped Transformers: Stability and Transferability",
+  "url": "https://arxiv.org/abs/2606.18524",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Loop-$μ$P: Residual Scaling and Hyperparameter Transfer in Looped Transformers",
+  "titleReview": true
+ },
+ {
+  "title": "DeepLoop: Depth Scaling for Looped Transformers",
+  "url": "https://arxiv.org/abs/2607.13491",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "DeepLoop: Depth Scaling for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Simply Stabilizing the Loop via Fully Looped Transformer",
+  "url": "https://arxiv.org/abs/2605.18797",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Simply Stabilizing the Loop via Fully Looped Transformer",
+  "titleReview": false
+ },
+ {
+  "title": "Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models",
+  "url": "https://arxiv.org/abs/2605.26733",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers",
+  "url": "https://arxiv.org/abs/2606.18206",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Think Shallow, Solve Deep: Controlling Recurrent Dynamics for Reliable Test-Time Depth",
+  "url": "https://arxiv.org/abs/2608.18222",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Think Shallow, Solve Deep: Controlling Recurrent Dynamics for Reliable Test-Time Depth",
+  "titleReview": false
+ },
+ {
+  "title": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping",
+  "url": "https://arxiv.org/abs/2606.29983",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping",
+  "titleReview": false
+ },
+ {
+  "title": "Solve the Loop: Attractor Models for Language and Reasoning",
+  "url": "https://arxiv.org/abs/2605.12466",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Solve the Loop: Attractor Models for Language and Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "LayerNorm as Implicit Gain Control in Looped Transformers",
+  "url": "https://arxiv.org/abs/2607.10681",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Spectral Margins and Memory Routing in Looped Transformers",
+  "titleReview": true
+ },
+ {
+  "title": "SCORE: Replacing Layer Stacking with Contractive Recurrent Depth",
+  "url": "https://arxiv.org/abs/2603.10544",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "SCORE: Replacing Layer Stacking with Contractive Recurrent Depth",
+  "titleReview": false
+ },
+ {
+  "title": "Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation",
+  "url": "https://arxiv.org/abs/2507.10524",
+  "year": 2025,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation",
+  "titleReview": false
+ },
+ {
+  "title": "Think-at-Hard: Dynamic Looped Transformers for Improved Reasoning",
+  "url": "https://arxiv.org/abs/2511.08577",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Think-at-Hard: Dynamic Looped Transformers for Improved Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "LoopFormer: Elastic-Depth Looped Transformers for Latent Reasoning via Shortcut Modulation",
+  "url": "https://arxiv.org/abs/2602.11451",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "LoopFormer: Elastic-Depth Looped Transformers for Latent Reasoning via Shortcut Modulation",
+  "titleReview": false
+ },
+ {
+  "title": "RecurTrace: Adaptive Latent Reasoning with Loop-Time Memory",
+  "url": "https://arxiv.org/abs/2609.03379",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "RecurTrace: Adaptive Latent Reasoning with Loop-Time Memory",
+  "titleReview": false
+ },
+ {
+  "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+  "url": "https://arxiv.org/abs/2607.20519",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+  "titleReview": false
+ },
+ {
+  "title": "Two-Scale Latent Dynamics for Recurrent-Depth Transformers",
+  "url": "https://arxiv.org/abs/2509.23314",
+  "year": 2025,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Two-Scale Latent Dynamics for Recurrent-Depth Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers",
+  "url": "https://arxiv.org/abs/2607.14427",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Teaching Pretrained Language Models to Think Deeper with Retrofitted Recurrence",
+  "url": "https://arxiv.org/abs/2511.07384",
+  "year": 2025,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Teaching Pretrained Language Models to Think Deeper with Retrofitted Recurrence",
+  "titleReview": false
+ },
+ {
+  "title": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+  "url": "https://arxiv.org/abs/2606.06574",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Skip a Layer or Loop It? Learning Program-of-Layers in LLMs",
+  "titleReview": false
+ },
+ {
+  "title": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+  "url": "https://arxiv.org/abs/2608.11233",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+  "titleReview": false
+ },
+ {
+  "title": "Improving Recursive Transformers with Mixture of LoRAs",
+  "url": "https://arxiv.org/abs/2512.12880",
+  "year": 2025,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Improving Recursive Transformers with Mixture of LoRAs",
+  "titleReview": false
+ },
+ {
+  "title": "Ouroboros: Dynamic Weight Generation for Recursive Transformers via Input-Conditioned LoRA Modulation",
+  "url": "https://arxiv.org/abs/2604.02051",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Ouroboros: Dynamic Weight Generation for Recursive Transformers via Input-Conditioned LoRA Modulation",
+  "titleReview": false
+ },
+ {
+  "title": "Prioritize the Process, Not Just the Outcome: Rewarding Latent Thought Trajectories Improves Reasoning in Looped Language Models",
+  "url": "https://arxiv.org/abs/2602.10520",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Prioritize the Process, Not Just the Outcome: Rewarding Latent Thought Trajectories Improves Reasoning in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "LoopRPT: Reinforcement Pre-Training for Looped Language Models",
+  "url": "https://arxiv.org/abs/2603.19714",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "LoopRPT: Reinforcement Pre-Training for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+  "url": "https://arxiv.org/abs/2606.31779",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LoopMTP: A looped transformer guided by latent multi-token prediction",
+  "url": "https://arxiv.org/abs/2608.03624",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "LoopMTP: A looped transformer guided by latent multi-token prediction",
+  "titleReview": false
+ },
+ {
+  "title": "Dense Supervision Is Not Enough: The Readout Blind Spot in Looped Language Models",
+  "url": "https://arxiv.org/abs/2606.24898",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Dense Supervision Is Not Enough: The Readout Blind Spot in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Demystifying Hidden-State Recurrence: Switchable Latent Reasoning with On-Policy Reinforcement Learning",
+  "url": "https://arxiv.org/abs/2606.13106",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Demystifying Hidden-State Recurrence: Switchable Latent Reasoning with On-Policy Reinforcement Learning",
+  "titleReview": false
+ },
+ {
+  "title": "Enhancing Auto-regressive Chain-of-Thought through Loop-Aligned Reasoning",
+  "url": "https://arxiv.org/abs/2502.08482",
+  "year": 2025,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Enhancing Auto-regressive Chain-of-Thought through Loop-Aligned Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Latent Chain-of-Thought? Decoding the Depth-Recurrent Transformer",
+  "url": "https://arxiv.org/abs/2507.02199",
+  "year": 2025,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Latent Chain-of-Thought? Decoding the Depth-Recurrent Transformer",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers under the Jacobian Lens: Does the Global Workspace Survive Recurrence?",
+  "url": "https://arxiv.org/abs/2609.01924",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Looped Transformers under the Jacobian Lens: Does the Global Workspace Survive Recurrence?",
+  "titleReview": false
+ },
+ {
+  "title": "Observable Patterns Are Not Explanations: A Causal-Geometric Analysis of Latent Reasoning Models",
+  "url": "https://arxiv.org/abs/2606.12689",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Observable Patterns Are Not Explanations: A Causal-Geometric Analysis of Latent Reasoning Models",
+  "titleReview": false
+ },
+ {
+  "title": "Step-resolved data attribution for looped transformers",
+  "url": "https://arxiv.org/abs/2602.10097",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Step-resolved data attribution for looped transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Loop as a Bridge: Can Looped Transformers Truly Link Representation Space and Natural Language Outputs?",
+  "url": "https://arxiv.org/abs/2601.10242",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Loop as a Bridge: Can Looped Transformers Truly Link Representation Space and Natural Language Outputs?",
+  "titleReview": false
+ },
+ {
+  "title": "Hierarchical Reasoning Model",
+  "url": "https://arxiv.org/abs/2506.21734",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Hierarchical Reasoning Model",
+  "titleReview": false
+ },
+ {
+  "title": "Less is More: Recursive Reasoning with Tiny Networks",
+  "url": "https://arxiv.org/abs/2510.04871",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Less is More: Recursive Reasoning with Tiny Networks",
+  "titleReview": false
+ },
+ {
+  "title": "Hierarchical Reasoning Models: Perspectives and Misconceptions",
+  "url": "https://arxiv.org/abs/2510.00355",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Hierarchical Reasoning Models: Perspectives and Misconceptions",
+  "titleReview": false
+ },
+ {
+  "title": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models",
+  "url": "https://arxiv.org/abs/2601.10679",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models",
+  "titleReview": false
+ },
+ {
+  "title": "One Step Forward and K Steps Back: Better Reasoning with Denoising Recursion Models",
+  "url": "https://arxiv.org/abs/2604.18839",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "One Step Forward and K Steps Back: Better Reasoning with Denoising Recursion Models",
+  "titleReview": false
+ },
+ {
+  "title": "Latent Reasoning in TRMs is Secretly a Policy Improvement Operator",
+  "url": "https://arxiv.org/abs/2511.16886",
+  "year": 2025,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Latent Reasoning in TRMs is Secretly a Policy Improvement Operator",
+  "titleReview": false
+ },
+ {
+  "title": "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
+  "url": "https://arxiv.org/abs/2603.22871",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
+  "titleReview": false
+ },
+ {
+  "title": "LoopViT: Scaling Visual ARC with Looped Transformers",
+  "url": "https://arxiv.org/abs/2602.02156",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LoopViT: Scaling Visual ARC with Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning",
+  "url": "https://arxiv.org/abs/2602.07845",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "RD-ViT: Recurrent-Depth Vision Transformer for Semantic Segmentation with Reduced Data Dependence Extending the Recurrent-Depth Transformer Architecture to Dense Prediction",
+  "url": "https://arxiv.org/abs/2605.03999",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "RD-ViT: Recurrent-Depth Vision Transformer for Semantic Segmentation with Reduced Data Dependence Extending the Recurrent-Depth Transformer Architecture to Dense Prediction",
+  "titleReview": false
+ },
+ {
+  "title": "ELT: Elastic Looped Transformers for Visual Generation",
+  "url": "https://arxiv.org/abs/2604.09168",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "ELT: Elastic Looped Transformers for Visual Generation",
+  "titleReview": false
+ },
+ {
+  "title": "Déjà View: Looping Transformers for Multi-View 3D Reconstruction",
+  "url": "https://arxiv.org/abs/2605.30215",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Déjà View: Looping Transformers for Multi-View 3D Reconstruction",
+  "titleReview": false
+ },
+ {
+  "title": "Test-Time Compute Scaling for ASR with Depth-Conditioned Looped Transformers",
+  "url": "https://arxiv.org/abs/2606.04678",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Test-Time Compute Scaling for ASR with Depth-Conditioned Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Language Models Improve Compositional Tool Calling",
+  "url": "https://arxiv.org/abs/2608.18171",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Looped Language Models Improve Compositional Tool Calling",
+  "titleReview": false
+ },
+ {
+  "title": "Looping Back to Move Forward: Recursive Transformers for Efficient and Flexible Large Multimodal Models",
+  "url": "https://arxiv.org/abs/2602.09080",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Looping Back to Move Forward: Recursive Transformers for Efficient and Flexible Large Multimodal Models",
+  "titleReview": false
+ },
+ {
+  "title": "ReLoop-UME: Recurrent Depth with Learnable Retrieval Registers for Universal Multimodal Embedding",
+  "url": "https://arxiv.org/abs/2607.28751",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "ReLoop-UME: Recurrent Depth with Learnable Retrieval Registers for Universal Multimodal Embedding",
+  "titleReview": false
+ },
+ {
+  "title": "Block-Recurrent Dynamics in Vision Transformers",
+  "url": "https://arxiv.org/abs/2512.19941",
+  "year": 2025,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Block-Recurrent Dynamics in Vision Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LatentMT: Machine Translation with Latent Reasoning",
+  "url": "https://arxiv.org/abs/2607.18618",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LatentMT: Machine Translation with Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Training Large Language Models to Reason in a Continuous Latent Space",
+  "url": "https://arxiv.org/abs/2412.06769",
+  "year": 2025,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Training Large Language Models to Reason in a Continuous Latent Space",
+  "titleReview": false
+ },
+ {
+  "title": "Compressed Chain of Thought: Efficient Reasoning Through Dense Representations",
+  "url": "https://arxiv.org/abs/2412.13171",
+  "year": 2024,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Compressed Chain of Thought: Efficient Reasoning Through Dense Representations",
+  "titleReview": false
+ },
+ {
+  "title": "Think before you speak: Training Language Models With Pause Tokens",
+  "url": "https://arxiv.org/abs/2310.02226",
+  "year": 2024,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Think before you speak: Training Language Models With Pause Tokens",
+  "titleReview": false
+ },
+ {
+  "title": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
+  "url": "https://arxiv.org/abs/2404.02258",
+  "year": 2024,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
+  "titleReview": false
+ },
+ {
+  "title": "PonderLM: Pretraining Language Models to Ponder in Continuous Space",
+  "url": "https://arxiv.org/abs/2505.20674",
+  "year": 2025,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "PonderLM: Pretraining Language Models to Ponder in Continuous Space",
+  "titleReview": false
+ },
+ {
+  "title": "Encode, Think, Decode: Scaling test-time reasoning with recursive latent thoughts",
+  "url": "https://arxiv.org/abs/2510.07358",
+  "year": 2025,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Encode, Think, Decode: Scaling test-time reasoning with recursive latent thoughts",
+  "titleReview": false
+ },
+ {
+  "title": "AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling",
+  "url": "https://arxiv.org/abs/2507.08567",
+  "year": 2025,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling",
+  "titleReview": false
+ },
+ {
+  "title": "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium",
+  "url": "https://arxiv.org/abs/2511.21882",
+  "year": 2025,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium",
+  "titleReview": false
+ },
+ {
+  "title": "Extending Reasoning in Typed Decision Models via Looping",
+  "url": "https://arxiv.org/abs/2611.07736",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Extending Reasoning in Typed Decision Models via Looping",
+  "titleReview": false
+ },
+ {
+  "title": "Loopback Transformer: Towards a Unified View of Residual Looped Transformers",
+  "url": "https://arxiv.org/abs/2611.07226",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Loopback Transformer: Towards a Unified View of Residual Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Not All Loops Cost the Same: Phase-Dependent Depth for Serving Looped Transformers",
+  "url": "https://arxiv.org/abs/2611.07211",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Not All Loops Cost the Same: Phase-Dependent Depth for Serving Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LooM: Loop-Invariant Memory for Causal Encoder-Decoder Language Models",
+  "url": "https://arxiv.org/abs/2611.06835",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "LooM: Loop-Invariant Memory for Causal Encoder-Decoder Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Loop Before You Leap: What Recurrent Depth Can and Cannot Buy in Data-Limited Pretraining",
+  "url": "https://arxiv.org/abs/2611.06206",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Loop Before You Leap: What Recurrent Depth Can and Cannot Buy in Data-Limited Pretraining",
+  "titleReview": false
+ },
+ {
+  "title": "Learning When to Think Aloud in Latent Reasoning",
+  "url": "https://arxiv.org/abs/2611.06108",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Learning When to Think Aloud in Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers",
+  "url": "https://arxiv.org/abs/2611.05304",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "ARLoop: Fully-Open Pre-trained Looped Transformers with Attention Residuals",
+  "url": "https://arxiv.org/abs/2611.05234",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "ARLoop: Fully-Open Pre-trained Looped Transformers with Attention Residuals",
+  "titleReview": false
+ },
+ {
+  "title": "Best-of-Depth: Learning Exploratory Dynamics in Looped Transformers",
+  "url": "https://arxiv.org/abs/2611.04663",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Best-of-Depth: Learning Exploratory Dynamics in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LoopKV: Loop-Aware KV Cache Compression for Serving Looped Transformers",
+  "url": "https://arxiv.org/abs/2611.04137",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopKV: Loop-Aware KV Cache Compression for Serving Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "What Sets the Serving Speed of Looped Language Models? Measurements and Optimizations Graded by Exactness",
+  "url": "https://arxiv.org/abs/2611.05150",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "What Sets the Serving Speed of Looped Language Models? Measurements and Optimizations Graded by Exactness",
+  "titleReview": false
+ },
+ {
+  "title": "Solv3R: 3D Looped Transformer as a Multi-view Solver",
+  "url": "https://arxiv.org/abs/2611.02857",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Solv3R: 3D Looped Transformer as a Multi-view Solver",
+  "titleReview": false
+ },
+ {
+  "title": "When Does Adaptive Halting Win? Selection Rules Matter in Looped Language Models",
+  "url": "https://arxiv.org/abs/2611.02333",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "When Does Adaptive Halting Win? Selection Rules Matter in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Library of Layers (LoL): Adaptively Ordering Transformer Layers at Runtime",
+  "url": "https://arxiv.org/abs/2611.03526",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Library of Layers (LoL): Adaptively Ordering Transformer Layers at Runtime",
+  "titleReview": false
+ },
+ {
+  "title": "Dory1.0-4B: A Looped Normalized-GPT",
+  "url": "https://arxiv.org/abs/2611.03998",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Dory1.0-4B: A Looped Normalized-GPT",
+  "titleReview": false
+ },
+ {
+  "title": "ElTab: Elastically Looped Tabular Transformers",
+  "url": "https://arxiv.org/abs/2610.41819",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "ElTab: Elastically Looped Tabular Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "UpLoop: Training Looped Transformers via Upcycling at No Extra Pretraining Compute",
+  "url": "https://arxiv.org/abs/2610.41720",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "UpLoop: Training Looped Transformers via Upcycling at No Extra Pretraining Compute",
+  "titleReview": false
+ },
+ {
+  "title": "Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn",
+  "url": "https://arxiv.org/abs/2610.41825",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn",
+  "titleReview": false
+ },
+ {
+  "title": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+  "url": "https://arxiv.org/abs/2610.42030",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+  "titleReview": false
+ },
+ {
+  "title": "How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference",
+  "url": "https://arxiv.org/abs/2610.40325",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference",
+  "titleReview": false
+ },
+ {
+  "title": "CopyLoop: Fast Looped Transformer Decoding via Context Copying and Shallow Screening",
+  "url": "https://arxiv.org/abs/2610.38822",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "CopyLoop: Fast Looped Transformer Decoding via Context Copying and Shallow Screening",
+  "titleReview": false
+ },
+ {
+  "title": "Deeper Backpropagation or More Updates? Training Looped Language Models Across Budgets",
+  "url": "https://arxiv.org/abs/2610.38422",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Deeper Backpropagation or More Updates? Training Looped Language Models Across Budgets",
+  "titleReview": false
+ },
+ {
+  "title": "Think Twice: The Metis-1.6 Technical Report",
+  "url": "https://arxiv.org/abs/2610.37903",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Think Twice: The Metis-1.6 Technical Report",
+  "titleReview": false
+ },
+ {
+  "title": "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
+  "url": "https://arxiv.org/abs/2610.37833",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
+  "titleReview": false
+ },
+ {
+  "title": "LoopFold: Parallelizing Recurrent Depth in Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.35556",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopFold: Parallelizing Recurrent Depth in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "StateLoop: Persistent State for Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.35544",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "StateLoop: Persistent State for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Cross-Loop Query Handoff: How Later Loops Redirect Two-Hop Retrieval in the Ouro Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.34639",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Cross-Loop Query Handoff: How Later Loops Redirect Two-Hop Retrieval in the Ouro Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Recency Is the Wrong Axis: A Negative Result on Windowed Deepest-Plane KV Caching in Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.34436",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Recency Is the Wrong Axis: A Negative Result on Windowed Deepest-Plane KV Caching in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "ScaleRLT: Exact Log-Probabilities and Fast Deferred Rollouts for Reinforcement Learning on Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.34427",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "ScaleRLT: Exact Log-Probabilities and Fast Deferred Rollouts for Reinforcement Learning on Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LoopGR: Parameter-Efficient Scaling for Generative Recommendation via Recurrent Depth",
+  "url": "https://arxiv.org/abs/2610.34157",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LoopGR: Parameter-Efficient Scaling for Generative Recommendation via Recurrent Depth",
+  "titleReview": false
+ },
+ {
+  "title": "Recursive CLIP: Vision-Language Distillation with Looped Transformer Blocks",
+  "url": "https://arxiv.org/abs/2610.34563",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Recursive CLIP: Vision-Language Distillation with Looped Transformer Blocks",
+  "titleReview": false
+ },
+ {
+  "title": "One Model, Two Paths: Balancing Single-Pass and Looped Performance in Language Models",
+  "url": "https://arxiv.org/abs/2610.33517",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "One Model, Two Paths: Balancing Single-Pass and Looped Performance in Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping",
+  "url": "https://arxiv.org/abs/2610.32492",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping",
+  "titleReview": false
+ },
+ {
+  "title": "Do Halting Heads Really Save Compute in Looped Language Models?",
+  "url": "https://arxiv.org/abs/2610.32246",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Do Halting Heads Really Save Compute in Looped Language Models?",
+  "titleReview": false
+ },
+ {
+  "title": "Tiny Recursive Policy: Recursive Latent Refinement for Visuomotor Control",
+  "url": "https://arxiv.org/abs/2610.33288",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Tiny Recursive Policy: Recursive Latent Refinement for Visuomotor Control",
+  "titleReview": false
+ },
+ {
+  "title": "LSTM-Style Looped Transformers with Shared KV Caches",
+  "url": "https://arxiv.org/abs/2610.33360",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LSTM-Style Looped Transformers with Shared KV Caches",
+  "titleReview": false
+ },
+ {
+  "title": "Agreement rather than normalisation keeps depth reusable in looped language models",
+  "url": "https://arxiv.org/abs/2610.31943",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Agreement rather than normalisation keeps depth reusable in looped language models",
+  "titleReview": false
+ },
+ {
+  "title": "Loop to Look Better: Learning Adaptive Depth for Question-Guided Perception in Vision-Language Models",
+  "url": "https://arxiv.org/abs/2610.30824",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Loop to Look Better: Learning Adaptive Depth for Question-Guided Perception in Vision-Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "BeNice! Closing Looping's Inference-Memory Gap via KV-Sharing",
+  "url": "https://arxiv.org/abs/2610.31633",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "BeNice! Closing Looping's Inference-Memory Gap via KV-Sharing",
+  "titleReview": false
+ },
+ {
+  "title": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+  "url": "https://arxiv.org/abs/2610.31421",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Uniform Diffusion Language Models",
+  "url": "https://arxiv.org/abs/2610.30066",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Looped Uniform Diffusion Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
+  "url": "https://arxiv.org/abs/2610.30128",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
+  "titleReview": false
+ },
+ {
+  "title": "How Much Gradient Does Truncated Backprop Lose in Looped Transformers?",
+  "url": "https://arxiv.org/abs/2610.28871",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "How Much Gradient Does Truncated Backprop Lose in Looped Transformers?",
+  "titleReview": false
+ },
+ {
+  "title": "Asymmetric Looped Transformers: Fixed Global Representations for an Iterative Decoder",
+  "url": "https://arxiv.org/abs/2610.28489",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Asymmetric Looped Transformers: Fixed Global Representations for an Iterative Decoder",
+  "titleReview": false
+ },
+ {
+  "title": "HistoLoop: Iterative Contextual Inference with a Looped Transformer for Histology-Based Spatial Gene Expression Prediction",
+  "url": "https://arxiv.org/abs/2610.28339",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "HistoLoop: Coarse-to-Fine Spatial Context Integration with a Looped Transformer for Histology-Based Spatial Gene Expression Prediction",
+  "titleReview": false
+ },
+ {
+  "title": "PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking",
+  "url": "https://arxiv.org/abs/2610.27628",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking",
+  "titleReview": false
+ },
+ {
+  "title": "Exploring Recurrent-Depth Language Models for Multitask Clinical Text Processing",
+  "url": "https://arxiv.org/abs/2610.27559",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Exploring Recurrent-Depth Language Models for Multitask Clinical Text Processing",
+  "titleReview": false
+ },
+ {
+  "title": "Present but Hard to Read: Probing Latent Reasoning with Minimal Pairs",
+  "url": "https://arxiv.org/abs/2610.28498",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Copied, Mixed or Computed? Testing Latent Intermediate Values with Minimal Pairs",
+  "titleReview": true
+ },
+ {
+  "title": "Truncate or Not? A Scaling Study of Looped Transformers with Truncated Backpropagation",
+  "url": "https://arxiv.org/abs/2610.26030",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Truncate or Not? A Scaling Study of Looped Transformers with Truncated Backpropagation",
+  "titleReview": false
+ },
+ {
+  "title": "Internalizing Chain-of-thought into Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.25998",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Internalizing Chain-of-thought into Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Nested Shared-Operator Recursion on ARC-AGI-1: An Empirical Study of HRM, TRM and URM",
+  "url": "https://arxiv.org/abs/2610.26666",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Nested Shared-Operator Recursion on ARC-AGI-1: An Empirical Study of HRM, TRM and URM",
+  "titleReview": false
+ },
+ {
+  "title": "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere",
+  "url": "https://arxiv.org/abs/2610.25646",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere",
+  "titleReview": false
+ },
+ {
+  "title": "recAMPLIFY: Large-Scale Pretraining of Recursive Protein Language Models",
+  "url": "https://arxiv.org/abs/2610.26747",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "recAMPLIFY: Large-Scale Pretraining of Recursive Protein Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Dual-Slot: From Serial Loops to Parallel Slots in Language Models",
+  "url": "https://arxiv.org/abs/2610.25086",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Dual-Slot: From Serial Loops to Parallel Slots in Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Block Recursive Transformers for Structured Parameter Sharing",
+  "url": "https://arxiv.org/abs/2610.24998",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Block Recursive Transformers for Structured Parameter Sharing",
+  "titleReview": false
+ },
+ {
+  "title": "UpLoop: Upcycling Large Language Models with Gated Loop",
+  "url": "https://arxiv.org/abs/2610.25004",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "UpLoop: Upcycling Large Language Models with Gated Loop",
+  "titleReview": false
+ },
+ {
+  "title": "Dynamic System Inspired Continuous Large Language Model for AI4Science Tasks",
+  "url": "https://arxiv.org/abs/2610.26959",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Dynamic System Inspired Continuous Large Language Model for AI4Science Tasks",
+  "titleReview": false
+ },
+ {
+  "title": "Look, Reason, Draw a Region: Recursive Refinement for Spatial Context Prediction",
+  "url": "https://arxiv.org/abs/2610.23302",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Look, Reason, Draw a Region: Recursive Refinement for Spatial Context Prediction",
+  "titleReview": false
+ },
+ {
+  "title": "Inside the Loop: A Mechanistic Study of Weight-Tied Transformers on Depth-Bound Algorithmic Tasks",
+  "url": "https://arxiv.org/abs/2610.24135",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics",
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Inside the Loop: A Mechanistic Study of Looped Transformers on Permutation Traversal",
+  "titleReview": true
+ },
+ {
+  "title": "Causal Latent Workspaces for Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.22796",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Causal Latent Workspaces for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Towards Looped Models Done Right, Part I: Topology, Input Injection, Recurrent-State Design",
+  "url": "https://arxiv.org/abs/2610.23036",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Towards Looped Models Done Right, Part I: Topology, Input Injection, Recurrent-State Design",
+  "titleReview": false
+ },
+ {
+  "title": "Looped GNNs Beyond Fixed Depth: Graph Size Generalization and Parameter-Efficient Adaptation",
+  "url": "https://arxiv.org/abs/2610.24112",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Looped GNNs Beyond Fixed Depth: Graph Size Generalization and Parameter-Efficient Adaptation",
+  "titleReview": false
+ },
+ {
+  "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.21594",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Retrofitting Recurrent Vision-Language Models from Pretrained Backbones",
+  "url": "https://arxiv.org/abs/2610.22075",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Retrofitting Recurrent Vision-Language Models from Pretrained Backbones",
+  "titleReview": false
+ },
+ {
+  "title": "Does Latent Chain-of-Thought Actually Reason? A Single, Unifying Taxonomy for Latent Reasoning",
+  "url": "https://arxiv.org/abs/2610.21182",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Does Latent Chain-of-Thought Actually Reason? A Single, Unifying Taxonomy for Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Learning to Compute Is Not Learning to Retain or Reuse in Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.19768",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics",
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Learning to Compute Is Not Learning to Retain or Reuse in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Test-Time Forecasting: Recurrent Depth Enables In-Context Dynamics Prediction",
+  "url": "https://arxiv.org/abs/2610.19552",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Test-Time Forecasting: Recurrent Depth Enables In-Context Dynamics Prediction",
+  "titleReview": false
+ },
+ {
+  "title": "LEV: Thinking Fast and Deep with Looped Decision Models",
+  "url": "https://arxiv.org/abs/2610.20951",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LEV: Thinking Fast and Deep with Looped Decision Models",
+  "titleReview": false
+ },
+ {
+  "title": "LatentLoop: Scaling Looped MoE Models with Asymmetric Compute Allocation",
+  "url": "https://arxiv.org/abs/2610.19975",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "LatentLoop: Scaling Looped MoE Models with Asymmetric Compute Allocation",
+  "titleReview": false
+ },
+ {
+  "title": "INTACT: Inducing Latent Reasoning on a Frozen Backbone",
+  "url": "https://arxiv.org/abs/2610.19568",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "INTACT: Inducing Latent Reasoning on a Frozen Backbone",
+  "titleReview": false
+ },
+ {
+  "title": "LoopREG: Representation Supervision Enables Test-Time Recurrent Depth in Diffusion Transformers",
+  "url": "https://arxiv.org/abs/2610.17877",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LoopREG: Representation Supervision Enables Test-Time Recurrent Depth in Diffusion Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Input-Conditioned Search for Efficient Test-Time Scaling of Recursive Reasoners",
+  "url": "https://arxiv.org/abs/2610.18547",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Input-Conditioned Search for Efficient Test-Time Scaling of Recursive Reasoners",
+  "titleReview": false
+ },
+ {
+  "title": "Monitoring latent reasoning in looped language models",
+  "url": "https://arxiv.org/abs/2610.18127",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Monitoring latent reasoning in looped language models",
+  "titleReview": false
+ },
+ {
+  "title": "Tiny Recursive Message Passing",
+  "url": "https://arxiv.org/abs/2610.18649",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Tiny Recursive Message Passing",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Reasoning Finishes Earlier Than You Think",
+  "url": "https://arxiv.org/abs/2610.18174",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Looped Reasoning Finishes Earlier Than You Think",
+  "titleReview": false
+ },
+ {
+  "title": "LoOPSD: On-Policy Self-Distillation with Looped Teachers",
+  "url": "https://arxiv.org/abs/2610.18162",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "LoOPSD: On-Policy Self-Distillation with Looped Teachers",
+  "titleReview": false
+ },
+ {
+  "title": "Dynamic K-Head: Difficulty-Supervised Budget Selection for Continuous Latent Reasoning",
+  "url": "https://arxiv.org/abs/2610.17679",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Dynamic K-Head: Difficulty-Supervised Budget Selection for Continuous Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.16368",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Resample the Answer: Where to Spend Test-Time Compute in Recursive Reasoning",
+  "url": "https://arxiv.org/abs/2610.16427",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Resample the Answer: Where to Spend Test-Time Compute in Recursive Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Chain Dimension Scaling: Communication-Efficient Loop-Style Scaling for Industrial Short-Video Ranking",
+  "url": "https://arxiv.org/abs/2610.16415",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Chain Dimension Scaling: Communication-Efficient Loop-Style Scaling for Industrial Short-Video Ranking",
+  "titleReview": false
+ },
+ {
+  "title": "RELAGRAM: Recursive Latent Graph Model for the Capacitated Vehicle Routing Problem",
+  "url": "https://arxiv.org/abs/2610.15106",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "RELAGRAM: Recursive Latent Graph Model for the Capacitated Vehicle Routing Problem",
+  "titleReview": false
+ },
+ {
+  "title": "Learning to Extrapolate in Depth with Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.14456",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Learning to Extrapolate in Depth with Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Running Fewer Loops Removes Refusal Behaviour in Recurrent-Depth Language Models",
+  "url": "https://arxiv.org/abs/2610.15218",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics",
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Running Fewer Loops Removes Refusal Behaviour in Recurrent-Depth Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Knowledge transfer between simple discrete worlds",
+  "url": "https://arxiv.org/abs/2610.15081",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Knowledge transfer between simple discrete worlds",
+  "titleReview": false
+ },
+ {
+  "title": "Recurrent In-Context Learning for Tabular Foundation Models",
+  "url": "https://arxiv.org/abs/2610.14998",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Recurrent In-Context Learning for Tabular Foundation Models",
+  "titleReview": false
+ },
+ {
+  "title": "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM",
+  "url": "https://arxiv.org/abs/2610.13660",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM",
+  "titleReview": false
+ },
+ {
+  "title": "Adaptive-Depth Is a Finishing Stage",
+  "url": "https://arxiv.org/abs/2610.14252",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Adaptive-Depth Is a Finishing Stage",
+  "titleReview": false
+ },
+ {
+  "title": "Scaling RNA Foundation Models through Iterative Refinement",
+  "url": "https://arxiv.org/abs/2610.13106",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Scaling RNA Foundation Models through Iterative Refinement",
+  "titleReview": false
+ },
+ {
+  "title": "RAMP: Recurrent Adaptive Mixed Precision for Efficient Prefill in Recurrent-Depth Language Models",
+  "url": "https://arxiv.org/abs/2610.13041",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "RAMP: Recurrent Adaptive Mixed Precision for Efficient Prefill in Recurrent-Depth Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals",
+  "url": "https://arxiv.org/abs/2610.11570",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals",
+  "titleReview": false
+ },
+ {
+  "title": "One Model to Loop Them All: Elastic Latent Recurrence for Language Models",
+  "url": "https://arxiv.org/abs/2610.12582",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "One Model to Loop Them All: Elastic Latent Recurrence for Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+  "url": "https://arxiv.org/abs/2610.12448",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts",
+  "titleReview": false
+ },
+ {
+  "title": "From Chain-of-Thought to Loops: Non-Autoregressive Latent Reasoning via Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.11472",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "From Chain-of-Thought to Loops: Non-Autoregressive Latent Reasoning via Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+  "url": "https://arxiv.org/abs/2610.10381",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+  "titleReview": false
+ },
+ {
+  "title": "Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.10625",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.10623",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Invariant-Measure Reasoners: Stable Representations for Latent Reasoning",
+  "url": "https://arxiv.org/abs/2610.10996",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Invariant-Measure Reasoners: Stable Representations for Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Think Before You Paint: Recursive Latent Reasoning for Diffusion Models",
+  "url": "https://arxiv.org/abs/2610.09876",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Think Before You Paint: Recursive Latent Reasoning for Diffusion Models",
+  "titleReview": false
+ },
+ {
+  "title": "Recurrent Looped Transformer",
+  "url": "https://arxiv.org/abs/2610.07591",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Recurrent Looped Transformer",
+  "titleReview": false
+ },
+ {
+  "title": "TAFFY: A Task-Adaptive Tabular Foundation Model with In-Context Diversity",
+  "url": "https://arxiv.org/abs/2610.07559",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "TAFFY: A Task-Adaptive Tabular Foundation Model with In-Context Diversity",
+  "titleReview": false
+ },
+ {
+  "title": "Hybrid Latent Attention for Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.07940",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Hybrid Latent Attention for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "SanSi: A Looped Typed Decision Model for System 1.5 Thinking",
+  "url": "https://arxiv.org/abs/2610.07730",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "SanSi: A Looped Typed Decision Model for System 1.5 Thinking",
+  "titleReview": false
+ },
+ {
+  "title": "Enabling Dynamic Computation in Looped LMs",
+  "url": "https://arxiv.org/abs/2610.09013",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Enabling Dynamic Computation in Looped LMs",
+  "titleReview": false
+ },
+ {
+  "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+  "url": "https://arxiv.org/abs/2610.06833",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+  "titleReview": false
+ },
+ {
+  "title": "LoopMoEVR: Loop-Based Degradation-Aware Mixture-of-Experts for Unified UHD Video Restoration",
+  "url": "https://arxiv.org/abs/2610.05109",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "LoopMoEVR: Loop-Based Degradation-Aware Mixture-of-Experts for Unified UHD Video Restoration",
+  "titleReview": false
+ },
+ {
+  "title": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.05265",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "LiFT: Loop Flow Transformers",
+  "url": "https://arxiv.org/abs/2610.05538",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LiFT: Loop Flow Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "ALoDLM: Adaptively Looped Diffusion Language Models",
+  "url": "https://arxiv.org/abs/2610.04198",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "ALoDLM: Adaptively Looped Diffusion Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "AdaLoop: Adaptive-Depth Latent Reasoning for Audio Language Models",
+  "url": "https://arxiv.org/abs/2610.06949",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "AdaLoop: Adaptive-Depth Latent Reasoning for Audio Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "On the Chain-of-Thought Monitorability of Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.02741",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "On the Chain-of-Thought Monitorability of Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.02383",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Decoding Looped Transformers Better for (Almost) Free",
+  "url": "https://arxiv.org/abs/2610.02185",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Decoding Looped Transformers Better for (Almost) Free",
+  "titleReview": false
+ },
+ {
+  "title": "Looping Beyond Twice: A Scalable Recipe for Looped Mixture-of-Experts",
+  "url": "https://arxiv.org/abs/2610.01153",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Looping Beyond Twice: A Scalable Recipe for Looped Mixture-of-Experts",
+  "titleReview": false
+ },
+ {
+  "title": "LAST: Looped Audio Spectrogram Transformer",
+  "url": "https://arxiv.org/abs/2610.01926",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LAST: Looped Audio Spectrogram Transformer",
+  "titleReview": false
+ },
+ {
+  "title": "What Limits Recursive Reasoning Models: Optimization, Architecture and Test-Time Scaling",
+  "url": "https://arxiv.org/abs/2609.39967",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "What Limits Recursive Reasoning Models: Optimization, Architecture and Test-Time Scaling",
+  "titleReview": false
+ },
+ {
+  "title": "Random Recursive Models",
+  "url": "https://arxiv.org/abs/2610.00541",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Random Recursive Models",
+  "titleReview": false
+ },
+ {
+  "title": "Rotate the Loop: Blockwise Conformality for Looped Transformers",
+  "url": "https://arxiv.org/abs/2610.14030",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Rotate the Loop: Blockwise Conformality for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Scaling Laws for Looped Mixture of Experts",
+  "url": "https://arxiv.org/abs/2609.40316",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Scaling Laws for Looped Mixture of Experts",
+  "titleReview": false
+ },
+ {
+  "title": "Shared Weights, Selected Computations: How Looped Transformers Route What Each Loop Does",
+  "url": "https://arxiv.org/abs/2609.39892",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Shared Weights, Selected Computations: How Looped Transformers Route What Each Loop Does",
+  "titleReview": false
+ },
+ {
+  "title": "Closing the Loop: Practical Training Recipes for Looped Language Models",
+  "url": "https://arxiv.org/abs/2610.00673",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Closing the Loop: Practical Training Recipes for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Diffusion Transformer",
+  "url": "https://arxiv.org/abs/2609.40305",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Looped Diffusion Transformer",
+  "titleReview": false
+ },
+ {
+  "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+  "url": "https://arxiv.org/abs/2609.39277",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+  "titleReview": false
+ },
+ {
+  "title": "LoopVL: Recurrent Visual Intelligence",
+  "url": "https://arxiv.org/abs/2609.38426",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "LoopVL: Recurrent Visual Intelligence",
+  "titleReview": false
+ },
+ {
+  "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue",
+  "url": "https://arxiv.org/abs/2609.37818",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning",
+  "url": "https://arxiv.org/abs/2609.37432",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers as Optimizers",
+  "url": "https://arxiv.org/abs/2609.37379",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Looped Transformers as Optimizers",
+  "titleReview": false
+ },
+ {
+  "title": "What Makes Recurrence Effective in Looped Language Models?",
+  "url": "https://arxiv.org/abs/2609.36636",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "What Makes Recurrence Effective in Looped Language Models?",
+  "titleReview": false
+ },
+ {
+  "title": "Scheduling Recursive Reasoning in Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.36653",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Scheduling Recursive Reasoning in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "LoopICL: Looping a single transformer block to solve tabular tasks",
+  "url": "https://arxiv.org/abs/2609.36108",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LoopICL: Looping a single transformer block to solve tabular tasks",
+  "titleReview": false
+ },
+ {
+  "title": "How to Loop MoE: Flatten the Experts, Untie the Attention",
+  "url": "https://arxiv.org/abs/2609.35751",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "How to Loop MoE: Flatten the Experts, Untie the Attention",
+  "titleReview": false
+ },
+ {
+  "title": "Improving Test-Time Scaling with Adaptive Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.35748",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Improving Test-Time Scaling with Adaptive Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.34538",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Loop Dropout: Regularizing Shared Updates in Looped Language Models",
+  "url": "https://arxiv.org/abs/2609.34218",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "Loop Dropout: Regularizing Shared Updates in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "FlexLoop: Depth-Elastic Looped Policies for Adaptive Test-Time Computation in Deep RL",
+  "url": "https://arxiv.org/abs/2609.34488",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "FlexLoop: Depth-Elastic Looped Policies for Adaptive Test-Time Computation in Deep RL",
+  "titleReview": false
+ },
+ {
+  "title": "Compute Time Scaling with Recursive Models for Combinatorial Optimization",
+  "url": "https://arxiv.org/abs/2609.34585",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Compute Time Scaling with Recursive Models for Combinatorial Optimization",
+  "titleReview": false
+ },
+ {
+  "title": "Not All Thinking is Created Equal: Latent Reasoning Discovers a Recurrent Search Algorithm for Depth Generalization",
+  "url": "https://arxiv.org/abs/2609.35643",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics",
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Not All Thinking is Created Equal: Latent Reasoning Discovers a Recurrent Search Algorithm for Depth Generalization",
+  "titleReview": false
+ },
+ {
+  "title": "LoopTrack: A Simple Baseline for Parameter-Efficient Transformer Tracking",
+  "url": "https://arxiv.org/abs/2609.33306",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LoopTrack: A Simple Baseline for Parameter-Efficient Transformer Tracking",
+  "titleReview": false
+ },
+ {
+  "title": "Reasoning on the Simplex: Geometric Fixed-Point Models",
+  "url": "https://arxiv.org/abs/2609.33540",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Reasoning on the Simplex: Geometric Fixed-Point Models",
+  "titleReview": false
+ },
+ {
+  "title": "Beyond the Training Horizon: Mechanisms and Limits of Length Generalization in Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.33144",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Beyond the Training Horizon: Mechanisms and Limits of Length Generalization in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Structured Sparse Memory for Recurrent Reasoning",
+  "url": "https://arxiv.org/abs/2609.33270",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Structured Sparse Memory for Recurrent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "MoR-MLLM: Mixture of Recursions for Efficient Multimodal Large Language Models",
+  "url": "https://arxiv.org/abs/2610.08830",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "MoR-MLLM: Mixture of Recursions for Efficient Multimodal Large Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+  "url": "https://arxiv.org/abs/2609.30820",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+  "titleReview": false
+ },
+ {
+  "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+  "url": "https://arxiv.org/abs/2609.29812",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+  "titleReview": false
+ },
+ {
+  "title": "Depth through recurrence: Looped transformers for flow-matching TTS",
+  "url": "https://arxiv.org/abs/2609.29768",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Depth through recurrence: Looped transformers for flow-matching TTS",
+  "titleReview": false
+ },
+ {
+  "title": "Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models",
+  "url": "https://arxiv.org/abs/2609.27373",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Stream Recursion Model (SRM)",
+  "url": "https://arxiv.org/abs/2609.28809",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Stream Recursion Model (SRM)",
+  "titleReview": false
+ },
+ {
+  "title": "Statistical Gains from Looped Estimation under Parameter Budgets",
+  "url": "https://arxiv.org/abs/2609.25778",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Statistical Gains from Looped Estimation under Parameter Budgets",
+  "titleReview": false
+ },
+ {
+  "title": "When Recursive Models Finish Computing",
+  "url": "https://arxiv.org/abs/2609.26487",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "When Recursive Models Finish Computing",
+  "titleReview": false
+ },
+ {
+  "title": "LoopCD: Loop-wise Contrastive Decoding for Improving Reasoning in Looped Language Models",
+  "url": "https://arxiv.org/abs/2609.24196",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "LoopCD: Loop-wise Contrastive Decoding for Improving Reasoning in Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models",
+  "url": "https://arxiv.org/abs/2609.23033",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Trading Depth for Time in Recurrent Transformers",
+  "url": "https://arxiv.org/abs/2609.21605",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Trading Depth for Time in Recurrent Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Prediction Dynamics in Depth-Recurrent Language Models",
+  "url": "https://arxiv.org/abs/2609.21383",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Prediction Dynamics in Depth-Recurrent Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Storing Is Not Remembering: LSTM-UT and Bounded Gated Memory for Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.19521",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory",
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "LSTM-UT and Bounded Gated Memory for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Beyond Depth Truncation: Controlled Evaluation of Depth Utilization in Recursive Language Models",
+  "url": "https://arxiv.org/abs/2609.19934",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Beyond Depth Truncation: Controlled Evaluation of Depth Utilization in Recursive Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents",
+  "url": "https://arxiv.org/abs/2609.19107",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents",
+  "titleReview": false
+ },
+ {
+  "title": "LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.17184",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Right Direction, Wrong Step: Geometric Analysis of Finite-Step Failure in Looped Transformers",
+  "url": "https://arxiv.org/abs/2609.16665",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Right Direction, Wrong Step: Geometric Analysis of Finite-Step Failure in Looped Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+  "url": "https://arxiv.org/abs/2609.15160",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting",
+   "Efficiency: Latency, KV Cache & Quantization"
+  ],
+  "observedTitle": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+  "titleReview": false
+ },
+ {
+  "title": "Same path, different walk: a mechanistic comparison of looped and stacked transformer encoders on 12-lead ECG",
+  "url": "https://arxiv.org/abs/2609.15498",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Same path, different walk: a mechanistic comparison of looped and stacked transformer encoders on 12-lead ECG",
+  "titleReview": false
+ },
+ {
+  "title": "FlowTSFM: Turning Encoder Depth into Quantile Transport",
+  "url": "https://arxiv.org/abs/2609.13640",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "FlowTSFM: Turning Encoder Depth into Quantile Transport",
+  "titleReview": false
+ },
+ {
+  "title": "LoopVAE: Recurrent Depth Across Scales for Visual Tokenization",
+  "url": "https://arxiv.org/abs/2609.11516",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "LoopVAE: Recurrent Depth Across Scales for Visual Tokenization",
+  "titleReview": false
+ },
+ {
+  "title": "Thinking with Looped Flows",
+  "url": "https://arxiv.org/abs/2609.11801",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Thinking with Looped Flows",
+  "titleReview": false
+ },
+ {
+  "title": "Looped GPT-BERT: Trading Parameters for Computation in Small Language Modeling",
+  "url": "https://arxiv.org/abs/2609.09691",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Looped GPT-BERT: Trading Parameters for Computation in Small Language Modeling",
+  "titleReview": false
+ },
+ {
+  "title": "DART: Distributional Adversarial Recurrent Training for Algorithm Learning",
+  "url": "https://arxiv.org/abs/2609.05988",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "DART: Distributional Adversarial Recurrent Training for Algorithm Learning",
+  "titleReview": false
+ },
+ {
+  "title": "Assessing Adversarial Robustness of Latent Reasoning Models",
+  "url": "https://arxiv.org/abs/2609.22228",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Assessing Adversarial Robustness of Latent Reasoning Models",
+  "titleReview": false
+ },
+ {
+  "title": "Diffusion as a Training Curriculum for Timestep-Free Iterative Reasoning",
+  "url": "https://arxiv.org/abs/2609.01449",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Diffusion as a Training Curriculum for Timestep-Free Iterative Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Latent Recurrent Thoughts: Recurrent Refinement of Proposed Latents for Reasoning with Frozen LLMs",
+  "url": "https://arxiv.org/abs/2609.01117",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Latent Recurrent Thoughts: Recurrent Refinement of Proposed Latents for Reasoning with Frozen LLMs",
+  "titleReview": false
+ },
+ {
+  "title": "Dissecting Hierarchical Reasoning Models: A Mechanistic Study",
+  "url": "https://arxiv.org/abs/2609.22197",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Dissecting Hierarchical Reasoning Models: A Mechanistic Study",
+  "titleReview": false
+ },
+ {
+  "title": "Evaluating Tiny Recursive Models Across Training for Code Generation",
+  "url": "https://arxiv.org/abs/2608.29376",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Evaluating Tiny Recursive Models Across Training for Code Generation",
+  "titleReview": false
+ },
+ {
+  "title": "Training-Free Hidden-State Refinement for Flow-Matching Image Generators",
+  "url": "https://arxiv.org/abs/2608.29160",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Training-Free Hidden-State Refinement for Flow-Matching Image Generators",
+  "titleReview": false
+ },
+ {
+  "title": "Dynamical phase selection controls compute scaling in looped transformers",
+  "url": "https://arxiv.org/abs/2608.26556",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics",
+   "Theory: Expressivity, ICL & Length Generalization"
+  ],
+  "observedTitle": "Dynamical phase selection controls compute scaling in looped transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Squeezing More from Limited Data with Recursive Transformers",
+  "url": "https://arxiv.org/abs/2608.26973",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Squeezing More from Limited Data with Recursive Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Steering Recurrent Reasoners at Inference Time with Readout Feedback",
+  "url": "https://arxiv.org/abs/2608.24136",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Steering Recurrent Reasoners at Inference Time with Readout Feedback",
+  "titleReview": false
+ },
+ {
+  "title": "Where Cognition Lives: Dissecting Emergent from Computed Function in a Minimal Complete Cognitive Architecture",
+  "url": "https://arxiv.org/abs/2608.22347",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Where Cognition Lives: Dissecting Emergent from Computed Function in a Minimal Complete Cognitive Architecture",
+  "titleReview": false
+ },
+ {
+  "title": "Behaviour Is an Incomplete Measure of Reasoning Development: Cross-surface pre-arrival accessibility and the limits of developmental inference in a recurrent-depth reasoner",
+  "url": "https://arxiv.org/abs/2608.16085",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Behaviour Is an Incomplete Measure of Reasoning Development: Cross-surface pre-arrival accessibility and the limits of developmental inference in a recurrent-depth reasoner",
+  "titleReview": false
+ },
+ {
+  "title": "Mimir: A Sub-2B Hierarchical Reasoning Model Trained on Permissible Data Punches Above Its Weight Class",
+  "url": "https://arxiv.org/abs/2608.13517",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Mimir: A Sub-2B Hierarchical Reasoning Model Trained on Permissible Data Punches Above Its Weight Class",
+  "titleReview": false
+ },
+ {
+  "title": "MergeOver: Post-Training Token Merging for Recursive Vision Transformers",
+  "url": "https://arxiv.org/abs/2608.13141",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "MergeOver: Post-Training Token Merging for Recursive Vision Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching",
+  "url": "https://arxiv.org/abs/2608.09444",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching",
+  "titleReview": false
+ },
+ {
+  "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+  "url": "https://arxiv.org/abs/2608.09888",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Think Deep, Speak Once: Relit, A Recursive Latent Implicit Transformer Framework",
+  "url": "https://arxiv.org/abs/2608.08113",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Think Deep, Speak Once: Relit, A Recursive Latent Implicit Transformer Framework",
+  "titleReview": false
+ },
+ {
+  "title": "bioMoR: Biology-Guided Mixture-of-Recursions for Effective Genomic Learning",
+  "url": "https://arxiv.org/abs/2608.06727",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "bioMoR: Biology-Guided Mixture-of-Recursions for Effective Genomic Learning",
+  "titleReview": false
+ },
+ {
+  "title": "MACRO: Markov Chain Routing of Transformer Layers",
+  "url": "https://arxiv.org/abs/2608.05872",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "MACRO: Markov Chain Routing of Transformer Layers",
+  "titleReview": false
+ },
+ {
+  "title": "Training Crossroads for Recurrent Vision Transformers: Recurrence, Neural ODEs, and Deep Supervision",
+  "url": "https://arxiv.org/abs/2608.04879",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Training Crossroads for Recurrent Vision Transformers: Recurrence, Neural ODEs, and Deep Supervision",
+  "titleReview": false
+ },
+ {
+  "title": "The Ignition Is Real, and It Lives at the Readout: Latent composition, difficulty-clocked ignition, and the interface-constituted commit in a recurrent-depth reasoner",
+  "url": "https://arxiv.org/abs/2608.03263",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "The Ignition Is Real, and It Lives at the Readout: Latent composition, difficulty-clocked ignition, and the interface-constituted commit in a recurrent-depth reasoner",
+  "titleReview": false
+ },
+ {
+  "title": "Recursive Vision Language Models for General Symbolic Reasoning",
+  "url": "https://arxiv.org/abs/2608.01534",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Recursive Vision Language Models for General Symbolic Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "REIMU: Efficient Heterogeneous Hierarchical Reasoning for SSL-Based Speech Deepfake Detection",
+  "url": "https://arxiv.org/abs/2608.00857",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "REIMU: Efficient Heterogeneous Hierarchical Reasoning for SSL-Based Speech Deepfake Detection",
+  "titleReview": false
+ },
+ {
+  "title": "TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning",
+  "url": "https://arxiv.org/abs/2607.29586",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "Looped Transformers with Source-Centered State Evolution",
+  "url": "https://arxiv.org/abs/2607.27656",
+  "year": 2026,
+  "category": "Training & adaptation",
+  "tags": [
+   "Stability & Training Theory"
+  ],
+  "observedTitle": "Looped Transformers with Source-Centered State Evolution",
+  "titleReview": false
+ },
+ {
+  "title": "Recursive transformers for semiconductor thermo-mechanical reliability",
+  "url": "https://arxiv.org/abs/2607.27251",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Recursive transformers for semiconductor thermo-mechanical reliability",
+  "titleReview": false
+ },
+ {
+  "title": "Penelope: Localized Latent Recurrence for Efficient Structured Reasoning",
+  "url": "https://arxiv.org/abs/2607.25915",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "Penelope: Localized Latent Recurrence for Efficient Structured Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "J-CoT: Chain-of-Thought in J-Space",
+  "url": "https://arxiv.org/abs/2607.21981",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "J-CoT: Chain-of-Thought in J-Space",
+  "titleReview": false
+ },
+ {
+  "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+  "url": "https://arxiv.org/abs/2607.19691",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping",
+   "Post-Training & RL for Looped Models"
+  ],
+  "observedTitle": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+  "titleReview": false
+ },
+ {
+  "title": "Operational Proto-Introspection in Looped Language Models: Process-Quality Taps, Executable Branching, and the Readout-Control Boundary",
+  "url": "https://arxiv.org/abs/2607.18553",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Operational Proto-Introspection in Looped Language Models: Reading Correctness Before the Answer",
+  "titleReview": true
+ },
+ {
+  "title": "Mobius Learning: Cyclic Depth Folding in Transformers",
+  "url": "https://arxiv.org/abs/2607.17843",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Mobius Learning: Cyclic Depth Folding in Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "T^2MLR: Transformer with Temporal Middle-Layer Recurrence",
+  "url": "https://arxiv.org/abs/2607.15178",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping",
+   "Retrofitting & Training-Free"
+  ],
+  "observedTitle": "T^2MLR: Transformer with Temporal Middle-Layer Recurrence",
+  "titleReview": false
+ },
+ {
+  "title": "RecRec: Latent Interests Recursive Reasoning for Sequential Recommendation",
+  "url": "https://arxiv.org/abs/2607.12945",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "RecRec: Latent Interests Recursive Reasoning for Sequential Recommendation",
+  "titleReview": false
+ },
+ {
+  "title": "RecRec: Recursive Refinement for Sequential Recommendation",
+  "url": "https://arxiv.org/abs/2607.10541",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "RecRec: Recursive Refinement for Sequential Recommendation",
+  "titleReview": false
+ },
+ {
+  "title": "Energy-guided Recursive Model",
+  "url": "https://arxiv.org/abs/2607.10128",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Energy-guided Recursive Model",
+  "titleReview": false
+ },
+ {
+  "title": "G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models",
+  "url": "https://arxiv.org/abs/2607.02491",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models",
+  "titleReview": false
+ },
+ {
+  "title": "Soft Mixture-of-Recursions: Going Deeper with Recursive Vision Transformers",
+  "url": "https://arxiv.org/abs/2607.00774",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Soft Mixture-of-Recursions: Going Deeper with Recursive Vision Transformers",
+  "titleReview": false
+ },
+ {
+  "title": "Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners",
+  "url": "https://arxiv.org/abs/2606.29150",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners",
+  "titleReview": false
+ },
+ {
+  "title": "Quantizing Recursive Reasoning Models",
+  "url": "https://arxiv.org/abs/2607.16237",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "Quantizing Recursive Reasoning Models",
+  "titleReview": false
+ },
+ {
+  "title": "What Survives When You Compress a Recursive Reasoner for the Edge?",
+  "url": "https://arxiv.org/abs/2606.26488",
+  "year": 2026,
+  "category": "Inference & efficiency",
+  "tags": [
+   "Efficiency: Latency, KV Cache & Quantization",
+   "Tiny Recursive Reasoners"
+  ],
+  "observedTitle": "What Survives When You Compress a Recursive Reasoner for the Edge?",
+  "titleReview": false
+ },
+ {
+  "title": "Repeated Shared Access Enables Grokking, but Edit Propagation Depends on an Addressable Memory",
+  "url": "https://arxiv.org/abs/2606.20737",
+  "year": 2026,
+  "category": "Foundations & theory",
+  "tags": [
+   "Theory: Expressivity, ICL & Length Generalization",
+   "Interpretability & Latent Dynamics"
+  ],
+  "observedTitle": "Repeated Shared Access Enables Grokking, but Edit Propagation Depends on an Addressable Memory",
+  "titleReview": false
+ },
+ {
+  "title": "Looped World Models",
+  "url": "https://arxiv.org/abs/2606.18208",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Looped World Models",
+  "titleReview": false
+ },
+ {
+  "title": "Recursive Scaling in Masked Diffusion Models",
+  "url": "https://arxiv.org/abs/2606.18022",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal",
+   "Adaptive Computation & Halting"
+  ],
+  "observedTitle": "Recursive Scaling in Masked Diffusion Models",
+  "titleReview": false
+ },
+ {
+  "title": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+  "url": "https://arxiv.org/abs/2606.16825",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+  "titleReview": false
+ },
+ {
+  "title": "Slots, Transitions, Loops: Learning Composable World Models for ARC",
+  "url": "https://arxiv.org/abs/2606.12316",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Tiny Recursive Reasoners",
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Slots, Transitions, Loops: Learning Composable World Models for ARC",
+  "titleReview": false
+ },
+ {
+  "title": "Rethinking Depth: A study of the Recursive-Transformer for Speech Recognition",
+  "url": "https://arxiv.org/abs/2606.09357",
+  "year": 2026,
+  "category": "Analysis & applications",
+  "tags": [
+   "Applications & Cross-Modal"
+  ],
+  "observedTitle": "Rethinking Depth: A study of the Recursive-Transformer for Speech Recognition",
+  "titleReview": false
+ },
+ {
+  "title": "Why Limit the Residual Stream to Layers and Not Tokens? Persistent Memory for Continuous Latent Reasoning",
+  "url": "https://arxiv.org/abs/2606.07720",
+  "year": 2026,
+  "category": "Surveys & related reasoning",
+  "tags": [
+   "Related: Latent Reasoning Beyond Looping"
+  ],
+  "observedTitle": "Why Limit the Residual Stream to Layers and Not Tokens? Persistent Memory for Continuous Latent Reasoning",
+  "titleReview": false
+ },
+ {
+  "title": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+  "url": "https://arxiv.org/abs/2606.04438",
+  "year": 2026,
+  "category": "Architectures & pretraining",
+  "tags": [
+   "Scaled Pretraining"
+  ],
+  "observedTitle": "LoopMoE: Unifying Iterative Computation with Mixture-of-Experts for Language Modeling",
+  "titleReview": false
+ }
+]

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Loop Transformer Atlas">
+  <rect width="64" height="64" rx="16" fill="#10202b"/>
+  <g fill="none" stroke-width="4.5" stroke-linecap="round">
+    <path stroke="#74dfde" d="M13 33c0-20 20-19 26-8l8 13c5 9-5 17-13 8l-11-17"/>
+    <path stroke="#ffbc75" d="M51 31c0 20-20 19-26 8l-8-13c-5-9 5-17 13-8l11 17"/>
+  </g>
+</svg>

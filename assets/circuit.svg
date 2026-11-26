@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 290" role="img" aria-labelledby="t d">
+  <title id="t">Loop Transformer Atlas · recurrent depth</title><desc id="d">A prelude feeds a shared transformation. Its output returns as a new hidden state or exits through a readout. The static arrows encode the same information as the animation.</desc>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#37515b"/></pattern>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#152f38"/><stop offset="1" stop-color="#101824"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto"><path d="m0 0 7 3.5-7 3.5z" fill="#74dfde"/></marker>
+  </defs>
+  <style>.pulse{animation:travel 4s linear infinite}@keyframes travel{to{stroke-dashoffset:-460}}@media(prefers-reduced-motion:reduce){.pulse{animation:none}}</style>
+  <rect width="840" height="290" rx="18" fill="url(#bg)"/><rect width="840" height="290" rx="18" fill="url(#grid)" opacity=".7"/>
+  <g font-family="ui-monospace,monospace" font-size="13" fill="#bed7db" letter-spacing="2">
+    <text x="28" y="34">L / T</text><text x="812" y="34" text-anchor="end">PLATE 01 : RECURRENT DEPTH</text>
+  </g>
+  <g fill="none" stroke="#74dfde" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M126 159H204"/><path d="M317 159H378"/><path d="M515 159H614"/><path d="M722 159H775"/>
+    <path d="M533 159V95Q533 70 508 70H370Q344 70 344 96V143"/>
+  </g>
+  <path class="pulse" d="M344 159H533V95Q533 70 508 70H370Q344 70 344 96V159" fill="none" stroke="#ffbc75" stroke-width="5" stroke-dasharray="14 446" stroke-linecap="round"/>
+  <g fill="#182f39" stroke="#6a9ca3" stroke-width="2"><rect x="65" y="136" width="62" height="46" rx="23"/><rect x="209" y="128" width="108" height="62" rx="9"/><rect x="620" y="128" width="102" height="62" rx="9"/></g>
+  <rect x="383" y="116" width="132" height="86" rx="13" fill="#24444a" stroke="#ffbc75" stroke-width="3"/>
+  <g fill="#edfaf6" font-family="system-ui,sans-serif" text-anchor="middle" font-size="24"><text x="96" y="167">x</text><text x="263" y="167">P</text><text x="449" y="170" font-size="36">Fθ</text><text x="671" y="167">C</text><text x="795" y="167">y</text></g>
+  <g text-anchor="middle" fill="#b4cecf" font-family="ui-monospace,monospace" font-size="14"><text x="438" y="56">r → r + 1</text><text x="263" y="221">PRELUDE</text><text x="449" y="229" fill="#ffcf9b">SHARED CORE</text><text x="671" y="221">CODA</text><text x="420" y="268">h[r+1] = Fθ(h[r], P(x))</text></g>
+</svg>
