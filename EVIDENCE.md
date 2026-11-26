@@ -16,6 +16,10 @@ We searched the public web and arXiv by `universal transformer`, `recurrent stac
 
 **Independent additions** include the TACL graph parser, the AAAI translation comparator, [LoopCache](https://arxiv.org/abs/2611.24301v1), [LoopRes v2](https://arxiv.org/abs/2611.31094v2) and [MoLT v1](https://arxiv.org/abs/2611.34923v1). The [MoLT code](https://github.com/hustvl/MoLT) is linked by its paper; the [Huginn paper](https://arxiv.org/abs/2502.05171v2) separately identifies its [training code](https://github.com/seal-rg/recurrent-pretraining) and [checkpoint](https://huggingface.co/tomg-group-umd/huginn-0125). No release, checkpoint or benchmark was run as part of this survey.
 
+## Reading the frontier chapters / 如何解读前沿专题
+
+The [research directions](https://hyfine.github.io/loop-transformer-atlas/#directions) chapter also cites [Looped CED](https://arxiv.org/abs/2611.13378v1) as supplementary primary reading, **not** a new map record. Proposed comparison experiments are editorial suggestions, not published results. The [model deep dives](https://hyfine.github.io/loop-transformer-atlas/#frontier) distinguish Z.ai's 30B training ablation, SenseNova's matched training/inference configurations and NVIDIA's same-checkpoint inference sweep. 技术方向中的「下一步怎样验证」是建议实验，不是复现结论；三个模型的数值因对照条件不同，不组成排行榜。
+
 ## What was traversed / 遍历范围
 
 The input consisted of the supplied overview, four overview figures, three local papers and 138 files in the companion repository, excluding version-control internals and OS metadata: **146 files**. We examined the overview, the local papers, model directory, bilingual survey and five core paper/report pairs. The extractor scanned text sources (including generated HTML, CSV, JSON, translation caches, SVG and TeX), PDF page text and URI annotations, and slides’ PPTX text and external relationships. The four overview images were inspected for labels; the diagrams on this site are original. File references are checked relative to their rendered base; an `exists` result checks the file, not an HTML fragment. We do not recursively crawl a remote site’s navigation, treat Git history as another document, or run third-party repository code.

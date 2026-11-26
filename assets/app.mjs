@@ -1,14 +1,15 @@
 import {works} from '../data/works.mjs';
 import {routes} from '../data/routes.mjs';
+import {directions,dossiers} from '../data/frontier.mjs';
+import {chapters,views,readRoute} from './navigation.mjs';
 
 const repo = 'https://github.com/hyfine/loop-transformer-atlas/blob/main/';
-const chapters = {overview:['Overview','总览'],tree:['Family tree','家族树'],lanes:['Swimlanes','泳道'],time:['Trajectories','时间轨迹'],lab:['Mechanism lab','方法实验室'],library:['Library','文献库']};
 const dates = [...works].sort((a,b)=>a.date.localeCompare(b.date) || a.name.localeCompare(b.name));
 const families = Object.fromEntries(routes.map(r=>[r.id,r]));
 const byId = Object.fromEntries(works.map(w=>[w.id,w]));
 const main = document.querySelector('main');
 let zh = new URL(location.href).searchParams.get('lang') === 'zh';
-let tab, family = 'B', selected = 'huginn', cellYear = '2025', step = 0, tick = 0, timer, rounds = 2;
+let tab, mapView='tree', selected='huginn', labFamily='B', model='glm', step=0, timer, rounds=2;
 let archive, archiveError, loading, shelfPage = 0, query = '', shelfScope = 'all', treeFit = false;
 const tr = (en,cn)=>zh ? cn : en;
 const t = pair=>pair[Number(zh)];
@@ -27,9 +28,9 @@ const btn = (key,label,attrs='')=>`<button type="button" data-do="${key}" ${attr
 const kicker = s=>`<div class="eyebrow">${s}</div>`;
 const heading = (n,title,lead)=>`<div class="sectionhead">${kicker('FIELD PLATE / '+n)}<h2>${title}</h2><p class="lede">${lead}</p></div>`;
 const options = (arr,value)=>arr.map(([id,name])=>`<option value="${esc(id)}"${id===value?' selected':''}>${esc(name)}</option>`).join('');
-const routeSelect = ()=>`<label>${tr('Route','路线')} <select id="route">${options(routes.map(r=>[r.id,`${r.id} · ${t(r.title)}`]),family)}</select></label>`;
+const routeSelect = ()=>`<label>${tr('Research question','研究问题')} <select id="route">${options(routes.map(r=>[r.id,`${r.id} · ${t(r.title)}`]),labFamily)}</select></label>`;
 const legend = ()=>`<div class="legend">${routes.map(r=>`<span style="--accent:${r.color}"><b>● ${r.id}</b> ${t(r.title)}</span>`).join('')}</div>`;
-const inspector = w=>`<article class="inspector" style="--accent:${families[w.family].color}"><div class="tag">${w.family} / ${w.date} · ${esc(w.venue)}</div><h3>${esc(w.name)}</h3><p>${esc(t(w.finding))}</p><p class="hint"><b>${tr('Read with care','解读边界')}:</b> ${esc(t(w.limit))}</p>${sources(w)}</article>`;
+const inspector = w=>`<article class="inspector" style="--accent:${families[w.family].color}"><div class="tag">${w.family} · ${t(families[w.family].title)} / ${w.date} · ${esc(w.venue)}</div><h3>${esc(w.name)}</h3><p>${esc(t(w.finding))}</p><p class="hint"><b>${tr('Read with care','解读边界')}:</b> ${esc(t(w.limit))}</p>${sources(w)}</article>`;
 const svg = (w,h,label,body)=>`<div class="chart" tabindex="0" aria-label="${esc(label)}"><svg viewBox="0 0 ${w} ${h}" role="group" aria-label="${esc(label)}">${body}</svg></div>`;
 const line = (d,col,extra='')=>`<path d="${d}" fill="none" stroke="${col}" stroke-width="2" ${extra}/>`;
 const txt = (x,y,s,attrs='')=>`<text x="${x}" y="${y}" ${attrs}>${esc(s)}</text>`;
@@ -37,21 +38,28 @@ const action = (key,value,label,body)=>`<g tabindex="0" role="button" aria-label
 const rect = (x,y,w,h,color,active=false)=>`<rect class="hit${active?' active':''}" x="${x}" y="${y}" width="${w}" height="${h}" rx="8" fill="#172e38" stroke="${color}"/>`;
 const circle = (x,y,r,color,active=false)=>`<circle class="hit${active?' active':''}" cx="${x}" cy="${y}" r="${r}" fill="${color}" stroke="#13242e"/>`;
 function stop(){clearInterval(timer);timer=undefined;}
+const mapHref=(view,id=selected)=>`#${view}/${byId[id].family}/${id}`;
+function chooseWork(id){
+  selected=id;
+  history.replaceState(null,'',mapHref(mapView));
+}
+const switcher=(label,items)=>`<div class="switcher" role="navigation" aria-label="${esc(label)}">${items.map(([href,name,active])=>`<a href="${href}"${active?' aria-current="location"':''}>${esc(name)}</a>`).join('')}</div>`;
 
 function overview(){
   const tags = ['molt','glm','loopres','loopcache','sense','arloop','dory'];
   return `<div class="split"><div>${kicker('RESEARCH ATLAS / VOL. 07')}<h1>${tr('One block.<br><em>Many depths.</em>','一组权重，<br><em>多轮计算。</em>')}</h1>
   <p class="lede">${tr('A Transformer can spend more compute before it writes its next token. Follow what changes inside the loop, what stays shared, and what one more pass actually costs.','Transformer 可以在写出下一个 token 前多算几轮。沿着环路看清：什么在变化，什么保持共享，再算一轮究竟要付出什么。')}</p>
-  <div class="tools"><a class="primary" href="#tree">${tr('Explore the tree →','展开家族树 →')}</a><a href="${repo}docs/guide.${lang()}.md">${tr('Read the field guide','阅读技术导读')} ↗</a></div></div>
+  <div class="tools"><a class="primary" href="#map">${tr('Explore the research map →','打开研究地图 →')}</a><a href="${repo}docs/guide.${lang()}.md">${tr('Read the field guide','阅读技术导读')} ↗</a></div></div>
   <div class="plate">${kicker('01 / DEPTH COUNTER')}<img src="assets/circuit.svg" alt="${tr('Prelude, recurrent core with feedback, and coda','前段编码、带状态反馈的共享核心与输出尾段')}">
   <div class="tools">${tr('Core visits','核心访问次数')} ${[1,2,4].map(r=>btn('round',`×${r}`,`data-value="${r}" aria-pressed="${r===rounds}"`)).join('')}</div>
   <div class="numbers"><span><b>32</b><small>${tr('distinct layers','独立层数')}</small></span><span><b>${4+24*rounds+4}</b><small>${tr('layer executions','执行层次')}</small></span><span><b>×${rounds}</b><small>${tr('middle block','中间块')}</small></span></div>
   <small>${tr('4 + 24R + 4. R=2 is the released','4 + 24R + 4。R=2 对应实际发布的')} <a href="#tree/B/sense">SenseNova-Loop-9B</a>${tr('; the other settings are arithmetic examples, not measured models.','；其他设置仅演示计算关系，并非实测模型。')}</small></div></div>
-  <section>${heading('02',tr('Where to start','从哪个问题读起'),tr('Six routes into the same design space. Each opens a worked example with a playable dataflow.','六条路线对应六个设计问题。每条路线都可打开一个代表作，逐步查看数据流。'))}<div class="grid">${routes.map(r=>`<a class="card" style="--accent:${r.color}" href="#lab/${r.id}"><span class="tag">${r.id} / ${routeWorks(r.id).length}</span><h3>${t(r.title)}</h3><p>${t(r.question)}</p></a>`).join('')}</div></section>
-  <section>${heading('03',tr('Frontier notebook','前沿手记'),tr('November 2026 · New mechanisms and releases, not a leaderboard. Select a record for its evidence boundary.','2026 年 11 月 · 这里按新机制与新发布选录，不按跑分排名。点开条目可见证据边界。'))}<div class="grid">${tags.map(id=>{const w=byId[id];return `<a class="card" style="--accent:${families[w.family].color}" href="#tree/${w.family}/${id}"><span class="meta">${w.date} · ${esc(w.venue)}</span><h3>${w.name} ↗</h3><p>${t(w.finding)}</p></a>`}).join('')}</div></section>`;
+  <section>${heading('02',tr('Which question are you asking?','你想弄清哪个问题？'),tr('We group works by the question their evidence answers, not by size or benchmark rank. Choose a question to trace a representative model.','按每项工作的证据主要回答什么问题归类，不按大小或跑分排名。选一个问题，就能跟着代表作走一遍。'))}<div class="grid">${routes.map(r=>`<a class="card" style="--accent:${r.color}" href="#lab/${r.id}"><span class="tag">${r.id} / ${byId[r.example].name}</span><h3>${t(r.title)}</h3><p>${t(r.question)}</p></a>`).join('')}</div></section>
+  <section>${heading('03',tr('Frontier notebook','前沿手记'),tr('November 2026 · New mechanisms and releases, not a leaderboard.','2026 年 11 月 · 按新机制与新发布选录，不按跑分排名。'))}<div class="tools"><a href="#directions">${tr('Compare research directions →','对照最新技术方向 →')}</a><a href="#frontier/glm">${tr('Inside GLM-5.4 →','深读 GLM-5.4 →')}</a></div><div class="grid">${tags.map(id=>{const w=byId[id];return `<a class="card" style="--accent:${families[w.family].color}" href="${dossiers.some(d=>d.id===id)?'#frontier/'+id:mapHref('tree',id)}"><span class="meta">${w.date} · ${esc(w.venue)}</span><h3>${w.name} ↗</h3><p>${t(w.finding)}</p></a>`}).join('')}</div></section>`;
 }
 
 function tree(){
+  const family=byId[selected].family;
   const groups=[
     {tone:'blue',ids:['B','A','D'],xs:[244,435,626],side:-1,title:tr('Design the update','设计更新规则')},
     {tone:'teal',ids:['F','C','E'],xs:[665,856,1047],side:1,title:tr('Allocate & apply it','分配与应用计算')}
@@ -112,14 +120,14 @@ function tree(){
     `<path class="tree-axis" d="M34 ${bottom+25}V46m-5 8 5-8 5 8"/>${stems}${grid}${chips}${caps}`+
     `<rect x="${rootX-99}" y="${rootY-19}" width="198" height="38" rx="9" fill="url(#tree-root-fill)"/>`+
     txt(rootX,rootY+6,tr('Loop Transformers','循环 Transformer'),'class="tree-root-label" text-anchor="middle"');
-  return heading('04',tr('The family tree','方法家族树'),tr('Read from the root up. Blue branches design the update; teal branches allocate or apply it. Select any work to inspect its evidence.','从树根向上读。蓝色分支回答如何设计更新规则，青色分支回答如何分配或应用计算。点选作品即可查看证据。'))+
+  return `<p class="hint">${tr('Read up from the root: blue branches explore or build the repeated layer; teal branches choose, schedule or apply its computation.','从树根向上读：蓝色分支研究或构建共享层；青色分支讨论如何分配、执行或应用这份计算。')}</p>`+
     `<div class="tools">${btn('grow',tr('Replay growth ↑','重播生长 ↑'))} ${btn('tree-fit',treeFit?tr('Enlarge labels','放大标签'):tr('Fit whole tree','查看全图'))} ${btn('tree-evidence',tr('View selection','查看所选条目')+` · ${esc(byId[selected].name)} ↓`)}</div>
     <div class="tree-paper${treeFit?' fit':''}">${svg(1236,rootY+31,tr('Research families by year, oldest at the bottom','研究家族年份图，较早的工作在下方'),drawing)}</div>
-    <p class="hint">${tr('Dashed lines mark the base of each year band; spacing accommodates labels, not elapsed time. Forks mean shared questions, not paper-to-paper descent. On small screens, swipe across the plate.','虚线标记各年份区间的下界；间距按标签排布，不代表时间长度。分叉表示问题分类，不表示论文师承关系。小屏幕可横向滑动。')}</p>
-    ${inspector(byId[selected])}<a class="boxlink" href="#lab/${family}">${tr('Play this family’s mechanism →','播放该家族的代表机制 →')}</a>`;
+    <p class="hint">${tr('Dashed lines mark the base of each year band; spacing accommodates labels, not elapsed time. Forks mean shared questions, not paper-to-paper descent. On small screens, swipe across the plate.','虚线标记各年份区间的下界；间距按标签排布，不代表时间长度。分叉表示问题分类，不表示论文师承关系。小屏幕可横向滑动。')}</p>`;
 }
 
 function lanes(){
+  const family=byId[selected].family, cellYear=year(byId[selected]);
   const years=[...new Set(dates.map(year))], x=i=>200+i*72,y=i=>52+i*42;
   let g=years.map((v,i)=>txt(x(i),20,v,'class="small" text-anchor="middle"')).join('');
   routes.forEach((r,i)=>{
@@ -131,12 +139,12 @@ function lanes(){
     });
   });
   const group=routeWorks(family).filter(w=>year(w)===cellYear);
-  return heading('05',tr('A lane for each question','每个问题一条泳道'),tr('Rows are families, columns are represented years. Select a numbered stop to see every record in that cell. Size counts records, not importance.','行是家族，列是有收录的年份。选择有数字的站点可看该格的全部作品；大小表示收录数量，不表示重要性。'))+
-    `<div class="plate">${svg(x(years.length-1)+55,295,tr('Family by year','家族与年份交叉图'),g)}</div><div class="tools">${group.map(w=>btn('lane-work',w.name,`data-value="${w.id}" aria-pressed="${selected===w.id}"`)).join('')}</div>${inspector(byId[selected])}`;
+  return `<p class="hint">${tr('Rows are research questions; columns are years. Choose a numbered stop, then a work. The number counts records, not importance.','每行一个研究问题，每列一个年份。先选有数字的站点，再选具体作品；数字是收录数，不是重要性。')}</p>
+    <div class="plate">${svg(x(years.length-1)+55,295,tr('Family by year','家族与年份交叉图'),g)}</div><div class="tools">${group.map(w=>btn('lane-work',w.name,`data-value="${w.id}" aria-pressed="${selected===w.id}"`)).join('')}</div>`;
 }
 
 function trajectory(){
-  const w=dates[tick], x=i=>60+i*26,y=r=>44+routes.findIndex(f=>f.id===r)*36;
+  const tick=dates.indexOf(byId[selected]), x=i=>60+i*26,y=r=>44+routes.findIndex(f=>f.id===r)*36;
   let g='';
   for(const r of routes){
     g+=txt(9,y(r.id)+5,r.id,'font-weight="bold"')+line(`M50 ${y(r.id)}H${x(dates.length-1)+14}`,r.color,'opacity=".2"');
@@ -147,13 +155,48 @@ function trajectory(){
     if(!i||year(v)!==year(dates[i-1]))g+=txt(x(i),i%2?26:14,year(v),'class="small" text-anchor="middle"');
     g+=action('tick',i,`${v.date} · ${v.name}`,circle(x(i),y(v.family),i===tick?9:6,i<=tick?families[v.family].color:'#394951',i===tick));
   });
-  return heading('06',tr('Replay the research record','回放研究轨迹'),tr('Follow dated evidence from ACT to MoLT. Horizontal distance is one publication or release, not elapsed time. Items sharing a month need not have appeared in this order.','从 ACT 到 MoLT，按证据日期回放。横向每步是一个论文或发布事件，不代表等长时间；同月条目不保证先后。'))+
-    `<div class="plate">${legend()}${svg(x(dates.length-1)+30,248,tr('Chronological trajectories','各路线时间轨迹'),g)}
-    <div class="tools">${btn('play',timer?tr('Pause','暂停'):tr('Play','播放'))}<label>${tr('Record','事件')} <input id="scrub" type="range" min="0" max="${dates.length-1}" value="${tick}"> ${tick+1}/${dates.length}</label></div></div>${inspector(w)}`;
+  return `<p class="hint">${tr('Play or scrub from ACT to MoLT. One horizontal step is one publication or release, not elapsed time; same-month items need not have appeared in this order.','从 ACT 到 MoLT，可播放也可拖动。横向每步是一个论文或发布事件，不代表等长时间；同月条目不保证先后。')}</p>
+    <div class="plate">${legend()}${svg(x(dates.length-1)+30,248,tr('Chronological trajectories','各路线时间轨迹'),g)}
+    <div class="tools">${btn('play',timer?tr('Pause','暂停'):tr('Play','播放'))}<label>${tr('Record','事件')} <input id="scrub" type="range" min="0" max="${dates.length-1}" value="${tick}"> ${tick+1}/${dates.length}</label></div></div>`;
+}
+
+function researchMap(){
+  const w=byId[selected];
+  const guide=`<details class="route-key"><summary>${tr('Classification key: six questions and their examples','分类速查：六个问题与对应例子')}</summary>
+    <dl>${routes.map(r=>`<dt><a href="${mapHref(mapView,r.example)}">${r.id} · ${t(r.title)}</a></dt><dd>${t(r.criterion)} <b>${byId[r.example].name}</b></dd>`).join('')}</dl>
+    <p>${tr('When several labels fit, we choose the comparison discussed in the record. GLM-5.4 has a cache design, but here its main question is how to convert GLM-5 (D). Dory is a trained model, but our map entry examines its last-loop KV cache (E). Neither classification excludes the other contributions.','有交叉时，按条目正在分析的那组证据确定主类。GLM-5.4 也改了缓存，但这里关心如何从 GLM-5 改造，因此归 D；Dory 也有训练配方，但本条聚焦最后一轮 KV，因此归 E。主类不排除它的其他贡献。')}</p></details>`;
+  return heading('04–06',t(chapters.map),tr('Classify the question, not the model: Huginn asks how to train a repeated block (B); MoR asks which tokens should revisit it (C); LoopCache asks how to read less memory during decoding (E). Switch views without losing your selected work.','按研究问题分类，而不是给模型贴标签：Huginn 问怎样训练共享块（B），MoR 问哪些 token 应该再算一轮（C），LoopCache 问解码时怎样少读缓存（E）。切换下方视角会保留当前作品。'))+
+    guide+switcher(tr('Map views','地图视角'),Object.entries(views).map(([v,label])=>[mapHref(v),t(label),v===mapView]))+
+    `<div class="map-view" aria-label="${t(views[mapView])}">${({tree,lanes,time:trajectory})[mapView]()}</div>`+
+    inspector(w)+`<div class="links"><a href="#lab/${w.family}">${tr('Trace a representative mechanism','查看该类的代表流程')} →</a>${dossiers.some(d=>d.id===w.id)?`<a href="#frontier/${w.id}">${tr('Read the full model case','阅读该模型深读')} →</a>`:''}</div>`;
+}
+
+function researchDirections(){
+  return heading('09',t(chapters.directions),tr('November 2026 · Four open design decisions. For each one, compare the published mechanisms, the actual measurement and the experiment that would distinguish them.','2026 年 11 月 · 四个仍未定论的设计选择。每个方向分别看：方法改了什么、现有证据说明什么、下一步怎样验证。'))+
+    `<div class="direction-grid">${directions.map((d,i)=>`<article class="card direction">
+      ${kicker(`0${i+1} / ${tr('RESEARCH QUESTION','研究问题')}`)}<h3>${t(d.title)}</h3><p>${t(d.changed)}</p>
+      <h4>${tr('What the evidence shows','已有证据')}</h4><p>${t(d.observed)}</p>
+      <h4>${tr('What to test next','下一步怎样验证')}</h4><p>${t(d.test)}</p>
+      <div class="links">${d.refs.map(id=>`<a href="${esc(byId[id].links[0])}">${esc(byId[id].name)} ↗</a>`).join('')}${d.extra?`<a href="${esc(d.extra[1])}">${esc(d.extra[0])} ↗</a>`:''}</div></article>`).join('')}</div>`;
+}
+
+function frontierModels(){
+  const d=dossiers.find(item=>item.id===model), w=byId[d.id];
+  const block=(label,copy)=>`<div><h4>${label}</h4><p>${t(copy)}</p></div>`;
+  return heading('10',t(chapters.frontier),tr('One flagship disclosure and two open models answer different questions. Follow one prediction through each model, then check which comparison its authors actually ran. This is not a ranking of frontier capability.','一份旗舰技术披露与两个开放模型回答了不同问题。先跟着一次预测看内部如何执行，再看作者真正做了哪种对照。这里不是前沿能力排行榜。'))+
+    switcher(tr('Choose a model','选择模型'),dossiers.map(row=>[`#frontier/${row.id}`,byId[row.id].name,row.id===model]))+
+    `<article class="plate dossier"><div class="meta">${w.date} · ${t(d.role)}</div><h2>${w.name}</h2><p class="lede">${t(d.question)}</p>
+      <ol class="model-path" aria-label="${tr('Forward path','一次前向路径')}">${d.path.map(s=>`<li>${t(s)}</li>`).join('')}</ol><div class="case-grid">
+      ${block(tr('01 · What changes between passes?','01 · 轮次之间什么在变？'),d.state)}
+      ${block(tr('02 · What is trained, stored or recomputed?','02 · 学什么、存什么、重算什么？'),d.budget)}
+      ${block(tr('03 · What did the authors measure?','03 · 作者实际测了什么？'),d.result)}
+      ${block(tr('04 · What cannot be inferred?','04 · 哪些结论不能推出？'),d.limit)}</div>
+      <p class="hint">${t(d.locator)}</p>${sources(w)}<a class="boxlink" href="${mapHref('tree',w.id)}">${tr('Locate this work on the map','在地图中定位该模型')} →</a></article>
+    <section><h3>${tr('Compare the experiments, not the headlines','三组实验究竟在比较什么？')}</h3><div class="compare-scroll"><table class="comparison"><thead><tr>${[tr('Case','案例'),tr('Starting point','起点'),tr('Repeated work','重复哪部分'),tr('Comparison behind the claim','证据的比较口径')].map(s=>`<th scope="col">${s}</th>`).join('')}</tr></thead><tbody>${dossiers.map(row=>`<tr><th scope="row"><a href="#frontier/${row.id}">${byId[row.id].name}</a></th><td>${t(row.comparison)}</td><td>${t(row.schedule)}</td><td>${t(row.control)}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
 
 function lab(){
-  const r=families[family], w=byId[r.example], pos=[115,315,515,715];
+  const r=families[labFamily], w=byId[r.example], pos=[115,315,515,715];
   let g=`<defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="m0 0 6 3-6 3z" fill="${r.color}"/></marker></defs>`;
   for(let i=0;i<3;i++)g+=line(`M${pos[i]+77} 100H${pos[i+1]-80}`,r.color,'marker-end="url(#arr)"');
   const edge=r.id==='F'?'M555 72V46Q555 35 544 35H485Q475 35 475 46V71':
@@ -166,7 +209,7 @@ function lab(){
   return heading('07',tr('Mechanism lab','方法实验室'),tr('Each plate traces one representative design, not a universal algorithm for its family. Select a stage or play the explanation.','每幅图追踪一种代表性设计，而非整个家族的通用算法。可选择步骤或播放解说。'))+
     `<div class="tools">${routeSelect()} <b>${w.name}</b></div><div class="plate">${svg(830,['C','F'].includes(r.id)?192:149,t(r.title),g)}
     <div class="tools">${btn('play',timer?tr('Pause','暂停'):tr('Play','播放'))}${btn('next',tr('Next stage →','下一步 →'))} <b>${step+1}/4 · ${t(r.stages[step].label)}</b></div>
-    <p class="readout">${t(r.stages[step].note)}</p><p class="hint">${t(r.contrast)}</p></div>${inspector(w)}<a href="${repo}docs/routes.${lang()}.md#route-${r.id.toLowerCase()}">${tr('Read the full route and its comparison cases →','阅读完整路线与同类对照 →')}</a>`;
+    <p class="readout">${t(r.stages[step].note)}</p><p class="hint">${t(r.contrast)}</p></div>    ${inspector(w)}<a href="${repo}docs/routes.${lang()}.md#route-${r.id.toLowerCase()}">${tr('Read the full route and its comparison cases →','阅读完整路线与同类对照 →')}</a>`;
 }
 
 function filterRows(){
@@ -196,12 +239,17 @@ function library(){
 function render(){
   const focus=document.activeElement;
   const id=focus.id, cmd=focus.dataset.do, value=focus.dataset.value;
+  const focusedHref=focus.closest('#nav a, .switcher a')?.getAttribute('href');
   const treeScroll=main.querySelector('.tree-paper .chart')?.scrollLeft;
+  const keyOpen=main.querySelector('.route-key')?.open;
   document.documentElement.lang=zh?'zh-CN':'en';
-  document.title=`${t(chapters[tab])} · Loop Transformer Atlas`;
+  document.title=`${tab==='map'?t(views[mapView])+' · ':''}${t(chapters[tab])} · Loop Transformer Atlas`;
   document.querySelector('#language').textContent=tr('中文','English');
-  document.querySelector('#nav').innerHTML=Object.entries(chapters).map(([id,p])=>`<a href="#${id}" ${id===tab?'aria-current="page"':''}>${t(p)}</a>`).join('');
-  main.innerHTML=({overview,tree,lanes,time:trajectory,lab,library})[tab]();
+  const nav=document.querySelector('#nav');
+  nav.setAttribute('aria-label',tr('Atlas chapters','图谱章节'));
+  nav.innerHTML=Object.entries(chapters).map(([id,p])=>`<a href="#${id}" ${id===tab?'aria-current="page"':''}>${t(p)}</a>`).join('');
+  main.innerHTML=({overview,map:researchMap,directions:researchDirections,frontier:frontierModels,lab,library})[tab]();
+  if(tab==='map'&&keyOpen)main.querySelector('.route-key').open=true;
   const chart=main.querySelector('.tree-paper .chart');
   if(chart&&treeScroll!==undefined)chart.scrollLeft=treeScroll;
   else if(chart&&location.hash.startsWith('#tree/')){
@@ -210,14 +258,19 @@ function render(){
   }
   if(id)document.getElementById(id)?.focus({preventScroll:true});
   else if(cmd)Array.from(main.querySelectorAll('[data-do]')).find(el=>el.dataset.do===cmd&&el.dataset.value===value)?.focus({preventScroll:true});
+  else if(focusedHref)Array.from(document.querySelectorAll('#nav a,.switcher a')).find(el=>el.getAttribute('href')===focusedHref)?.focus({preventScroll:true});
 }
 function navigate(){
   const previous=tab;
-  stop();const [page,f,id]=location.hash.slice(1).split('/');
-  tab=Object.hasOwn(chapters,page)?page:'overview';
-  if(families[f])family=f;
-  selected=byId[id]?.family===family?id:families[family].example;
-  cellYear=year(byId[selected]);step=0;
+  stop();const route=readRoute(location.hash);
+  tab=route?.tab||'overview';
+  if(tab==='map'){
+    mapView=route.view||mapView;
+    selected=route.work||(!previous&&mapView==='time'?dates[0].id:selected);
+    if(!route.work)history.replaceState(null,'',mapHref(mapView));
+  }
+  if(tab==='lab'){labFamily=route.family||byId[selected].family;step=0;}
+  if(tab==='frontier')model=route.model;
   render();
   if(previous&&previous!==tab){main.focus({preventScroll:true});window.scrollTo(0,0);}
 }
@@ -225,13 +278,13 @@ function handle(key,val){
   if(key==='play'){
     if(timer)stop();
     else{
-      if(tab==='time'&&tick===dates.length-1)tick=0;
+      if(tab==='map'&&selected===dates.at(-1).id)chooseWork(dates[0].id);
       if(tab==='lab'&&step===3)step=0;
       timer=setInterval(()=>{
-        if(tab==='time')tick++;else step++;
-        if((tab==='time'&&tick===dates.length-1)||(tab==='lab'&&step===3))stop();
+        if(tab==='map')chooseWork(dates[dates.indexOf(byId[selected])+1].id);else step++;
+        if((tab==='map'&&selected===dates.at(-1).id)||(tab==='lab'&&step===3))stop();
         render();
-      },tab==='time'?950:2600);
+      },tab==='map'?950:2600);
     }
   }else{
     stop();
@@ -244,9 +297,9 @@ function handle(key,val){
       paper.classList.remove('growing');void paper.offsetWidth;paper.classList.add('growing');return;
     }
     if(key==='tree-evidence'){const card=main.querySelector('.inspector');card.tabIndex=-1;card.focus();return;}
-    if(key==='lane-work')selected=val;
-    if(key==='cell'){[family,cellYear]=val.split(':');selected=routeWorks(family).find(w=>year(w)===cellYear).id;}
-    if(key==='tick')tick=Number(val);
+    if(key==='lane-work')chooseWork(val);
+    if(key==='cell'){const [family,cellYear]=val.split(':');chooseWork(routeWorks(family).find(w=>year(w)===cellYear).id);}
+    if(key==='tick')chooseWork(dates[Number(val)].id);
     if(key==='step')step=Number(val);
     if(key==='next')step=(step+1)%4;
     if(key==='prev-page')shelfPage--;

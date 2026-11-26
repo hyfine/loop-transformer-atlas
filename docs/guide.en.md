@@ -28,16 +28,16 @@ This is a notation for comparison, not a universal implementation. The initial s
 
 ## Six families, four independent design choices
 
-The [tree](https://hyfine.github.io/loop-transformer-atlas/#tree) gives each work a primary address, not an exclusive identity. Dory is a trained language model *and* a cache design; we file it under execution to make the serving comparison easier.
+The [research map](https://hyfine.github.io/loop-transformer-atlas/#map) classifies the **question answered by the cited comparison**, not the whole model. If the result concerns learning a shared rule, read A; building a looped model, B; choosing who gets more computation, C. D starts from a non-looped checkpoint, E examines the serving dependency or cache, and F changes the object being refined. When several fit, use the evidence discussed in the record: Dory also has a training recipe, but its map entry compares historical KV policies (E). The tree, lanes and timeline keep the same selection.
 
 | Route | The question to ask | Work through it |
 |---|---|---|
-| A · Rules & sharing | Is a learned or constructed operator reused? Does it know its depth? | [Universal Transformer and algorithmic controls](routes.en.md#route-a) |
-| B · Pretrained cores | How are states initialized, reconditioned and stabilized? | [Huginn versus layer-wise Loopie](routes.en.md#route-b) |
-| C · Adaptive depth | Does a caller, a halting probability or a router allocate compute? | [Mixture-of-Recursions](routes.en.md#route-c) |
-| D · Retrofitting | Freeze the model, train small corrections, or continue training the whole path? | [Training-free damping versus learned gates](routes.en.md#route-d) |
-| E · Scheduling & KV | Which dependency can overlap, and whose keys/values survive? | [LoopCoder-v2, Dory and LoopCache](routes.en.md#route-e) |
-| F · Structured states | What is refined before a real-world or simulated time step advances? | [Graph, action and world-state examples](routes.en.md#route-f) |
+| A · What can sharing do? | Can a shared update replace independent layers or implement an algorithm? | [Universal Transformer and algorithmic controls](routes.en.md#route-a) |
+| B · Build a looped model | Where does the repeated block go and how is it trained? | [Huginn versus layer-wise Loopie](routes.en.md#route-b) |
+| C · Choose the depth | Does a caller, a halting probability or a router allocate compute? | [Mixture-of-Recursions](routes.en.md#route-c) |
+| D · Convert a checkpoint | Freeze existing weights, train small corrections, or continue training the whole path? | [Training-free damping versus learned gates](routes.en.md#route-d) |
+| E · Run loops efficiently | Which dependency can overlap, and whose keys/values survive? | [LoopCoder-v2, Dory and LoopCache](routes.en.md#route-e) |
+| F · Refine non-text states | What is refined before a graph is returned, a robot acts or a simulation advances? | [Graph, action and world-state examples](routes.en.md#route-f) |
 
 To classify a new paper, write four fields rather than one label: **unit of reuse** (whole stack, middle block, one layer, sublayer); **feedback** (residual state, conditioned input, graph, KV); **training provenance** (from scratch, continued training, adapter, frozen); **budget policy** (fixed, sampled during training, user-selected at inference, or data-dependent exit). For instance, *frozen/middle block/damped state/fixed substeps* describes the training-free recipe much better than “latent reasoning”.
 

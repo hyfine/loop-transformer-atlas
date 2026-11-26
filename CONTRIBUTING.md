@@ -4,7 +4,7 @@ For a new record, supply the primary paper or release, the indexed preprint/rele
 
 新增条目请给出原始来源、日期、机制及边界。数值必须带模型、指标和对照条件；预印本、会议、期刊、社区文章和厂商发布应当区分。不同轮数若是分别训练的模型，不能写成同一检查点的推理扫参。
 
-- [Works](data/works.mjs) are shared by the website and offline casebooks; [routes](data/routes.mjs) hold the six playable examples. Choose one primary route and explain overlaps in prose.
+- [Works](data/works.mjs) are shared by the website and offline casebooks; [routes](data/routes.mjs) hold the six classification cues and playable examples. Assign the primary route by the comparison discussed in the record, not every feature of a model. [Frontier chapters](data/frontier.mjs) link to the existing work IDs and distinguish published findings from proposed tests.
 - [Guides](docs/guide.en.md), [中文导读](docs/guide.zh.md) and both READMEs require editorial updates for changes to the synthesis. Avoid new evidence counts without reconciling [the ledger](EVIDENCE.md).
 - Add original figures or explicit reuse permission and source attribution. Do not upload paper PDFs by default.
 

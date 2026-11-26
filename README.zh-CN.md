@@ -17,8 +17,10 @@
 | 想弄清什么 | 从这里开始 |
 |---|---|
 | 十分钟建立直觉 | [算例、技术史与四组受控实验](docs/guide.zh.md) |
-| 掌握全局 | [从树根向上读到最新工作的家族树](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#tree) · [按年份对照各路线泳道](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lanes) · [回放时间轨迹](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#time) |
-| 逐步跟踪一次前向传播 | [A · 共享规则](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/A) · [B · 预训练](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B) · [C · 路由](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/C) · [D · 改造](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/D) · [E · KV 与调度](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/E) · [F · 结构化状态](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/F) |
+| 掌握全局 | [研究地图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#map)：家族树、泳道和时间轨迹可切换，保留当前作品。「分类速查」解释每类看什么对照、为什么归到这里。 |
+| 看十一月在解决什么问题 | [前沿技术方向](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#directions)：跨轮传什么、如何改造检查点、怎样少存或少搬 KV、怎样分配轮数。每个方向都列出已有证据和下一步验证方法。 |
+| 深入一个实际模型 | [GLM-5.4](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/glm) · [SenseNova-Loop-9B](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/sense) · [Dory1.0-4B](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/dory)。逐项对照执行路径、训练方式、缓存和实验条件。 |
+| 跟踪一次代表性计算流程 | [A · 共享层能做什么](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/A) · [B · 训练循环模型](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B) · [C · 决定循环几轮](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/C) · [D · 给已有模型加循环](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/D) · [E · 降低循环推理开销](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/E) · [F · 细化图、动作或世界状态](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/F) |
 | 寻找论文、实现与权重 | [检索文献库](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#library) · [一手资料手册](docs/routes.zh.md) · [逐链接访问记录](data/visits.csv) |
 
 ## 前沿手记 · 截至 2026 年 11 月 26 日

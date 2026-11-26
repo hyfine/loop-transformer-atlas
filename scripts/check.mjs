@@ -5,6 +5,8 @@ import {dirname, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {routes} from '../data/routes.mjs';
 import {works} from '../data/works.mjs';
+import {directions,dossiers} from '../data/frontier.mjs';
+import {readRoute,views} from '../assets/navigation.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=name=>readFileSync(join(root,name),'utf8');
@@ -17,7 +19,7 @@ const bilingual=pair=>{
 unique(works.map(w=>w.id));unique(routes.map(r=>r.id));
 for(const r of routes){
   assert(works.some(w=>w.id===r.example&&w.family===r.id));
-  [r.title,r.question,r.feedback,r.contrast,...r.stages.flatMap(s=>[s.label,s.note])].forEach(bilingual);
+  [r.title,r.question,r.criterion,r.feedback,r.contrast,...r.stages.flatMap(s=>[s.label,s.note])].forEach(bilingual);
   assert.equal(r.stages.length,4);
 }
 for(const w of works){
@@ -25,6 +27,20 @@ for(const w of works){
   assert.match(w.date,/^\d{4}-(0[1-9]|1[0-2])(?:-(0[1-9]|[12]\d|3[01]))?$/);
   assert(w.links.length&&w.links.every(u=>new URL(u).protocol==='https:'));
   bilingual(w.finding);bilingual(w.limit);
+  for(const view of Object.keys(views))
+    assert.deepEqual(readRoute(`#${view}/${w.family}/${w.id}`),{tab:'map',view,work:w.id});
+}
+assert.deepEqual(readRoute('#swimlanes'),readRoute('#lanes'));
+assert.equal(readRoute('#tree/A/dory'),null);
+for(const d of directions){
+  [d.title,d.changed,d.observed,d.test].forEach(bilingual);
+  assert(d.refs.length&&d.refs.every(id=>works.some(w=>w.id===id)),d.refs);
+  if(d.extra)assert.equal(new URL(d.extra[1]).protocol,'https:');
+}
+for(const d of dossiers){
+  assert(works.some(w=>w.id===d.id));
+  [d.role,d.question,...d.path,d.state,d.budget,d.result,d.limit,d.locator,d.comparison,d.schedule,d.control].forEach(bilingual);
+  assert.deepEqual(readRoute(`#frontier/${d.id}`),{tab:'frontier',model:d.id});
 }
 execFileSync(process.execPath,['scripts/casebook.mjs','--check'],{cwd:root});
 execFileSync(process.execPath,['--check','assets/app.mjs'],{cwd:root});
@@ -35,10 +51,7 @@ for(const name of docs){
   for(const m of md.matchAll(/(?:\]\(|(?:src|href)=")([^)"\s]+)[)"]/g)){
     const u=m[1];
     if(u.startsWith('https://hyfine.github.io/loop-transformer-atlas/')){
-      const url=new URL(u), [tab,f,id]=url.hash.slice(1).split('/');
-      if(tab)assert(['overview','tree','lanes','time','lab','library'].includes(tab),u);
-      if(f)assert(routes.some(r=>r.id===f),u);
-      if(id)assert(works.some(w=>w.id===id&&w.family===f),u);
+      assert(readRoute(new URL(u).hash),u);
     }else if(!/^[a-z]+:/i.test(u)){
       const [file,frag]=u.split('#'), target=file?resolve(root,dirname(name),file):join(root,name);
       assert(existsSync(target),`${name}: missing ${u}`);

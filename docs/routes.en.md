@@ -6,9 +6,11 @@ The animated paths are original explanatory diagrams. Each follows one named rep
 
 <a id="route-a"></a>
 
-## A · Rules & sharing
+## A · What can sharing do?
 
-Can one update rule do the work of many distinct layers?
+What can the same layer learn or compute when applied repeatedly?
+
+**Classification cue:** Look for a tied-versus-untied control, a constructive proof, or a test on longer inputs. The object of study is the shared rule itself.
 
 **Worked path: Universal Transformer.** [Play the diagram](https://hyfine.github.io/loop-transformer-atlas/#lab/A)
 
@@ -81,9 +83,11 @@ An approximation analysis motivates loop-dependent scales: the same weights can 
 
 <a id="route-b"></a>
 
-## B · Pretrained cores
+## B · Build a looped model
 
-How do you train a language model whose depth can be reused?
+How do you design and train a model around a repeated block?
+
+**Classification cue:** Look for a model architecture or pretraining recipe: where the loop sits, how its state is initialized, or how it learns at scale. Starting from an existing non-looped checkpoint is the defining contrast with D.
 
 **Worked path: Huginn-0125.** [Play the diagram](https://hyfine.github.io/loop-transformer-atlas/#lab/B)
 
@@ -164,9 +168,11 @@ A 32-layer decoder executes its 24 middle layers twice. Two residual streams exc
 
 <a id="route-c"></a>
 
-## C · Adaptive depth
+## C · Choose the depth
 
-Who decides whether one more pass is worth paying for?
+Who decides which inputs or tokens should get another pass?
+
+**Classification cue:** Look for a stop rule, token router or externally specified budget. Merely running an experiment at several fixed depths is not a depth policy.
 
 **Worked path: Mixture-of-Recursions.** [Play the diagram](https://hyfine.github.io/loop-transformer-atlas/#lab/C)
 
@@ -215,9 +221,11 @@ Condition a shared transition on time and step size. A shortcut-consistency loss
 
 <a id="route-d"></a>
 
-## D · Retrofitting
+## D · Convert a checkpoint
 
-Can the weights you already have survive a second visit?
+How can an existing non-looped checkpoint use its layers twice?
+
+**Classification cue:** Look at the starting weights: a frozen wrapper, learned adapters and continued training are different ways of converting an existing model. They do not share the same training cost.
 
 **Worked path: Training-free loops.** [Play the diagram](https://hyfine.github.io/loop-transformer-atlas/#lab/D)
 
@@ -274,9 +282,11 @@ During adaptation a layer attends to outputs of recent earlier loops. Learned lo
 
 <a id="route-e"></a>
 
-## E · Scheduling & KV
+## E · Run loops efficiently
 
-What travels between passes, and when is it available?
+What must wait for the previous pass, and which past states must stay in memory?
+
+**Classification cue:** Look for a changed execution order or key/value (KV) cache policy. The relevant evidence is latency, throughput, memory or a dependency diagram—not just the number of parameters.
 
 **Worked path: LoopCoder-v2.** [Play the diagram](https://hyfine.github.io/loop-transformer-atlas/#lab/E)
 
@@ -333,9 +343,11 @@ MoLT-R carries residual state; MoLT-KV restarts from embeddings and reads earlie
 
 <a id="route-f"></a>
 
-## F · Structured states
+## F · Refine non-text states
 
-What if the thing being refined is a graph, an action or a world state?
+What does one more pass improve before the system emits a graph, takes an action or advances the simulated world?
+
+**Classification cue:** Identify the object fed back: a dependency graph, latent action or environment state. An ordinary next-token model is not in F just because it accepts images.
 
 **Worked path: Looped World Models.** [Play the diagram](https://hyfine.github.io/loop-transformer-atlas/#lab/F)
 

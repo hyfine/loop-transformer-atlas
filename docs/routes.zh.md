@@ -6,9 +6,11 @@
 
 <a id="route-a"></a>
 
-## A · 共享与算法
+## A · 共享层能做什么
 
-同一条更新规则能否代替多个不同层？
+同一层重复执行，能学会或算出什么？
+
+**归类线索:** 看对照是否为共享层与独立层、是否构造了算法，或是否测试更长输入。研究对象是共享规则本身。
 
 **代表路径: Universal Transformer.** [播放流程图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/A)
 
@@ -81,9 +83,11 @@ UT 学习迭代规则，可编程计算机的存在性证明则把规则写入�
 
 <a id="route-b"></a>
 
-## B · 循环核预训练
+## B · 训练循环模型
 
-怎样训练一个能重复利用深度的语言模型？
+怎样以重复执行的层块为核心来设计和训练模型？
+
+**归类线索:** 看循环块放在哪、状态怎样初始化，或怎样大规模训练。若工作以非循环检查点为起点，重点是如何改造，则读 D。
 
 **代表路径: Huginn-0125.** [播放流程图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B)
 
@@ -164,9 +168,11 @@ Huginn 重复整块（ABAB），Loopie 连续重复每层（AABB）。非线性�
 
 <a id="route-c"></a>
 
-## C · 自适应深度
+## C · 决定循环几轮
 
-由谁判断下一轮计算是否值得？
+哪些请求或 token 值得再算一轮，由谁决定？
+
+**归类线索:** 看有没有停止规则、按 token 的路由或外部指定预算的机制。只测试几种固定深度，不等于学会了分配预算。
 
 **代表路径: Mixture-of-Recursions.** [播放流程图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/C)
 
@@ -215,9 +221,11 @@ ACT 学停机概率，MoR 筛选 token，LoopFormer 接收外部预算。比较�
 
 <a id="route-d"></a>
 
-## D · 存量模型改造
+## D · 给已有模型加循环
 
-已有模型的权重能承受第二次访问吗？
+原本没有循环的检查点，怎样让它的层再工作一次？
+
+**归类线索:** 先看起始权重。冻结后包装、训练适配器、继续训练都属于改造已有模型，但所需训练成本不同。
 
 **代表路径: Training-free loops.** [播放流程图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/D)
 
@@ -274,9 +282,11 @@ ACT 学停机概率，MoR 筛选 token，LoopFormer 接收外部预算。比较�
 
 <a id="route-e"></a>
 
-## E · 调度与缓存
+## E · 降低循环推理开销
 
-轮次之间要传递什么，什么时候可用？
+什么计算必须等上一轮，哪些历史状态必须占用显存？
+
+**归类线索:** 看执行顺序或注意力键值缓存（KV）策略是否改变。应看延迟、吞吐、显存或依赖关系，而不只看参数量。
 
 **代表路径: LoopCoder-v2.** [播放流程图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/E)
 
@@ -333,9 +343,11 @@ MoLT-R 传递残差状态；MoLT-KV 从嵌入重新开始，并读取前一轮�
 
 <a id="route-f"></a>
 
-## F · 结构化状态
+## F · 细化图、动作或世界状态
 
-如果被细化的是图、动作或世界状态呢？
+在输出一张图、采取一次动作或推进一个模拟时间步前，多算一轮细化了什么？
+
+**归类线索:** 看送回去细化的对象：依存图、潜在动作，还是环境状态。能接受图像但仍预测下一个 token，不因此自动归 F。
 
 **代表路径: Looped World Models.** [播放流程图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/F)
 
