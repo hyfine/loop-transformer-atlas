@@ -17,7 +17,7 @@ A looped Transformer reuses a transformation **across depth**. The weights can s
 | If you want to… | Start here |
 |---|---|
 | Understand the idea in ten minutes | [Worked example, history and four controlled comparisons](docs/guide.en.md) |
-| See the entire landscape | [Expand the family tree](https://hyfine.github.io/loop-transformer-atlas/#tree) · [Compare family/year swimlanes](https://hyfine.github.io/loop-transformer-atlas/#lanes) · [Replay the timeline](https://hyfine.github.io/loop-transformer-atlas/#time) |
+| See the entire landscape | [Read the family tree from roots to recent releases](https://hyfine.github.io/loop-transformer-atlas/#tree) · [Compare family/year swimlanes](https://hyfine.github.io/loop-transformer-atlas/#lanes) · [Replay the timeline](https://hyfine.github.io/loop-transformer-atlas/#time) |
 | Follow data through a model | [A · Shared rules](https://hyfine.github.io/loop-transformer-atlas/#lab/A) · [B · Pretraining](https://hyfine.github.io/loop-transformer-atlas/#lab/B) · [C · Routing](https://hyfine.github.io/loop-transformer-atlas/#lab/C) · [D · Retrofit](https://hyfine.github.io/loop-transformer-atlas/#lab/D) · [E · KV & scheduling](https://hyfine.github.io/loop-transformer-atlas/#lab/E) · [F · Structured states](https://hyfine.github.io/loop-transformer-atlas/#lab/F) |
 | Find a paper, implementation or checkpoint | [Search the library](https://hyfine.github.io/loop-transformer-atlas/#library) · [Primary-source casebook](docs/routes.en.md) · [Per-link visit records](data/visits.csv) |
 

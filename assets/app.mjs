@@ -9,7 +9,7 @@ const byId = Object.fromEntries(works.map(w=>[w.id,w]));
 const main = document.querySelector('main');
 let zh = new URL(location.href).searchParams.get('lang') === 'zh';
 let tab, family = 'B', selected = 'huginn', cellYear = '2025', step = 0, tick = 0, timer, rounds = 2;
-let archive, archiveError, loading, shelfPage = 0, query = '', shelfScope = 'all';
+let archive, archiveError, loading, shelfPage = 0, query = '', shelfScope = 'all', treeFit = false;
 const tr = (en,cn)=>zh ? cn : en;
 const t = pair=>pair[Number(zh)];
 const esc = s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -52,22 +52,71 @@ function overview(){
 }
 
 function tree(){
-  const list=routeWorks(family), branchY=i=>42+i*53, leafY=i=>30+i*40;
-  const h=Math.max(345,leafY(list.length)+12), cy=h/2;
-  let g=txt(22,cy-22,tr('REPEATED STATE','重复更新状态'),'class="small"')+rect(18,cy-12,106,42,'#74dfde')+txt(71,cy+16,'Fθ','text-anchor="middle"');
-  routes.forEach((r,i)=>{
-    const y=branchY(i);
-    g+=line(`M124 ${cy+9} C160 ${cy+9} 150 ${y} 190 ${y}`,r.color,`opacity="${family===r.id?1:.42}"`);
-    g+=action('family',r.id,t(r.title),rect(190,y-17,250,35,r.color,family===r.id)+txt(203,y+5,`${r.id} · ${t(r.title)} (${routeWorks(r.id).length})`));
-  });
-  const startY=branchY(routes.findIndex(r=>r.id===family));
-  list.forEach((w,i)=>{
-    const y=leafY(i),r=families[family];
-    g+=`<g class="reveal">${line(`M440 ${startY} C490 ${startY} 490 ${y} 545 ${y}`,r.color)}
-    ${action('work',w.id,w.name,rect(545,y-15,290,31,r.color,w.id===selected)+txt(555,y+5,w.name,'font-size="14"'))}</g>`;
-  });
-  return heading('04',tr('The family tree','方法家族树'),tr('Select a branch, then a leaf. Branches group the question each work answers; they are not claims of academic descent.','先选分支，再点叶子。分支表示作品主要回答的问题，并不表示论文之间存在直接传承。'))+
-    `<div class="plate">${svg(856,h,tr('Family membership','家族归属'),g)}</div>${inspector(byId[selected])}<a class="boxlink" href="#lab/${family}">${tr('Play this family’s mechanism →','播放该家族的代表机制 →')}</a>`;
+  const groups=[
+    {tone:'blue',ids:['B','A','D'],xs:[244,435,626],side:-1,title:tr('Design the update','设计更新规则')},
+    {tone:'teal',ids:['F','C','E'],xs:[665,856,1047],side:1,title:tr('Allocate & apply it','分配与应用计算')}
+  ];
+  const years=[...new Set(dates.map(year))].reverse(), bands=new Map(), rowPitch=40;
+  let bottom=72;
+  for(const yr of years){
+    const cells=Object.fromEntries(routes.map(r=>[r.id,routeWorks(r.id).filter(w=>year(w)===yr)]));
+    const height=8+rowPitch*Math.max(...Object.values(cells).map(cell=>cell.length));
+    bands.set(yr,{top:bottom,height,cells});
+    bottom+=height;
+  }
+  const rootX=646, rootY=bottom+99;
+  const stem=(d,cls)=>`<path class="tree-stem ${cls}" pathLength="1" d="${d}"/>`;
+  let stems='',chips='',caps='',grid='';
+  const font=document.createElement('canvas').getContext('2d');
+  font.font='600 13px system-ui';
+  for(const [i,yr] of years.entries()){
+    const {top,height}=bands.get(yr), y=top+height;
+    grid+=`<path class="tree-rule" d="M39 ${y}H1220"/><rect class="tree-year-pill" x="10" y="${y-10}" width="49" height="20" rx="5"/>`+txt(34.5,y+4,yr,'class="tree-year" text-anchor="middle"');
+    for(const {tone,ids,xs,side} of groups){
+      ids.forEach((id,j)=>{
+        const cell=bands.get(yr).cells[id],x=xs[j];
+        cell.forEach((w,k)=>{
+          const cy=top+height/2+((cell.length-1)/2-k)*rowPitch;
+          const lines=[''];
+          for(const word of w.name.split(' ')){
+            const last=lines.at(-1), next=last?`${last} ${word}`:word;
+            if(last&&font.measureText(next).width>147)lines.push(word);else lines[lines.length-1]=next;
+          }
+          const width=Math.ceil(Math.max(...lines.map(s=>font.measureText(s).width)))+17;
+          const h=lines.length*14+8, x0=side===1?x+13:x-13-width;
+          const body=`<path class="tree-twig" d="M${x} ${cy}h${side*14}"/><circle class="tree-pin" cx="${x}" cy="${cy}" r="3"/>`+
+            `<rect class="hit tree-chip${selected===w.id?' chosen':''}" x="${x0}" y="${cy-h/2}" width="${width}" height="${h}" rx="4"/>`+
+            lines.map((s,n)=>txt(x0+width/2,cy+4.5+(n-(lines.length-1)/2)*14,s,'class="tree-name" text-anchor="middle"')).join('');
+          chips+=`<g class="tree-${tone} tree-leaf" style="--lag:${(years.length-1-i)*75}ms">${action('work',w.id,`${w.name} · ${w.date} · ${t(families[id].title)}`,body)}</g>`;
+        });
+      });
+    }
+  }
+  for(const {tone,ids,xs,side,title} of groups){
+    const hub=xs[1];
+    let wood=stem(`M${rootX} ${rootY} C${rootX} ${bottom+40} ${hub} ${bottom+65} ${hub} ${bottom-4}`,'tree-trunk');
+    ids.forEach((id,j)=>{
+      const x=xs[j], first=bands.get(year(routeWorks(id)[0]));
+      const bend=first.top+first.height;
+      const d=j===1?`M${hub} ${bottom-4}V55`:
+        `M${hub} ${Math.min(bottom-4,bend+54)} C${hub} ${bend+12} ${x} ${bend+38} ${x} ${bend-5}V55`;
+      wood+=stem(d,'tree-arm')+`<path class="tree-tip" d="M${x-14} 60L${x} 33l14 27Z"/>`;
+      const cx=x+side*77, label=t(families[id].title);
+      caps+=`<g class="tree-${tone}">${action('family',id,label,`<rect class="hit tree-heading${id===family?' chosen':''}" x="${cx-86}" y="6" width="172" height="25" rx="7"/>`+
+        txt(cx,23,`${id} · ${label}`,'class="tree-caption" text-anchor="middle"'))}</g>`;
+    });
+    stems+=`<g class="tree-${tone}">${wood}</g>`;
+    caps+=`<g class="tree-${tone}">${txt(hub+side*67,bottom+64,title,'class="tree-group" text-anchor="middle"')}</g>`;
+  }
+  const drawing=`<defs><linearGradient id="tree-root-fill"><stop stop-color="#407bb6"/><stop offset="1" stop-color="#167f80"/></linearGradient></defs>`+
+    `<path class="tree-axis" d="M34 ${bottom+25}V46m-5 8 5-8 5 8"/>${stems}${grid}${chips}${caps}`+
+    `<rect x="${rootX-99}" y="${rootY-19}" width="198" height="38" rx="9" fill="url(#tree-root-fill)"/>`+
+    txt(rootX,rootY+6,tr('Loop Transformers','循环 Transformer'),'class="tree-root-label" text-anchor="middle"');
+  return heading('04',tr('The family tree','方法家族树'),tr('Read from the root up. Blue branches design the update; teal branches allocate or apply it. Select any work to inspect its evidence.','从树根向上读。蓝色分支回答如何设计更新规则，青色分支回答如何分配或应用计算。点选作品即可查看证据。'))+
+    `<div class="tools">${btn('grow',tr('Replay growth ↑','重播生长 ↑'))} ${btn('tree-fit',treeFit?tr('Enlarge labels','放大标签'):tr('Fit whole tree','查看全图'))} ${btn('tree-evidence',tr('View selection','查看所选条目')+` · ${esc(byId[selected].name)} ↓`)}</div>
+    <div class="tree-paper${treeFit?' fit':''}">${svg(1236,rootY+31,tr('Research families by year, oldest at the bottom','研究家族年份图，较早的工作在下方'),drawing)}</div>
+    <p class="hint">${tr('Dashed lines mark the base of each year band; spacing accommodates labels, not elapsed time. Forks mean shared questions, not paper-to-paper descent. On small screens, swipe across the plate.','虚线标记各年份区间的下界；间距按标签排布，不代表时间长度。分叉表示问题分类，不表示论文师承关系。小屏幕可横向滑动。')}</p>
+    ${inspector(byId[selected])}<a class="boxlink" href="#lab/${family}">${tr('Play this family’s mechanism →','播放该家族的代表机制 →')}</a>`;
 }
 
 function lanes(){
@@ -147,11 +196,18 @@ function library(){
 function render(){
   const focus=document.activeElement;
   const id=focus.id, cmd=focus.dataset.do, value=focus.dataset.value;
+  const treeScroll=main.querySelector('.tree-paper .chart')?.scrollLeft;
   document.documentElement.lang=zh?'zh-CN':'en';
   document.title=`${t(chapters[tab])} · Loop Transformer Atlas`;
   document.querySelector('#language').textContent=tr('中文','English');
   document.querySelector('#nav').innerHTML=Object.entries(chapters).map(([id,p])=>`<a href="#${id}" ${id===tab?'aria-current="page"':''}>${t(p)}</a>`).join('');
   main.innerHTML=({overview,tree,lanes,time:trajectory,lab,library})[tab]();
+  const chart=main.querySelector('.tree-paper .chart');
+  if(chart&&treeScroll!==undefined)chart.scrollLeft=treeScroll;
+  else if(chart&&location.hash.startsWith('#tree/')){
+    const selectedRect=chart.querySelector('.tree-chip.chosen').getBoundingClientRect();
+    chart.scrollLeft=selectedRect.left-chart.getBoundingClientRect().left+(selectedRect.width-chart.clientWidth)/2;
+  }
   if(id)document.getElementById(id)?.focus({preventScroll:true});
   else if(cmd)Array.from(main.querySelectorAll('[data-do]')).find(el=>el.dataset.do===cmd&&el.dataset.value===value)?.focus({preventScroll:true});
 }
@@ -181,7 +237,13 @@ function handle(key,val){
     stop();
     if(key==='round')rounds=Number(val);
     if(key==='family'){location.hash=`tree/${val}`;return;}
-    if(key==='work'){location.hash=`tree/${family}/${val}`;return;}
+    if(key==='work'){location.hash=`tree/${byId[val].family}/${val}`;return;}
+    if(key==='tree-fit')treeFit=!treeFit;
+    if(key==='grow'){
+      const paper=main.querySelector('.tree-paper');
+      paper.classList.remove('growing');void paper.offsetWidth;paper.classList.add('growing');return;
+    }
+    if(key==='tree-evidence'){const card=main.querySelector('.inspector');card.tabIndex=-1;card.focus();return;}
     if(key==='lane-work')selected=val;
     if(key==='cell'){[family,cellYear]=val.split(':');selected=routeWorks(family).find(w=>year(w)===cellYear).id;}
     if(key==='tick')tick=Number(val);

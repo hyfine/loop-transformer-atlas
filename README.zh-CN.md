@@ -17,7 +17,7 @@
 | 想弄清什么 | 从这里开始 |
 |---|---|
 | 十分钟建立直觉 | [算例、技术史与四组受控实验](docs/guide.zh.md) |
-| 掌握全局 | [可展开的家族树](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#tree) · [按年份对照各路线泳道](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lanes) · [回放时间轨迹](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#time) |
+| 掌握全局 | [从树根向上读到最新工作的家族树](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#tree) · [按年份对照各路线泳道](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lanes) · [回放时间轨迹](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#time) |
 | 逐步跟踪一次前向传播 | [A · 共享规则](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/A) · [B · 预训练](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B) · [C · 路由](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/C) · [D · 改造](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/D) · [E · KV 与调度](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/E) · [F · 结构化状态](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/F) |
 | 寻找论文、实现与权重 | [检索文献库](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#library) · [一手资料手册](docs/routes.zh.md) · [逐链接访问记录](data/visits.csv) |
 
