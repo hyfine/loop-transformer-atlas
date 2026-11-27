@@ -6,7 +6,9 @@
 
 **只存一组权重，却能多算几轮。下一轮究竟买到了什么？**
 
-[**从图解综述开始 →**](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/digest) · [中文 Markdown 原件](survey/Loop_Transformer_Survey_zh_illustrated.md) · [下载工作簿](survey/Loop_Transformer_Landscape.xlsx) · [原件归档说明](survey/README.md)
+[**按章节浏览图解综述 →**](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/digest) · [下载工作簿](survey/Loop_Transformer_Landscape.xlsx) · [原件归档说明](survey/README.md)
+
+**推荐在 PC 端阅读全文：** [打开《Loop Transformer 技术全景》中文图解综述](survey/Loop_Transformer_Survey_zh_illustrated.md)。所有章节、插图和表格都在同一页，适合连续阅读。
 
 **微信公众号版：** [点击阅览图文全文（网页版）](https://hyfine.github.io/loop-transformer-atlas/wechat/公众号正文.html) · [在手机微信中阅读公众号原文](https://mp.weixin.qq.com/s/Poxa25iG-8ZYJcdpjBVsDg) · [完整素材与排版工具](wechat/README.md)
 

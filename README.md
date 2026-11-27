@@ -6,7 +6,9 @@
 
 **One set of weights. Several rounds of computation. What does the next pass buy?**
 
-[**Read the illustrated survey →**](https://hyfine.github.io/loop-transformer-atlas/#survey/digest) · [Original Chinese Markdown](survey/Loop_Transformer_Survey_zh_illustrated.md) · [Download the workbook](survey/Loop_Transformer_Landscape.xlsx) · [Archive notes](survey/README.md)
+[**Browse the illustrated survey by chapter →**](https://hyfine.github.io/loop-transformer-atlas/#survey/digest) · [Download the workbook](survey/Loop_Transformer_Landscape.xlsx) · [Archive notes](survey/README.md)
+
+**Recommended for desktop reading:** [Read the full illustrated survey in Chinese](survey/Loop_Transformer_Survey_zh_illustrated.md). All chapters, figures and tables are on one GitHub page.
 
 **WeChat edition (中文):** [Read the full illustrated article in your browser](https://hyfine.github.io/loop-transformer-atlas/wechat/公众号正文.html) · [Open the original article in WeChat](https://mp.weixin.qq.com/s/Poxa25iG-8ZYJcdpjBVsDg) · [Publication files and artwork](wechat/README.md)
 
