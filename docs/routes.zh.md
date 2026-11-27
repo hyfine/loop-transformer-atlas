@@ -203,7 +203,7 @@ ACT 学停机概率，MoR 筛选 token，LoopFormer 接收外部预算。比较�
 
 ### Ouro
 
-2025-10 · arXiv · [arxiv.org](https://arxiv.org/abs/2510.25741) · [huggingface.co](https://huggingface.co/ByteDance/Ouro-2.6B)
+2025-10 · arXiv · [arxiv.org](https://arxiv.org/abs/2510.25741) · [huggingface.co](https://huggingface.co/ByteDance/Ouro-2.6B) · [ouro-llm.github.io](https://ouro-llm.github.io/)
 
 以熵正则化的深度分配目标训练循环语言模型，数据量达 7.7T token，使中间出口也具有预测价值。
 

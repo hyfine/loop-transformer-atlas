@@ -22,7 +22,7 @@ We searched the public web and arXiv by `universal transformer`, `recurrent stac
 
 ## Reading the frontier chapters / 如何解读前沿专题
 
-The [research directions](https://hyfine.github.io/loop-transformer-atlas/#directions) chapter also cites [Looped CED](https://arxiv.org/abs/2611.13378v1) as supplementary primary reading, **not** a new map record. Proposed comparison experiments are editorial suggestions, not published results. The [model deep dives](https://hyfine.github.io/loop-transformer-atlas/#frontier) distinguish Z.ai's 30B training ablation, SenseNova's matched training/inference configurations and NVIDIA's same-checkpoint inference sweep. 技术方向中的「下一步怎样验证」是建议实验，不是复现结论；三个模型的数值因对照条件不同，不组成排行榜。
+The [research directions](https://hyfine.github.io/loop-transformer-atlas/#directions) chapter also cites [Looped CED](https://arxiv.org/abs/2611.13378v1) as supplementary primary reading, **not** a new map record. Proposed comparison experiments are editorial suggestions, not published results. [Model Cases](https://hyfine.github.io/loop-transformer-atlas/#frontier) follows survey §7.3, Figs. 7-2–7-7. It distinguishes Z.ai’s 30B training ablation, SenseNova’s matched train/test depths, Dory’s inference sweep, Ouro’s matched average exit depth, and MoLT’s scale-specific efficiency and timing experiments. 技术方向中的「下一步怎样验证」是建议实验；五个案例的比较口径不同，不构成排行榜。GLM 与 U-MoLT 的架构图为本站独立示意，图旁可直达发布方原图；其余图沿用[图解版归档及其署名](survey/README.md)。
 
 ## What was traversed / 遍历范围
 

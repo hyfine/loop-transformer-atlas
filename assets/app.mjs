@@ -90,7 +90,10 @@ const plateEnglish={
   dory_architecture:'Dory: normalized input, core and output',ouro_looplm_architecture:'Ouro: exit training vs inference',
   molt_attention_visibility:'MoLT: signals visible across visits',molt_architecture:'U-MoLT: construct memory, then read it'
 };
-const sourceArt={glm54_architecture:'https://z.ai/blog/glm-5.4',molt_attention_visibility:'https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_attention_visibility.png',molt_architecture:'https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png'};
+const sourceArt=Object.fromEntries([
+  ['molt_attention_visibility.png','https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_attention_visibility.png'],
+  ...dossiers.flatMap(d=>d.figures.filter(f=>f.diagram).map(f=>[f.file,f.source]))
+]);
 async function loadSurvey(){
   if(reader||surveyLoading||surveyError)return;
   surveyLoading=true;
@@ -113,10 +116,11 @@ function illustrated(){
   const label=(f)=>zh?f.alt:plateEnglish[f.file.split('/').pop().split('.')[0]]||`${t(ch.title)} · mechanism`;
   let graphic='';
   if(f){
-    const src='survey/'+f.file,credit=sourceArt[f.file.split('/').pop().split('.')[0]];
+    const src='survey/'+f.file,credit=sourceArt[f.file.split('/').pop()];
     graphic=`<div class="plate survey-figure"><div class="tools"><label>${tr('Illustration','图版')} <select id="survey-plate">${options(part.figures.map((v,n)=>[String(n),`${n+1}/${part.figures.length} · ${label(v)}`]),String(plate))}</select></label></div>
     <figure><a href="${src}"><img src="${src}" alt="${esc(label(f))}"></a><figcaption><b>${esc(label(f))}</b>${zh&&f.caption&&!credit?` · ${esc(f.caption)}`:''}</figcaption></figure>
-    <div class="links"><a href="${src}">${tr('Full-size image','打开原尺寸图片')} ↗</a>${f.svg?`<a href="survey/${f.svg}">${tr('Editable vector','可编辑矢量版')} ↗</a>`:''}${credit?`<a href="${credit}">${tr('Atlas redraw here · see publisher’s original','本站独立示意 · 查看发布方原图')} ↗</a>`:''}</div></div>`;
+    <div class="links"><a href="${src}">${tr('Full-size image','打开原尺寸图片')} ↗</a>${f.svg?`<a href="survey/${f.svg}">${tr('Editable vector','可编辑矢量版')} ↗</a>`:''}${credit?`<a href="${esc(credit)}">${tr('Atlas redraw here · see publisher’s original','本站独立示意 · 查看发布方原图')} ↗</a>`:''}
+    ${section==='industry'?dossiers.filter(d=>d.figures.some(fig=>f.file===`images/external/${fig.file}`)).map(d=>`<a href="#frontier/${d.id}">${tr('Read the model case','阅读对应模型深读')} →</a>`).join(''):''}</div></div>`;
   }
   const familyNotes=field?(corpus||[]).filter(r=>r.family===section&&r.reading):[];
   const appendix=section==='families'||section==='taxonomy'?familyPicker():'';
@@ -253,16 +257,26 @@ function researchDirections(){
 function frontierModels(){
   const d=dossiers.find(item=>item.id===model), w=byId[d.id];
   const block=(label,copy)=>`<div><h4>${label}</h4><p>${t(copy)}</p></div>`;
-  return heading('10',t(chapters.frontier),tr('One flagship disclosure and two open models answer different questions. Follow one prediction through each model, then check which comparison its authors actually ran. This is not a ranking of frontier capability.','一份旗舰技术披露与两个开放模型回答了不同问题。先跟着一次预测看内部如何执行，再看作者真正做了哪种对照。这里不是前沿能力排行榜。'))+
-    switcher(tr('Choose a model','选择模型'),dossiers.map(row=>[`#frontier/${row.id}`,byId[row.id].name,row.id===model]))+
-    `<article class="plate dossier"><div class="meta">${w.date} · ${t(d.role)}</div><h2>${w.name}</h2><p class="lede">${t(d.question)}</p>
+  const name=row=>row.id==='molt'?'MoLT':byId[row.id].name;
+  const figures=d.figures.map(f=>{
+    const src=esc(f.diagram||`survey/images/external/${f.file}`), title=esc(t(f.title));
+    return `<figure data-plate="${f.number}"><a href="${src}" aria-label="${tr('Enlarge: ','放大：')}${title}"><img src="${src}" alt="${title}" decoding="async"></a>
+      <figcaption><strong>${tr('Fig. ','图 ')}${f.number} · ${title}</strong><p>${esc(t(f.caption))}</p>
+      <div class="links"><span>${esc(t(f.credit))}</span><a href="${src}">${tr('Full size','查看大图')} ↗</a>
+      <a href="${esc(f.source)}">${f.diagram?tr('Publisher’s original figure','发布方原图'):tr('Figure source','图源')} ↗</a></div></figcaption></figure>`;
+  }).join('');
+  return heading('§7.3',t(chapters.frontier),tr('Read the five architectures side by side: where do the weights repeat, what passes between visits, and when does the model read a prediction? Each figure is paired with the comparison its authors actually ran.','对照阅读五种架构：权重在哪里重用，两遍之间传递什么，什么时候读出预测？每张图都配有读图说明，并区分作者实际做过的实验。'))+
+    switcher(tr('Choose a model','选择模型'),dossiers.map(row=>[`#frontier/${row.id}`,name(row),row.id===model]))+
+    `<article class="plate dossier"><div class="meta">${w.date} · ${t(d.role)}</div><h2>${name(d)}</h2><p class="lede">${t(d.question)}</p>
+      <div class="survey-figure case-figures">${figures}</div>
       <ol class="model-path" aria-label="${tr('Forward path','一次前向路径')}">${d.path.map(s=>`<li>${t(s)}</li>`).join('')}</ol><div class="case-grid">
       ${block(tr('01 · What changes between passes?','01 · 轮次之间什么在变？'),d.state)}
       ${block(tr('02 · What is trained, stored or recomputed?','02 · 学什么、存什么、重算什么？'),d.budget)}
       ${block(tr('03 · What did the authors measure?','03 · 作者实际测了什么？'),d.result)}
       ${block(tr('04 · What cannot be inferred?','04 · 哪些结论不能推出？'),d.limit)}</div>
-      <p class="hint">${t(d.locator)}</p>${sources(w)}<a class="boxlink" href="${mapHref('tree',w.id)}">${tr('Locate this work on the map','在地图中定位该模型')} →</a></article>
-    <section><h3>${tr('Compare the experiments, not the headlines','三组实验究竟在比较什么？')}</h3><div class="compare-scroll"><table class="comparison"><thead><tr>${[tr('Case','案例'),tr('Starting point','起点'),tr('Repeated work','重复哪部分'),tr('Comparison behind the claim','证据的比较口径')].map(s=>`<th scope="col">${s}</th>`).join('')}</tr></thead><tbody>${dossiers.map(row=>`<tr><th scope="row"><a href="#frontier/${row.id}">${byId[row.id].name}</a></th><td>${t(row.comparison)}</td><td>${t(row.schedule)}</td><td>${t(row.control)}</td></tr>`).join('')}</tbody></table></div></section>`;
+      <p class="hint">${t(d.locator)}</p>${sources(w)}<div class="links"><a class="boxlink" href="${mapHref('tree',w.id)}">${tr('Locate this work on the map','在地图中定位该模型')} →</a>
+      <a class="boxlink" href="#survey/industry">${tr('Read the illustrated survey · §7','回到图解综述 · §7')} →</a></div></article>
+    <section><h3>${tr('Compare the experiments, not the headlines','五个案例究竟在比较什么？')}</h3><div class="compare-scroll"><table class="comparison"><thead><tr>${[tr('Case','案例'),tr('Starting point','起点'),tr('Repeated work','重复哪部分'),tr('Comparison behind the claim','证据的比较口径')].map(s=>`<th scope="col">${s}</th>`).join('')}</tr></thead><tbody>${dossiers.map(row=>`<tr><th scope="row"><a href="#frontier/${row.id}">${name(row)}</a></th><td>${t(row.comparison)}</td><td>${t(row.schedule)}</td><td>${t(row.control)}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
 
 function lab(){

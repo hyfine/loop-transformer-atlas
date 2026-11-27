@@ -45,6 +45,12 @@ for(const d of directions){
 for(const d of dossiers){
   assert(works.some(w=>w.id===d.id));
   [d.role,d.question,...d.path,d.state,d.budget,d.result,d.limit,d.locator,d.comparison,d.schedule,d.control].forEach(bilingual);
+  assert(d.figures.length,`Missing architecture: ${d.id}`);
+  for(const f of d.figures){
+    [f.title,f.caption,f.credit].forEach(bilingual);
+    assert.equal(new URL(f.source).protocol,'https:');
+    assert(existsSync(join(root,f.diagram||`survey/images/external/${f.file}`)),f.file);
+  }
   assert.deepEqual(readRoute(`#frontier/${d.id}`),{tab:'frontier',model:d.id});
 }
 execFileSync(process.execPath,['scripts/casebook.mjs','--check'],{cwd:root});
@@ -71,6 +77,9 @@ for(const row of manifest){
 }
 const plates=chapters.flatMap(c=>c.figures);
 assert.equal(plates.length,41);unique(plates.map(f=>f.file));
+const section73=read('survey/Loop_Transformer_Survey_zh_illustrated.md').split('### 7.3 ')[1].split('### 7.4 ')[0];
+const casePlates=dossiers.flatMap(d=>d.figures.map(f=>[f.file,f.number]));
+assert.deepEqual(casePlates,Array.from(section73.matchAll(/!\[[^\]]*\]\(images\/external\/([^)]+)\)\s+\*图 (7-\d+)：/g),m=>[m[1],m[2]]),'Model Cases must cover each §7.3 plate in source order');
 const assets=plates.flatMap(f=>f.svg?[f.file,f.svg]:[f.file]).sort();
 assert.deepEqual(assets,manifest.map(r=>r.path).filter(p=>p.startsWith('images/')).sort());
 for(const c of chapters)assert.doesNotMatch(c.html,/<(?:script|iframe|object)\b|(?:src|href)="javascript:/i);

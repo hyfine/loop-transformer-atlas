@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 450" width="1080" height="450" role="img" aria-labelledby="t d">
+  <title id="t">GLM-5.4 · two visits to one middle block</title>
+  <desc id="d">Layers 1–26 prepare the state. Layers 27–54 run twice with distinct update gates. Pass two reuses the first pass's sparse prefix and indices and reads its own local KV window. Layers 55–78 and the language head read the result.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m1 1 8 4-8 4z" fill="#31586a"/></marker></defs>
+  <rect width="1080" height="450" rx="16" fill="#f4f9f8"/>
+  <g font-family="system-ui, sans-serif" fill="#163849">
+    <text x="34" y="35" font-size="14" letter-spacing="2" fill="#24736c">ATLAS REDRAW · 本站示意 · §7.3</text>
+    <text x="34" y="73" font-size="27" font-weight="bold">GLM-5.4  /  78 stored layers, 106 layer executions</text>
+    <g fill="none" stroke="#33877e" stroke-width="2"><path d="M258 135v-14h544v14"/></g>
+    <text x="530" y="111" text-anchor="middle" font-size="17" fill="#24736c">same 28 layers · 两遍共享权重 θ</text>
+    <g stroke-width="2">
+      <rect x="34" y="150" width="164" height="90" rx="10" fill="#e4eef5" stroke="#9fb9c8"/>
+      <rect x="252" y="150" width="224" height="90" rx="10" fill="#d6efe7" stroke="#409788"/>
+      <rect x="582" y="150" width="224" height="90" rx="10" fill="#d6efe7" stroke="#409788"/>
+      <rect x="866" y="150" width="180" height="90" rx="10" fill="#e4eef5" stroke="#9fb9c8"/>
+    </g>
+    <g text-anchor="middle" font-size="20" font-weight="bold">
+      <text x="116" y="186">Prelude 前段</text><text x="364" y="186">Pass 1 · 首遍</text>
+      <text x="694" y="186">Pass 2 · 再访</text><text x="956" y="186">Coda → LM head</text>
+    </g>
+    <g text-anchor="middle" font-size="15">
+      <text x="116" y="216">L1–26</text><text x="364" y="216">L27–54 → gate β₁</text>
+      <text x="694" y="216">L27–54 → gate β₂</text><text x="956" y="216">L55–78 · 读出</text>
+      <text x="527" y="180">state x₁</text>
+    </g>
+    <g fill="none" stroke="#31586a" stroke-width="2.5" marker-end="url(#a)">
+      <path d="M199 195h47"/><path d="M477 195h99"/><path d="M808 195h52"/>
+      <path d="M364 241v43"/><path d="M482 326h70q18 0 18-18v-36q0-12 12-12h55q12 0 12-12v-7"/>
+      <path d="M783 288v-45"/>
+    </g>
+    <rect x="222" y="290" width="259" height="77" rx="9" fill="#e7eefb" stroke="#8aa9cd"/>
+    <rect x="685" y="290" width="294" height="77" rx="9" fill="#fff0db" stroke="#d5ac70"/>
+    <g text-anchor="middle">
+      <text x="352" y="320" font-size="18" font-weight="bold">Sparse prefix · 全局前缀</text>
+      <text x="352" y="346" font-size="15">pass-1 KV + top-k indices</text>
+      <text x="831" y="320" font-size="18" font-weight="bold">Local KV · 本轮局部窗口</text>
+      <text x="831" y="346" font-size="15">pass-2 KV · 128 tokens</text>
+    </g>
+    <path d="M34 389h1012" stroke="#bfd3d3"/>
+    <text x="34" y="420" font-size="17">26 + 2 × 28 + 24 = 106  ·  Gates blend updates; they do not skip a visit. 门控调节写回幅度，不跳过计算。</text>
+  </g>
+</svg>

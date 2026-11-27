@@ -51,7 +51,7 @@ export const works = [
   w('plt','E','2025-10','Parallel Loop Transformer','arXiv',[ar('2510.24824')],
     'Offset cross-loop information along sequence positions. A later pass can read information that is already available instead of waiting for the same position to finish.|沿序列位置错开跨轮信息传递。后续轮次可读取已经就绪的位置，而不必等待同一位置完成。',
     'Shortening the serial dependency changes which state is available; it is not a free parallelization of identical arithmetic.|缩短串行依赖会改变可读的状态，并非完全相同计算的免费并行化。'),
-  w('ouro','C','2025-10','Ouro','arXiv',[ar('2510.25741'),hf('ByteDance/Ouro-2.6B')],
+  w('ouro','C','2025-10','Ouro','arXiv',[ar('2510.25741'),hf('ByteDance/Ouro-2.6B'),'https://ouro-llm.github.io/'],
     'Train looped LMs with an entropy-regularized depth-allocation objective and up to 7.7T tokens. The objective teaches intermediate exits to be useful.|以熵正则化的深度分配目标训练循环语言模型，数据量达 7.7T token，使中间出口也具有预测价值。',
     'Better manipulation of supplied facts does not imply the capacity to memorize as many independent facts as a larger model.|更善于处理给定知识，不意味着能记住与更大模型同样多的独立事实。'),
   w('retro','D','2025-11','Retrofitted recurrence','arXiv',[ar('2511.07384'),gh('mcleish7/retrofitting-recurrence'),hf('collections/tomg-group-umd/retrofitting-recurrence')],

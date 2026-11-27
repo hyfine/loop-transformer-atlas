@@ -203,7 +203,7 @@ A router selects which tokens revisit the shared stack. Restricting attention wo
 
 ### Ouro
 
-2025-10 · arXiv · [arxiv.org](https://arxiv.org/abs/2510.25741) · [huggingface.co](https://huggingface.co/ByteDance/Ouro-2.6B)
+2025-10 · arXiv · [arxiv.org](https://arxiv.org/abs/2510.25741) · [huggingface.co](https://huggingface.co/ByteDance/Ouro-2.6B) · [ouro-llm.github.io](https://ouro-llm.github.io/)
 
 Train looped LMs with an entropy-regularized depth-allocation objective and up to 7.7T tokens. The objective teaches intermediate exits to be useful.
 
