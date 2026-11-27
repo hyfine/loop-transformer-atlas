@@ -6,13 +6,27 @@
 
 **只存一组权重，却能多算几轮。下一轮究竟买到了什么？**
 
-[**打开中文交互图谱 →**](https://hyfine.github.io/loop-transformer-atlas/?lang=zh) · [技术导读](docs/guide.zh.md) · [方法案例手册](docs/routes.zh.md) · [证据与链接审阅](EVIDENCE.md)
+[**从图解综述开始 →**](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/digest) · [中文 Markdown 原件](survey/Loop_Transformer_Survey_zh_illustrated.md) · [下载工作簿](survey/Loop_Transformer_Landscape.xlsx) · [原件归档说明](survey/README.md)
 
 [![前段编码输入，动态反馈边将变化的状态送回同一个共享核，最后由尾段读出。](assets/circuit.svg)](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B)
 
 循环 Transformer **沿深度**复用同一变换：权重可以不变，激活状态却在每轮变化。它不是智能体反复调用大模型，也不是生成更长的文字思维链。[SenseNova-Loop-9B 配置](https://huggingface.co/sensenova/SenseNova-Loop-9B/blob/main/config.json)很适合作为起点：**32 个独立层，执行 56 层次**。多出的 24 次执行来自重访中间块，而不是多保存了 24 层参数。
 
-## 选择阅读入口
+## 图解主线：从一次层重访，读到一次工程决策
+
+11 月 26 日的图解版以 **四层技术栈、十三个技术族**组织 **376 篇论文**，另列 17 项模型／工业发布和 7 篇博客／报道。网页版按原文顺序推进；每章可切换中英导读、展开对应中文原文和表格，查看高清图以及随附的可编辑 SVG。
+
+| 按原文顺序读 | 读完应能回答 |
+|---|---|
+| [§0 一页结论](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/digest) → [§1 概念与设计空间](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/design) | 到底重复了什么？为什么 `ABAB` 与 `AABB` 同样只存两组权重，却不是同一计算？ |
+| [§2 六阶段历史](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/history) → [§3 家族树与谱系](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/lineage) → [§4 泳道](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/lanes) | 何时从研究表达力转向训练、服务？图中哪些联系比“先后发表”更强？ |
+| [§5 四层分类](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/taxonomy) → [§6 十三族深读](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/families) | 一项工作的核心对照是模型、训练、推理还是理解与应用？每族配有十篇选读。 |
+| [§7 模型与工业实践](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/industry) → [§8 趋势](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/trends) → [§9 开放问题](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/questions) | 收益究竟来自同检查点加深、等训练步时，还是等 FLOPs／KV 的结构比较？ |
+| [§10 工程选型](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/decisions) → [§11 来源](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/sources) → [术语表](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/glossary) | 哪些权重可以改？瓶颈在哪？做什么对照能推翻预期的收益？ |
+
+**按时间选读：** 5 分钟读 §0、§3、§8；30 分钟读 §1、§2、§4、§5、§7；两小时沿主线阅读全文，对照[每族十篇的 130 篇精选](survey/reading-list.csv)与[43 篇近期增量](survey/latest-papers.csv)。两份清单有重叠；仓库链接到出版方，不托管论文全文。
+
+## 配套交互工具
 
 | 想弄清什么 | 从这里开始 |
 |---|---|
@@ -36,4 +50,4 @@
 
 ## 收录边界与复用
 
-六条路线收录 32 条研究或发布精读记录，另设含 333 条记录的发现索引。两者有重叠，**不能相加称为 365 种架构**。每条精读记录都标注一手证据与解读边界。[检索方法、种子归属与失效链接](EVIDENCE.md) · [贡献与本地运行](CONTRIBUTING.md) · [引用](CITATION.cff) · [许可](LICENSE)。
+综述的主索引是 **376 篇、F01–F13 十三族**。交互地图的 **32 条案例、A–F 六个阅读视角**用于对照机制；333 条种子索引用于检索，它们与主库重叠，不能相加。[归档差异与图源](survey/README.md) · [检索与失效链接](EVIDENCE.md) · [贡献与本地运行](CONTRIBUTING.md) · [引用](CITATION.cff) · [许可](LICENSE)。

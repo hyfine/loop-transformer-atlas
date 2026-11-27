@@ -6,13 +6,27 @@
 
 **One set of weights. Several rounds of computation. What does the next pass buy?**
 
-[**Open the interactive atlas →**](https://hyfine.github.io/loop-transformer-atlas/) · [Read the technical guide](docs/guide.en.md) · [Casebook](docs/routes.en.md) · [Evidence ledger](EVIDENCE.md)
+[**Read the illustrated survey →**](https://hyfine.github.io/loop-transformer-atlas/#survey/digest) · [Original Chinese Markdown](survey/Loop_Transformer_Survey_zh_illustrated.md) · [Download the workbook](survey/Loop_Transformer_Landscape.xlsx) · [Archive notes](survey/README.md)
 
 [![A prelude encodes the input; an animated feedback path returns the evolving state to the same recurrent core before a coda reads it out.](assets/circuit.svg)](https://hyfine.github.io/loop-transformer-atlas/#lab/B)
 
 A looped Transformer reuses a transformation **across depth**. The weights can stay the same while the activations change. This is not an agent repeatedly calling an LLM, and it is not a model writing a longer chain of thought. The [SenseNova-Loop-9B configuration](https://huggingface.co/sensenova/SenseNova-Loop-9B/blob/main/config.json) is a useful first example: **32 distinct layers; 56 layer executions**. The extra 24 executions come from revisiting the middle block, not from storing 24 more layers.
 
-## Pick a way in
+## The illustrated survey: from a repeated layer to an engineering decision
+
+The November 26 survey indexes **376 papers in 13 families**, 17 model/release records and seven articles/reports. The web edition follows the source order; each chapter offers an English or Chinese reading guide, its figure plates, and the complete Chinese source section and tables. The workbook carries the underlying evidence and family tabs.
+
+| In the survey’s order | Read it to answer… |
+|---|---|
+| [§0 Takeaways](https://hyfine.github.io/loop-transformer-atlas/#survey/digest) → [§1 Design space](https://hyfine.github.io/loop-transformer-atlas/#survey/design) | What repeats? Compare `ABAB` with `AABB`; distinguish storage from executions. |
+| [§2 Six historical phases](https://hyfine.github.io/loop-transformer-atlas/#survey/history) → [§3 Family tree & lineage](https://hyfine.github.io/loop-transformer-atlas/#survey/lineage) → [§4 Swimlanes](https://hyfine.github.io/loop-transformer-atlas/#survey/lanes) | When did the question shift from representability to training, then to serving? Which edges mean more than chronology? |
+| [§5 Four-layer taxonomy](https://hyfine.github.io/loop-transformer-atlas/#survey/taxonomy) → [§6 Thirteen investigations](https://hyfine.github.io/loop-transformer-atlas/#survey/families) | Model, training, inference, understanding/application: which experiment distinguishes one family from another? Each family has ten suggested papers. |
+| [§7 Models & industrial practice](https://hyfine.github.io/loop-transformer-atlas/#survey/industry) → [§8 Trends](https://hyfine.github.io/loop-transformer-atlas/#survey/trends) → [§9 Open questions](https://hyfine.github.io/loop-transformer-atlas/#survey/questions) | Which claims are measured on a fixed checkpoint, at equal step time, or with matched FLOPs/KV? |
+| [§10 Engineering decisions](https://hyfine.github.io/loop-transformer-atlas/#survey/decisions) → [§11 Sources](https://hyfine.github.io/loop-transformer-atlas/#survey/sources) → [Glossary](https://hyfine.github.io/loop-transformer-atlas/#survey/glossary) | Which weights may change, what budget is scarce, and what would disprove the claimed benefit? |
+
+**Time-boxed reading:** 5 minutes → §0, §3, §8. 30 minutes → §1, §2, §4, §5, §7. Two hours → follow the full route and cross-check claims against the [130 family readings](survey/reading-list.csv) and [43 recent releases](survey/latest-papers.csv). These lists overlap. Full paper PDFs are linked to their publishers, not hosted here.
+
+## Companion tools
 
 | If you want to… | Start here |
 |---|---|
@@ -36,4 +50,4 @@ A looped Transformer reuses a transformation **across depth**. The weights can s
 
 ## Scope and reuse
 
-32 curated research/release records across six routes, plus a separate 333-record discovery index. The collections overlap; they are **not** 365 distinct loop architectures. Every curated record links to primary evidence and states a limitation. [Method, seed attribution and failed links](EVIDENCE.md) · [Contributing / running locally](CONTRIBUTING.md) · [Citation](CITATION.cff) · [Licenses](LICENSE).
+The workbook’s **F01–F13** taxonomy is the primary route through the 376-paper survey. The **32 curated** case notes use six **A–F** editorial questions to drive the interactive maps; the historical seed index has 333 records. These collections overlap and must not be added together. [Edition contents, metadata and image rights](survey/README.md) · [Evidence](EVIDENCE.md) · [Contributing](CONTRIBUTING.md) · [Citation](CITATION.cff) · [Licenses](LICENSE).

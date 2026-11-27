@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660"><defs><marker id="ah1F3A5F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F3A5F"/></marker><marker id="ah2BB3A3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2BB3A3"/></marker><marker id="ah1C8577" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1C8577"/></marker><marker id="ahEE8A2A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EE8A2A"/></marker><marker id="ah5B6B7F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7F"/></marker><marker id="ahD64545" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D64545"/></marker><marker id="ah3A6EA5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3A6EA5"/></marker><marker id="ah22313F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#22313F"/></marker></defs><rect width="1200" height="660" fill="#FFFFFF"/>
+<text x="40" y="52" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="26" fill="#1F3A5F" font-weight="bold" text-anchor="start">并行循环（PLT）与 LoopCoder-v2：每多一轮，收益与位置代价如何权衡</text>
+<text x="40" y="82" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#5B6B7F" font-weight="normal" text-anchor="start">PLT 让循环几乎不增加解码延迟；LoopCoder-v2 用“收益–成本”视角解释为何 2 轮最优</text>
+<rect x="40" y="108" width="560" height="490" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="60" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1F3A5F" font-weight="bold" text-anchor="start">解码调度：串行循环 vs 跨循环并行（R = 2）</text>
+<text x="60" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14.5" fill="#1F3A5F" font-weight="bold" text-anchor="start">串行循环：每个 token 跑完 2 轮才能生成下一个</text>
+<text x="138" y="210" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第 1 轮</text>
+<text x="138" y="250" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第 2 轮</text>
+<text x="170.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">1</text>
+<text x="216.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">2</text>
+<text x="262.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">3</text>
+<text x="308.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">4</text>
+<text x="354.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">5</text>
+<text x="400.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">6</text>
+<text x="446.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">7</text>
+<text x="492.0" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">8</text>
+<text x="526" y="288" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#9AA7B5" font-weight="normal" text-anchor="start">解码步</text>
+<rect x="150" y="190" width="40" height="30" rx="6" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="170.0" y="210" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="196" y="230" width="40" height="30" rx="6" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="216.0" y="250" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="242" y="190" width="40" height="30" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="262.0" y="210" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="288" y="230" width="40" height="30" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="308.0" y="250" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="334" y="190" width="40" height="30" rx="6" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="354.0" y="210" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="380" y="230" width="40" height="30" rx="6" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="400.0" y="250" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="426" y="190" width="40" height="30" rx="6" fill="#EFE7FB" stroke="#7B5CC4" stroke-width="1.3"/>
+<text x="446.0" y="210" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#7B5CC4" font-weight="bold" text-anchor="middle">t4</text>
+<rect x="472" y="230" width="40" height="30" rx="6" fill="#EFE7FB" stroke="#7B5CC4" stroke-width="1.3"/>
+<text x="492.0" y="250" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#7B5CC4" font-weight="bold" text-anchor="middle">t4</text>
+<text x="60" y="316" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#D64545" font-weight="normal" text-anchor="start">延迟 ≈ R 倍；每轮各存一份 KV</text>
+<text x="60" y="356" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14.5" fill="#1F3A5F" font-weight="bold" text-anchor="start">PLT · 跨循环并行（CLP）：第 2 轮处理错后一位的 token</text>
+<text x="138" y="390" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第 1 轮</text>
+<text x="138" y="430" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第 2 轮</text>
+<text x="170.0" y="468" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">1</text>
+<text x="216.0" y="468" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">2</text>
+<text x="262.0" y="468" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">3</text>
+<text x="308.0" y="468" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">4</text>
+<text x="354.0" y="468" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#9AA7B5" font-weight="normal" text-anchor="middle">5</text>
+<text x="388" y="468" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#9AA7B5" font-weight="normal" text-anchor="start">解码步</text>
+<rect x="150" y="370" width="40" height="30" rx="6" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="170.0" y="390" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="196" y="410" width="40" height="30" rx="6" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="216.0" y="430" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="196" y="370" width="40" height="30" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="216.0" y="390" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="242" y="410" width="40" height="30" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="262.0" y="430" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="242" y="370" width="40" height="30" rx="6" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="262.0" y="390" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="288" y="410" width="40" height="30" rx="6" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="308.0" y="430" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="288" y="370" width="40" height="30" rx="6" fill="#EFE7FB" stroke="#7B5CC4" stroke-width="1.3"/>
+<text x="308.0" y="390" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#7B5CC4" font-weight="bold" text-anchor="middle">t4</text>
+<rect x="334" y="410" width="40" height="30" rx="6" fill="#EFE7FB" stroke="#7B5CC4" stroke-width="1.3"/>
+<text x="354.0" y="430" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#7B5CC4" font-weight="bold" text-anchor="middle">t4</text>
+<text x="60" y="496" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1C8577" font-weight="normal" text-anchor="start">同一次前向内并行完成两轮 → 延迟≈不循环模型</text>
+<text x="60" y="540" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">首轮 KV 共享给后续轮 + 门控滑窗注意力（G-SWA）补充局部信息，</text>
+<text x="60" y="562" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">因而显存也几乎不随轮数增长（PLT，arXiv 2510.24824）。</text>
+<rect x="620" y="108" width="540" height="330" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="640" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1F3A5F" font-weight="bold" text-anchor="start">收益–成本视角（定性示意，非实测）</text>
+<line x1="690" y1="390" x2="1110" y2="390" stroke="#5B6B7F" stroke-width="1.5"/>
+<line x1="690" y1="390" x2="690" y2="190" stroke="#5B6B7F" stroke-width="1.5"/>
+<rect x="734" y="240" width="52" height="150" rx="4" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.4"/>
+<text x="760" y="412" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="middle">第 2 轮</text>
+<rect x="854" y="345" width="52" height="45" rx="4" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.4"/>
+<text x="880" y="412" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="middle">第 3 轮</text>
+<rect x="974" y="370" width="52" height="20" rx="4" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.4"/>
+<text x="1000" y="412" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="middle">第 4 轮</text>
+<line x1="710" y1="330" x2="1100" y2="330" stroke="#D64545" stroke-width="2.4" stroke-dasharray="8 6"/>
+<text x="1100" y="320" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#D64545" font-weight="normal" text-anchor="end">CLP 位置错位代价（每轮近似固定）</text>
+<text x="760" y="230" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">新增一轮的精炼收益</text>
+<text x="680" y="204" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="end">大</text>
+<text x="680" y="386" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="end">小</text>
+<rect x="820" y="200" width="290" height="52" rx="8" fill="#FDECEC" stroke="#F2B8B8" stroke-width="1"/>
+<text x="965" y="222" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#D64545" font-weight="bold" text-anchor="middle">第 3 轮起：收益 &lt; 代价</text>
+<text x="965" y="242" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#D64545" font-weight="normal" text-anchor="middle">净效果转负，出现非单调</text>
+<rect x="620" y="452" width="540" height="146" rx="14" fill="#E3F5F2" stroke="#9ED9CF" stroke-width="1.2"/>
+<text x="640" y="480" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14.5" fill="#1C8577" font-weight="bold" text-anchor="start">LoopCoder-v2（7B PLT 代码模型，18T tokens，论文摘要）</text>
+<text x="640" y="508" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#22313F" font-weight="normal" text-anchor="start">· 2 轮版本：SWE-bench Verified 43.0 → 64.4；Multi-SWE 14.0 → 31.0</text>
+<text x="640" y="534" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#22313F" font-weight="normal" text-anchor="start">· 3 轮及以上的版本回落：循环次数的效果强烈非单调</text>
+<text x="640" y="560" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#22313F" font-weight="normal" text-anchor="start">· 诊断：第 2 轮贡献主要精炼，之后收益递减并振荡，</text>
+<text x="652" y="584" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#22313F" font-weight="normal" text-anchor="start">而 CLP 带来的位置错位代价基本不变</text>
+<text x="600" y="622" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="middle">注意：这是 PLT 这一并行布局下的结论，不是循环次数的普遍上限（Huginn 可推到 32+ 轮，LOOM 在 MoE 上稳定到 9–12 轮）。</text>
+<text x="40" y="642" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#8A97A6" font-weight="normal" text-anchor="start">本文绘制。依据：Parallel Loop Transformer（arXiv 2510.24824）、LoopCoder-v2（arXiv 2606.18023）、LOOM（arXiv 2610.01153）。</text>
+</svg>

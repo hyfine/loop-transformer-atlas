@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {existsSync, readFileSync, readdirSync} from 'node:fs';
 import {dirname, join, resolve} from 'node:path';
@@ -7,6 +8,7 @@ import {routes} from '../data/routes.mjs';
 import {works} from '../data/works.mjs';
 import {directions,dossiers} from '../data/frontier.mjs';
 import {readRoute,views} from '../assets/navigation.mjs';
+import {layers,story} from '../data/story.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const read=name=>readFileSync(join(root,name),'utf8');
@@ -44,6 +46,31 @@ for(const d of dossiers){
 }
 execFileSync(process.execPath,['scripts/casebook.mjs','--check'],{cwd:root});
 execFileSync(process.execPath,['--check','assets/app.mjs'],{cwd:root});
+const chapters=JSON.parse(read('data/survey-reader.json')), corpus=JSON.parse(read('data/survey-library.json'));
+assert.deepEqual(chapters.map(c=>c.id),story.map(s=>s.id));
+const familyIds=layers.flatMap(l=>l.ids);
+unique(familyIds);unique(corpus.map(r=>r.id));assert.equal(corpus.length,376);
+assert.equal(corpus.filter(r=>r.recent).length,43);
+assert.equal(corpus.filter(r=>r.recent||r.reading).length,147);
+for(const s of story){
+  [s.title,s.idea,s.test].forEach(bilingual);
+  assert.deepEqual(readRoute(`#survey/${s.id}`),{tab:'survey',section:s.id});
+}
+for(const id of familyIds){
+  assert.equal(corpus.filter(r=>r.family===id&&r.reading).length,10,id);
+  assert.deepEqual(readRoute(`#library/${id}`),{tab:'library',family:id});
+}
+const manifest=JSON.parse(read('survey/manifest.json'));
+for(const row of manifest){
+  const bytes=readFileSync(join(root,'survey',row.path));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),row.public_sha256,row.path);
+  assert.equal(row.mode==='unchanged',row.source_sha256===row.public_sha256,row.path);
+}
+const plates=chapters.flatMap(c=>c.figures);
+assert.equal(plates.length,41);unique(plates.map(f=>f.file));
+const assets=plates.flatMap(f=>f.svg?[f.file,f.svg]:[f.file]).sort();
+assert.deepEqual(assets,manifest.map(r=>r.path).filter(p=>p.startsWith('images/')).sort());
+for(const c of chapters)assert.doesNotMatch(c.html,/<(?:script|iframe|object)\b|(?:src|href)="javascript:/i);
 const docs=['README.md','README.zh-CN.md','CONTRIBUTING.md','EVIDENCE.md',
   ...readdirSync(join(root,'docs')).filter(p=>p.endsWith('.md')).map(p=>'docs/'+p)];
 for(const name of docs){

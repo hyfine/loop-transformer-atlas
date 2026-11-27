@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 872" width="1200" height="872"><defs><marker id="ah1F3A5F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F3A5F"/></marker><marker id="ah2BB3A3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2BB3A3"/></marker><marker id="ah1C8577" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1C8577"/></marker><marker id="ahEE8A2A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EE8A2A"/></marker><marker id="ah5B6B7F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7F"/></marker><marker id="ahD64545" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D64545"/></marker><marker id="ah3A6EA5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3A6EA5"/></marker><marker id="ah22313F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#22313F"/></marker></defs><rect width="1200" height="872" fill="#FFFFFF"/>
+<text x="40" y="52" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="26" fill="#1F3A5F" font-weight="bold" text-anchor="start">循环粒度地图：重复哪一段 × 怎样调度</text>
+<text x="40" y="82" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#5B6B7F" font-weight="normal" text-anchor="start">上排：参数共享的范围（粒度）；下排：重复计算的执行方式（调度）。两者正交，比较架构时应同时说明。</text>
+<rect x="40" y="108" width="265" height="420" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="58" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="start">① 整模型循环</text>
+<text x="58" y="160" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">Model-loop</text>
+<rect x="80" y="412" width="125" height="26" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="142.5" y="429.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">Embed</text>
+<rect x="80" y="186" width="125" height="26" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="142.5" y="203.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">Head</text>
+<rect x="80" y="372" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="142.5" y="390.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 1</text>
+<rect x="80" y="336" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="142.5" y="354.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 2</text>
+<rect x="80" y="300" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="142.5" y="318.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 3</text>
+<rect x="80" y="264" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="142.5" y="282.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 4</text>
+<rect x="80" y="228" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="142.5" y="246.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 5</text>
+<path d="M 211 242 C 265 242, 265 386, 215 386" fill="none" stroke="#EE8A2A" stroke-width="2.6" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="257" y="318" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#EE8A2A" font-weight="bold" text-anchor="start">×R</text>
+<text x="74" y="398" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10" fill="#22313F" font-weight="normal" text-anchor="start"></text>
+<text x="58" y="470" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">整个层栈的输出回送为输入</text>
+<text x="58" y="494" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">代表：Universal Transformer、Ouro、</text>
+<text x="97" y="514" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">Metis-1.6</text>
+<rect x="325" y="108" width="265" height="420" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="343" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="start">② 段循环</text>
+<text x="343" y="160" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">Block-loop</text>
+<rect x="365" y="412" width="125" height="26" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="427.5" y="429.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">Embed</text>
+<rect x="365" y="186" width="125" height="26" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="427.5" y="203.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">Head</text>
+<rect x="365" y="372" width="125" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="427.5" y="390.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 1</text>
+<rect x="365" y="336" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="427.5" y="354.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 2</text>
+<rect x="365" y="300" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="427.5" y="318.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 3</text>
+<rect x="365" y="264" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="427.5" y="282.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 4</text>
+<rect x="365" y="228" width="125" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="427.5" y="246.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 5</text>
+<path d="M 496 278 C 546 278, 546 350, 500 350" fill="none" stroke="#EE8A2A" stroke-width="2.6" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="538" y="318" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#EE8A2A" font-weight="bold" text-anchor="start">×R</text>
+<text x="355" y="390" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">Prelude</text>
+<text x="355" y="246" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">Coda</text>
+<text x="343" y="470" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">只循环中间一段，首尾层不循环</text>
+<text x="343" y="494" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">代表：Huginn、SenseNova-Loop、</text>
+<text x="382" y="514" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">GLM-5.4、Dory、SMELT</text>
+<rect x="610" y="108" width="265" height="420" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="628" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="start">③ 层循环</text>
+<text x="628" y="160" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">Layer-loop</text>
+<rect x="650" y="412" width="125" height="26" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="712.5" y="429.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">Embed</text>
+<rect x="650" y="186" width="125" height="26" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="712.5" y="203.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">Head</text>
+<rect x="650" y="372" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="712.5" y="390.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 1</text>
+<rect x="650" y="336" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="712.5" y="354.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 2</text>
+<rect x="650" y="300" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="712.5" y="318.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 3</text>
+<rect x="650" y="264" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="712.5" y="282.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 4</text>
+<rect x="650" y="228" width="125" height="28" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="712.5" y="246.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="normal" text-anchor="middle">层 5</text>
+<path d="M 779 378 C 805 374, 805 398, 781 394" fill="none" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<path d="M 779 342 C 805 338, 805 362, 781 358" fill="none" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<path d="M 779 306 C 805 302, 805 326, 781 322" fill="none" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<path d="M 779 270 C 805 266, 805 290, 781 286" fill="none" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<path d="M 779 234 C 805 230, 805 254, 781 250" fill="none" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="809" y="318" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#EE8A2A" font-weight="bold" text-anchor="start">每层 ×K</text>
+<text x="628" y="470" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">每一层先重复 K 次再进入下一层</text>
+<text x="628" y="494" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">代表：Loopie、UpLoop（门控）、</text>
+<text x="667" y="514" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">Training-Free 的层模式</text>
+<rect x="895" y="108" width="265" height="420" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="913" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="start">④ 潜在条件</text>
+<text x="913" y="160" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">Latent conditioning</text>
+<rect x="917" y="336" width="100" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="967.0" y="354.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 1</text>
+<rect x="917" y="300" width="100" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="967.0" y="318.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 2</text>
+<rect x="917" y="264" width="100" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="967.0" y="282.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 3</text>
+<rect x="917" y="372" width="100" height="28" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="967.0" y="390.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">输入</text>
+<rect x="917" y="222" width="100" height="30" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="967.0" y="241.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="bold" text-anchor="middle">隐状态 hₜ</text>
+<text x="967" y="204" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="middle">第 t 步</text>
+<rect x="1035" y="336" width="100" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="1085.0" y="354.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 1</text>
+<rect x="1035" y="300" width="100" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="1085.0" y="318.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 2</text>
+<rect x="1035" y="264" width="100" height="28" rx="10" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="1085.0" y="282.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">层 3</text>
+<rect x="1035" y="372" width="100" height="28" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="1085.0" y="390.32" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">输入</text>
+<rect x="1035" y="222" width="100" height="30" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="1085.0" y="241.5" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#1C8577" font-weight="bold" text-anchor="middle">隐状态 hₜ₊₁</text>
+<text x="1085" y="204" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="middle">第 t+1 步</text>
+<path d="M 1017 237 C 1026 237, 1026 250, 1026 262 L 1026 380 C 1026 386, 1028 386, 1031 386" fill="none" stroke="#EE8A2A" stroke-width="2.6" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="913" y="432" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#EE8A2A" font-weight="bold" text-anchor="start">上一步隐状态回送为下一步的条件</text>
+<text x="913" y="470" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">上一轮 / 上一 token 的隐状态作为条件</text>
+<text x="913" y="494" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">代表：Coconut、PLT 的 CLP、</text>
+<text x="952" y="514" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">Latent Recurrent Transformer</text>
+<text x="40" y="568" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="start">执行调度（与粒度正交）</text>
+<rect x="40" y="582" width="365" height="250" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="58" y="610" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15.5" fill="#1F3A5F" font-weight="bold" text-anchor="start">串行递归</text>
+<text x="58" y="630" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">每个 token 依次跑完 R 轮</text>
+<text x="100" y="669" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第1轮</text>
+<text x="100" y="701" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第2轮</text>
+<text x="100" y="733" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第3轮</text>
+<text x="123.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">1</text>
+<text x="153.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">2</text>
+<text x="183.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">3</text>
+<text x="213.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">4</text>
+<text x="243.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">5</text>
+<text x="273.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">6</text>
+<text x="303.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">7</text>
+<text x="333.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">8</text>
+<text x="363.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">9</text>
+<text x="245.0" y="778" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">时间步 →</text>
+<rect x="110" y="650" width="26" height="26" rx="5" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="123.0" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="140" y="682" width="26" height="26" rx="5" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="153.0" y="700" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="170" y="714" width="26" height="26" rx="5" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="183.0" y="732" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="200" y="650" width="26" height="26" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="213.0" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="230" y="682" width="26" height="26" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="243.0" y="700" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="260" y="714" width="26" height="26" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="273.0" y="732" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="290" y="650" width="26" height="26" rx="5" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="303.0" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="320" y="682" width="26" height="26" rx="5" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="333.0" y="700" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="350" y="714" width="26" height="26" rx="5" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="363.0" y="732" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<text x="58" y="812" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#22313F" font-weight="normal" text-anchor="start">延迟与 KV 随 R 线性增长</text>
+<rect x="418" y="582" width="365" height="250" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="436" y="610" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15.5" fill="#1F3A5F" font-weight="bold" text-anchor="start">跨循环并行（PLT · CLP）</text>
+<text x="436" y="630" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">第 r 轮处理错开 r−1 位的 token</text>
+<text x="478" y="669" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第1轮</text>
+<text x="478" y="701" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第2轮</text>
+<text x="478" y="733" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#5B6B7F" font-weight="normal" text-anchor="end">第3轮</text>
+<text x="501.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">1</text>
+<text x="531.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">2</text>
+<text x="561.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">3</text>
+<text x="591.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">4</text>
+<text x="621.0" y="762" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="10.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">5</text>
+<text x="563.0" y="778" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11.5" fill="#9AA7B5" font-weight="normal" text-anchor="middle">时间步 →</text>
+<rect x="488" y="650" width="26" height="26" rx="5" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="501.0" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="518" y="682" width="26" height="26" rx="5" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="531.0" y="700" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="548" y="714" width="26" height="26" rx="5" fill="#DDEBFA" stroke="#3A6EA5" stroke-width="1.3"/>
+<text x="561.0" y="732" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#3A6EA5" font-weight="bold" text-anchor="middle">t1</text>
+<rect x="518" y="650" width="26" height="26" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="531.0" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="548" y="682" width="26" height="26" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="561.0" y="700" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="578" y="714" width="26" height="26" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="591.0" y="732" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#2BB3A3" font-weight="bold" text-anchor="middle">t2</text>
+<rect x="548" y="650" width="26" height="26" rx="5" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="561.0" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="578" y="682" width="26" height="26" rx="5" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="591.0" y="700" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<rect x="608" y="714" width="26" height="26" rx="5" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.3"/>
+<text x="621.0" y="732" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="11" fill="#EE8A2A" font-weight="bold" text-anchor="middle">t3</text>
+<text x="436" y="812" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#22313F" font-weight="normal" text-anchor="start">一次前向内完成多轮；需共享 KV + 门控滑窗</text>
+<rect x="796" y="582" width="365" height="250" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="814" y="610" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15.5" fill="#1F3A5F" font-weight="bold" text-anchor="start">自适应停机</text>
+<text x="814" y="630" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#5B6B7F" font-weight="normal" text-anchor="start">不同 token 用不同轮数</text>
+<text x="856" y="668" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#1F3A5F" font-weight="bold" text-anchor="end">t1</text>
+<rect x="866" y="650" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="922" y="650" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="978" y="650" width="50" height="24" rx="5" fill="#F6F8FA" stroke="#E1E6EC" stroke-width="1.2"/>
+<rect x="1034" y="650" width="50" height="24" rx="5" fill="#F6F8FA" stroke="#E1E6EC" stroke-width="1.2"/>
+<text x="972" y="667" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="0.1" fill="#22313F" font-weight="normal" text-anchor="start">■</text>
+<line x1="975" y1="647" x2="975" y2="677" stroke="#D64545" stroke-width="2.2"/>
+<text x="856" y="702" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#1F3A5F" font-weight="bold" text-anchor="end">t2</text>
+<rect x="866" y="684" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="922" y="684" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="978" y="684" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="1034" y="684" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<text x="1084" y="701" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="0.1" fill="#22313F" font-weight="normal" text-anchor="start">■</text>
+<line x1="1087" y1="681" x2="1087" y2="711" stroke="#D64545" stroke-width="2.2"/>
+<text x="856" y="736" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#1F3A5F" font-weight="bold" text-anchor="end">t3</text>
+<rect x="866" y="718" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="922" y="718" width="50" height="24" rx="5" fill="#F6F8FA" stroke="#E1E6EC" stroke-width="1.2"/>
+<rect x="978" y="718" width="50" height="24" rx="5" fill="#F6F8FA" stroke="#E1E6EC" stroke-width="1.2"/>
+<rect x="1034" y="718" width="50" height="24" rx="5" fill="#F6F8FA" stroke="#E1E6EC" stroke-width="1.2"/>
+<text x="916" y="735" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="0.1" fill="#22313F" font-weight="normal" text-anchor="start">■</text>
+<line x1="919" y1="715" x2="919" y2="745" stroke="#D64545" stroke-width="2.2"/>
+<text x="856" y="770" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#1F3A5F" font-weight="bold" text-anchor="end">t4</text>
+<rect x="866" y="752" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="922" y="752" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="978" y="752" width="50" height="24" rx="5" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.2"/>
+<rect x="1034" y="752" width="50" height="24" rx="5" fill="#F6F8FA" stroke="#E1E6EC" stroke-width="1.2"/>
+<text x="1028" y="769" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="0.1" fill="#22313F" font-weight="normal" text-anchor="start">■</text>
+<line x1="1031" y1="749" x2="1031" y2="779" stroke="#D64545" stroke-width="2.2"/>
+<text x="814" y="812" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#22313F" font-weight="normal" text-anchor="start">按难度分配深度（ACT / MoR / 退出门）</text>
+<text x="40" y="854" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#8A97A6" font-weight="normal" text-anchor="start">本文绘制（概念示意）。红线 = 该 token 停机位置；色块中的 t1…t4 表示不同 token。</text>
+</svg>

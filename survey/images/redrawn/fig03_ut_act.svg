@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600"><defs><marker id="ah1F3A5F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F3A5F"/></marker><marker id="ah2BB3A3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2BB3A3"/></marker><marker id="ah1C8577" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1C8577"/></marker><marker id="ahEE8A2A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EE8A2A"/></marker><marker id="ah5B6B7F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7F"/></marker><marker id="ahD64545" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D64545"/></marker><marker id="ah3A6EA5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3A6EA5"/></marker><marker id="ah22313F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#22313F"/></marker></defs><rect width="1200" height="600" fill="#FFFFFF"/>
+<text x="40" y="52" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="26" fill="#1F3A5F" font-weight="bold" text-anchor="start">Universal Transformer + ACT：共享变换，逐位置停机</text>
+<text x="40" y="82" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#5B6B7F" font-weight="normal" text-anchor="start">所有位置并行地用同一个块更新；每个位置自己决定何时停止（Dehghani et al. 2018；Graves 2016）</text>
+<rect x="40" y="108" width="470" height="440" rx="14" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="60" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1F3A5F" font-weight="bold" text-anchor="start">每一步做什么（参数在各步共享）</text>
+<circle cx="120" cy="186" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="182" cy="186" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="244" cy="186" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="306" cy="186" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="368" cy="186" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<text x="60" y="166" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">第 s 步各位置状态 H⁽ˢ⁾</text>
+<rect x="80" y="222" width="290" height="46" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="225.0" y="250.22" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14.5" fill="#1C8577" font-weight="bold" text-anchor="middle">多头自注意力（跨位置交互）</text>
+<rect x="80" y="290" width="290" height="46" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="225.0" y="318.22" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14.5" fill="#1C8577" font-weight="bold" text-anchor="middle">Transition（逐位置前馈）</text>
+<circle cx="120" cy="380" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="182" cy="380" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="244" cy="380" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="306" cy="380" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<circle cx="368" cy="380" r="15" fill="#fff" stroke="#1F3A5F" stroke-width="1.6"/>
+<text x="60" y="420" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">第 s+1 步各位置状态 H⁽ˢ⁺¹⁾</text>
+<line x1="225" y1="203" x2="225" y2="218" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="225" y1="268" x2="225" y2="286" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="225" y1="336" x2="225" y2="362" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<path d="M 372 380 C 450 380, 450 186, 378 186" fill="none" stroke="#EE8A2A" stroke-width="2.6" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="452" y="290" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#EE8A2A" font-weight="bold" text-anchor="start">s = 1…T</text>
+<text x="452" y="310" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#EE8A2A" font-weight="normal" text-anchor="start">同一组参数</text>
+<rect x="395" y="222" width="100" height="46" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="445.0" y="241.22" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#22313F" font-weight="normal" text-anchor="middle"><tspan x="445.0" dy="0">+ 位置编码</tspan><tspan x="445.0" dy="16.200000000000003">+ 步数编码 s</tspan></text>
+<rect x="60" y="446" width="430" height="82" rx="10" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.5"/>
+<text x="275.0" y="474.13" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#8A4508" font-weight="normal" text-anchor="middle"><tspan x="275.0" dy="0">停机单元：pₜ⁽ˢ⁾ = σ(w·hₜ⁽ˢ⁾ + b)</tspan><tspan x="275.0" dy="17.55">累计 Σₛ pₜ⁽ˢ⁾ ≥ 1−ε 时该位置停止更新</tspan><tspan x="275.0" dy="17.55">输出 = 各步状态按停机概率加权</tspan></text>
+<rect x="540" y="108" width="620" height="440" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="560" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1F3A5F" font-weight="bold" text-anchor="start">不同位置在不同步停机（示意）</text>
+<text x="662.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=1</text>
+<text x="712.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=2</text>
+<text x="762.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=3</text>
+<text x="812.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=4</text>
+<text x="862.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=5</text>
+<text x="912.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=6</text>
+<text x="962.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=7</text>
+<text x="1012.0" y="176" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12" fill="#5B6B7F" font-weight="normal" text-anchor="middle">s=8</text>
+<text x="626" y="208" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="end">位置 1</text>
+<rect x="640" y="186" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="690" y="186" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="740" y="186" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="790" y="186" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="812.0" y="208" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="840" y="186" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="862.0" y="208" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="890" y="186" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="912.0" y="208" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="940" y="186" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="962.0" y="208" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="990" y="186" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="1012.0" y="208" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<line x1="787" y1="183" x2="787" y2="223" stroke="#D64545" stroke-width="2.4"/>
+<text x="626" y="252" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="end">位置 2</text>
+<rect x="640" y="230" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="690" y="230" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="740" y="230" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="790" y="230" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="840" y="230" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="890" y="230" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="912.0" y="252" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="940" y="230" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="962.0" y="252" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="990" y="230" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="1012.0" y="252" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<line x1="887" y1="227" x2="887" y2="267" stroke="#D64545" stroke-width="2.4"/>
+<text x="626" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="end">位置 3</text>
+<rect x="640" y="274" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="690" y="274" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="740" y="274" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="762.0" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="790" y="274" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="812.0" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="840" y="274" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="862.0" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="890" y="274" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="912.0" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="940" y="274" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="962.0" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="990" y="274" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="1012.0" y="296" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<line x1="737" y1="271" x2="737" y2="311" stroke="#D64545" stroke-width="2.4"/>
+<text x="626" y="340" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="end">位置 4</text>
+<rect x="640" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="690" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="740" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="790" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="840" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="890" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="940" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="990" y="318" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<line x1="1037" y1="315" x2="1037" y2="355" stroke="#D64545" stroke-width="2.4"/>
+<text x="626" y="384" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="end">位置 5</text>
+<rect x="640" y="362" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="690" y="362" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="740" y="362" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="790" y="362" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="840" y="362" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="862.0" y="384" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="890" y="362" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="912.0" y="384" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="940" y="362" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="962.0" y="384" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="990" y="362" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="1012.0" y="384" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<line x1="837" y1="359" x2="837" y2="399" stroke="#D64545" stroke-width="2.4"/>
+<text x="626" y="428" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#1F3A5F" font-weight="bold" text-anchor="end">位置 6</text>
+<rect x="640" y="406" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="690" y="406" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="740" y="406" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="790" y="406" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="840" y="406" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="890" y="406" width="44" height="34" rx="6" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<rect x="940" y="406" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="962.0" y="428" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<rect x="990" y="406" width="44" height="34" rx="6" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="1012.0" y="428" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#AAB4C0" font-weight="normal" text-anchor="middle">＝</text>
+<line x1="937" y1="403" x2="937" y2="443" stroke="#D64545" stroke-width="2.4"/>
+<rect x="560" y="462" width="20" height="16" rx="4" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.3"/>
+<text x="588" y="475" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#22313F" font-weight="normal" text-anchor="start">仍在更新</text>
+<rect x="670" y="462" width="20" height="16" rx="4" fill="#F4F6F9" stroke="#DCE2E9" stroke-width="1.2"/>
+<text x="698" y="475" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#22313F" font-weight="normal" text-anchor="start">已停机：状态原样复制（＝）</text>
+<line x1="904" y1="460" x2="904" y2="480" stroke="#D64545" stroke-width="2.4"/>
+<text x="912" y="475" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#22313F" font-weight="normal" text-anchor="start">停机位置</text>
+<text x="560" y="506" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#22313F" font-weight="normal" text-anchor="start">难的位置（如位置 4）用满上限 T 步；容易的位置提前停下，省下的计算留给难的位置。</text>
+<text x="560" y="528" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13" fill="#5B6B7F" font-weight="normal" text-anchor="start">上限 T<tspan baseline-shift="sub" font-size="72%">max</tspan> 约束最坏情况的计算量。数值仅为示意，不代表实测。</text>
+<text x="40" y="582" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#8A97A6" font-weight="normal" text-anchor="start">本文绘制。依据：Universal Transformers（arXiv 1807.03819）与 Adaptive Computation Time（arXiv 1603.08983）的机制描述。</text>
+</svg>

@@ -1,0 +1,3 @@
+# Preserve the supplied Markdown verbatim, including its intentional hard breaks.
+survey/Loop_Transformer_Survey_zh_illustrated.md -text -whitespace
+survey/images/**/*.svg -text -whitespace

@@ -2,6 +2,7 @@ import {works} from '../data/works.mjs';
 import {routes} from '../data/routes.mjs';
 import {directions,dossiers} from '../data/frontier.mjs';
 import {chapters,views,readRoute} from './navigation.mjs';
+import {story,layers} from '../data/story.mjs';
 
 const repo = 'https://github.com/hyfine/loop-transformer-atlas/blob/main/';
 const dates = [...works].sort((a,b)=>a.date.localeCompare(b.date) || a.name.localeCompare(b.name));
@@ -10,7 +11,9 @@ const byId = Object.fromEntries(works.map(w=>[w.id,w]));
 const main = document.querySelector('main');
 let zh = new URL(location.href).searchParams.get('lang') === 'zh';
 let tab, mapView='tree', selected='huginn', labFamily='B', model='glm', step=0, timer, rounds=2;
-let archive, archiveError, loading, shelfPage = 0, query = '', shelfScope = 'all', treeFit = false;
+let archive, archiveError, loading, shelfPage = 0, query = '', shelfScope = 'survey', treeFit = false;
+let section='digest', plate=0, reader, corpus, surveyLoading=false, surveyError='', shelfFamily='';
+const original='survey/Loop_Transformer_Survey_zh_illustrated.md', workbook='survey/Loop_Transformer_Landscape.xlsx';
 const tr = (en,cn)=>zh ? cn : en;
 const t = pair=>pair[Number(zh)];
 const esc = s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -44,18 +47,85 @@ function chooseWork(id){
   history.replaceState(null,'',mapHref(mapView));
 }
 const switcher=(label,items)=>`<div class="switcher" role="navigation" aria-label="${esc(label)}">${items.map(([href,name,active])=>`<a href="${href}"${active?' aria-current="location"':''}>${esc(name)}</a>`).join('')}</div>`;
+const storyLink=(id,label)=>`<a href="#survey/${id}">${esc(label||t(story.find(s=>s.id===id).title))}</a>`;
+const sourceLinks=()=>`<div class="links source-links"><a href="${repo}${original}">${tr('Original illustrated Markdown · 中文','图解 Markdown 原文')}</a><a href="${workbook}" download>${tr('Download workbook · 23 sheets','下载工作簿 · 23 张表')}</a><a href="survey/reading-list.csv" download>${tr('130 family readings · CSV','130 篇分族精选 · CSV')}</a><a href="survey/latest-papers.csv" download>${tr('43 recent papers · CSV','43 篇近期增量 · CSV')}</a><a href="${repo}survey/README.md">${tr('Archive & figure credits','归档与图源')}</a></div>`;
+const sectionOrder=story.filter(s=>!/^F\d\d$/.test(s.id));
+const familyPicker=()=>`<div class="family-layers">${layers.map(layer=>`<div><b>${t(layer.name)}</b><div class="links">${layer.ids.map(id=>storyLink(id,`${id} · ${t(story.find(s=>s.id===id).title)}`)).join('')}</div></div>`).join('')}</div>`;
+function storyPaths(){
+  const paths=[
+    ['5 min','5 分钟',['digest','lineage','trends']],
+    ['30 min','30 分钟',['design','history','lanes','taxonomy','industry']],
+    ['2 hours','2 小时',['families','questions','decisions','sources','glossary']]
+  ];
+  return `<div class="grid story-paths">${paths.map(([en,cn,ids])=>`<div class="card"><span class="eyebrow">${tr(en,cn)}</span><p>${ids.map(id=>storyLink(id)).join(' → ')}</p></div>`).join('')}</div>`;
+}
 
 function overview(){
   const tags = ['molt','glm','loopres','loopcache','sense','arloop','dory'];
   return `<div class="split"><div>${kicker('RESEARCH ATLAS / VOL. 07')}<h1>${tr('One block.<br><em>Many depths.</em>','一组权重，<br><em>多轮计算。</em>')}</h1>
   <p class="lede">${tr('A Transformer can spend more compute before it writes its next token. Follow what changes inside the loop, what stays shared, and what one more pass actually costs.','Transformer 可以在写出下一个 token 前多算几轮。沿着环路看清：什么在变化，什么保持共享，再算一轮究竟要付出什么。')}</p>
-  <div class="tools"><a class="primary" href="#map">${tr('Explore the research map →','打开研究地图 →')}</a><a href="${repo}docs/guide.${lang()}.md">${tr('Read the field guide','阅读技术导读')} ↗</a></div></div>
+  <div class="tools"><a class="primary" href="#survey/digest">${tr('Start the illustrated survey →','从图解综述开始 →')}</a><a href="#survey/families">${tr('Jump to the 13 families','跳到十三个技术族')}</a></div>${sourceLinks()}</div>
   <div class="plate">${kicker('01 / DEPTH COUNTER')}<img src="assets/circuit.svg" alt="${tr('Prelude, recurrent core with feedback, and coda','前段编码、带状态反馈的共享核心与输出尾段')}">
   <div class="tools">${tr('Core visits','核心访问次数')} ${[1,2,4].map(r=>btn('round',`×${r}`,`data-value="${r}" aria-pressed="${r===rounds}"`)).join('')}</div>
   <div class="numbers"><span><b>32</b><small>${tr('distinct layers','独立层数')}</small></span><span><b>${4+24*rounds+4}</b><small>${tr('layer executions','执行层次')}</small></span><span><b>×${rounds}</b><small>${tr('middle block','中间块')}</small></span></div>
   <small>${tr('4 + 24R + 4. R=2 is the released','4 + 24R + 4。R=2 对应实际发布的')} <a href="#tree/B/sense">SenseNova-Loop-9B</a>${tr('; the other settings are arithmetic examples, not measured models.','；其他设置仅演示计算关系，并非实测模型。')}</small></div></div>
-  <section>${heading('02',tr('Which question are you asking?','你想弄清哪个问题？'),tr('We group works by the question their evidence answers, not by size or benchmark rank. Choose a question to trace a representative model.','按每项工作的证据主要回答什么问题归类，不按大小或跑分排名。选一个问题，就能跟着代表作走一遍。'))}<div class="grid">${routes.map(r=>`<a class="card" style="--accent:${r.color}" href="#lab/${r.id}"><span class="tag">${r.id} / ${byId[r.example].name}</span><h3>${t(r.title)}</h3><p>${t(r.question)}</p></a>`).join('')}</div></section>
+  <section>${heading('02',tr('Read the field as an argument','沿着研究问题读全景'),tr('The survey starts with one repeated update, follows six historical phases, locates 376 papers in thirteen families, and only then turns to models, trends and engineering choices. Choose your reading time.','先理解一次重访，再看六个阶段如何产生新问题，用四层十三族定位 376 篇论文；最后才讨论模型、趋势和工程选型。可按阅读时间选入口。'))}<a class="survey-cover" href="#survey/digest"><img src="survey/images/illustrated/g0_cover.png" alt="${tr('Illustrated survey: 376 papers, 13 families and 17 model or industry records','图解版封面：376 篇论文、13 个技术族、17 项模型或工业实践')}"></a>${storyPaths()}
+  <div class="story-strip">${sectionOrder.map(s=>storyLink(s.id,`${s.number} · ${t(s.title)}`)).join('')}</div></section>
   <section>${heading('03',tr('Frontier notebook','前沿手记'),tr('November 2026 · New mechanisms and releases, not a leaderboard.','2026 年 11 月 · 按新机制与新发布选录，不按跑分排名。'))}<div class="tools"><a href="#directions">${tr('Compare research directions →','对照最新技术方向 →')}</a><a href="#frontier/glm">${tr('Inside GLM-5.4 →','深读 GLM-5.4 →')}</a></div><div class="grid">${tags.map(id=>{const w=byId[id];return `<a class="card" style="--accent:${families[w.family].color}" href="${dossiers.some(d=>d.id===id)?'#frontier/'+id:mapHref('tree',id)}"><span class="meta">${w.date} · ${esc(w.venue)}</span><h3>${w.name} ↗</h3><p>${t(w.finding)}</p></a>`}).join('')}</div></section>`;
+}
+
+const plateEnglish={
+  g0_cover:'Survey cover and corpus scope',fig01_recurrent_depth_overview:'Stored weights vs executed depth',
+  fig02_loop_granularity:'Reuse granularity and execution schedule',g1_loop_structures:'Five execution patterns',
+  g2_timeline:'Six phases and the question behind each',g3_papers_per_quarter:'First submissions per quarter',
+  g4_family_tree:'Four layers and thirteen families',g5_lineage:'Lineage and conceptual relationships',
+  g6_swimlane_global:'Family activity across the collection',g7a_swimlane_2025_2026H1:'Close-up: 2025 to June 2026',
+  g7b_swimlane_2026H2:'Close-up: July to November 2026',g8_cross_lane:'How constraints move between families',
+  g9_taxonomy_stack:'The four-layer taxonomy',fig03_ut_act:'UT and position-wise halting',
+  fig04_huginn_prelude_core_coda:'Huginn: prelude, recurrent core and coda',fig05_looped_moe_matched_budget:'What a matched budget controls',
+  fig06_training_free_ode:'Refine a frozen residual update with substeps',fig07_plt_gain_cost:'PLT position shifts and loop-count trade-offs',
+  g10_industry_routes:'Four deployment routes',g11_quadrant:'Qualitative cost and serving comparison',
+  g12_decision_flow:'Engineering decision tree',glm54_architecture:'GLM-5.4: a gated two-pass retrofit',
+  sensenova_loop_architecture:'SenseNova: two-stream middle-block reuse',sensenova_loop_scaling_zh:'SenseNova: matched train/test loop counts',
+  dory_architecture:'Dory: normalized input, core and output',ouro_looplm_architecture:'Ouro: exit training vs inference',
+  molt_attention_visibility:'MoLT: signals visible across visits',molt_architecture:'U-MoLT: construct memory, then read it'
+};
+const sourceArt={glm54_architecture:'https://z.ai/blog/glm-5.4',molt_attention_visibility:'https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_attention_visibility.png',molt_architecture:'https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png'};
+async function loadSurvey(){
+  if(reader||surveyLoading||surveyError)return;
+  surveyLoading=true;
+  try{
+    const files=await Promise.all(['survey-reader','survey-library'].map(async name=>{
+      const r=await fetch(`data/${name}.json`);if(!r.ok)throw new Error(`${name}: HTTP ${r.status}`);return r.json();
+    }));
+    [reader,corpus]=files;
+  }catch(error){surveyError=String(error);}
+  finally{surveyLoading=false;if(tab==='survey'||tab==='library')render();}
+}
+const surveyStatus=()=>surveyError?`<p role="alert">${tr('Survey data unavailable','综述数据载入失败')}: ${esc(surveyError)} ${btn('retry-survey',tr('Retry','重试'))}</p>`:`<p role="status">${tr('Loading illustrated edition…','正在加载图解版…')}</p>`;
+function illustrated(){
+  void loadSurvey();
+  const i=story.findIndex(s=>s.id===section), ch=story[i], field=/^F\d\d$/.test(section);
+  const controls=`<div class="tools story-controls"><label>${tr('Chapter','章节')} <select id="survey-section">${options(story.map(s=>[s.id,`${s.number} · ${t(s.title)}`]),section)}</select></label></div>`;
+  const intro=heading(ch.number,t(ch.title),t(ch.idea))+controls;
+  if(!reader)return intro+surveyStatus()+sourceLinks();
+  const part=reader.find(s=>s.id===section), f=part.figures[plate];
+  const label=(f)=>zh?f.alt:plateEnglish[f.file.split('/').pop().split('.')[0]]||`${t(ch.title)} · mechanism`;
+  let graphic='';
+  if(f){
+    const src='survey/'+f.file,credit=sourceArt[f.file.split('/').pop().split('.')[0]];
+    graphic=`<div class="plate survey-figure"><div class="tools"><label>${tr('Illustration','图版')} <select id="survey-plate">${options(part.figures.map((v,n)=>[String(n),`${n+1}/${part.figures.length} · ${label(v)}`]),String(plate))}</select></label></div>
+    <figure><a href="${src}"><img src="${src}" alt="${esc(label(f))}"></a><figcaption><b>${esc(label(f))}</b>${zh&&f.caption&&!credit?` · ${esc(f.caption)}`:''}</figcaption></figure>
+    <div class="links"><a href="${src}">${tr('Full-size image','打开原尺寸图片')} ↗</a>${f.svg?`<a href="survey/${f.svg}">${tr('Editable vector','可编辑矢量版')} ↗</a>`:''}${credit?`<a href="${credit}">${tr('Atlas redraw here · see publisher’s original','本站独立示意 · 查看发布方原图')} ↗</a>`:''}</div></div>`;
+  }
+  const familyNotes=field?(corpus||[]).filter(r=>r.family===section&&r.reading):[];
+  const appendix=section==='families'||section==='taxonomy'?familyPicker():'';
+  const supplement={lineage:'#map',lanes:'#lanes',industry:'#frontier',trends:'#directions',sources:'#library'}[section];
+  return `${intro}${appendix}${graphic}<p class="inspector"><b>${tr('Reading check','阅读提示')}:</b> ${esc(t(ch.test))}</p>
+    ${field?`<h3>${tr('Ten papers to read','本族十篇选读')}</h3><ul class="reading-papers">${familyNotes.map(r=>`<li><time>${r.date}</time> <a href="https://arxiv.org/abs/${r.reading.version}">${esc(r.reading.method)}</a> · ${esc(r.title)}</li>`).join('')}</ul><a href="#library/${section}">${tr('Browse every indexed paper in this family','查看本族全部索引论文')} →</a>`:''}
+    ${supplement?`<div class="tools"><a href="${supplement}">${tr('Open the companion interactive view','打开配套交互视角')} →</a></div>`:''}
+    <details class="survey-text"><summary>${tr('Read this entire source section · Chinese, figures and tables','展开本节中文原文、完整图版与表格')}</summary><div lang="zh-CN">${part.html}</div></details>
+    <div class="chapter-ends">${i?storyLink(story[i-1].id,'← '+t(story[i-1].title)):''}${i<story.length-1?storyLink(story[i+1].id,t(story[i+1].title)+' →'):''}</div>${sourceLinks()}`;
 }
 
 function tree(){
@@ -166,7 +236,7 @@ function researchMap(){
     <dl>${routes.map(r=>`<dt><a href="${mapHref(mapView,r.example)}">${r.id} · ${t(r.title)}</a></dt><dd>${t(r.criterion)} <b>${byId[r.example].name}</b></dd>`).join('')}</dl>
     <p>${tr('When several labels fit, we choose the comparison discussed in the record. GLM-5.4 has a cache design, but here its main question is how to convert GLM-5 (D). Dory is a trained model, but our map entry examines its last-loop KV cache (E). Neither classification excludes the other contributions.','有交叉时，按条目正在分析的那组证据确定主类。GLM-5.4 也改了缓存，但这里关心如何从 GLM-5 改造，因此归 D；Dory 也有训练配方，但本条聚焦最后一轮 KV，因此归 E。主类不排除它的其他贡献。')}</p></details>`;
   return heading('04–06',t(chapters.map),tr('Classify the question, not the model: Huginn asks how to train a repeated block (B); MoR asks which tokens should revisit it (C); LoopCache asks how to read less memory during decoding (E). Switch views without losing your selected work.','按研究问题分类，而不是给模型贴标签：Huginn 问怎样训练共享块（B），MoR 问哪些 token 应该再算一轮（C），LoopCache 问解码时怎样少读缓存（E）。切换下方视角会保留当前作品。'))+
-    guide+switcher(tr('Map views','地图视角'),Object.entries(views).map(([v,label])=>[mapHref(v),t(label),v===mapView]))+
+    `<p class="hint">${tr('This interactive overlay covers 32 case notes in six A–F reading lenses. For all 376 papers use the survey taxonomy and its timeline.','本交互叠图覆盖 32 条案例，按 A–F 六个提问视角阅读。综述的全量 376 篇采用四层十三族口径。')} ${storyLink('taxonomy')} · ${storyLink('lanes')}</p>`+guide+switcher(tr('Map views','地图视角'),Object.entries(views).map(([v,label])=>[mapHref(v),t(label),v===mapView]))+
     `<div class="map-view" aria-label="${t(views[mapView])}">${({tree,lanes,time:trajectory})[mapView]()}</div>`+
     inspector(w)+`<div class="links"><a href="#lab/${w.family}">${tr('Trace a representative mechanism','查看该类的代表流程')} →</a>${dossiers.some(d=>d.id===w.id)?`<a href="#frontier/${w.id}">${tr('Read the full model case','阅读该模型深读')} →</a>`:''}</div>`;
 }
@@ -216,9 +286,12 @@ function filterRows(){
   const key=query.trim().toLowerCase();
   const cards=dates.map(w=>({title:w.name,meta:`${w.date} · ${w.venue} · ${t(families[w.family].title)}`,url:`#tree/${w.family}/${w.id}`,text:[...w.finding,...w.limit].join(' ')}));
   const seed=(archive||[]).map(a=>({title:a.title,meta:`${a.year} · ${tr('Discovery index','检索索引')} · ${a.category}${a.titleReview?' · '+tr('Check current title: ','请核对当前标题：')+a.observedTitle:''}`,url:a.url,text:[...a.tags,a.observedTitle].join(' ')}));
-  const rows=(shelfScope==='cards'?cards:shelfScope==='seed'?seed:[...cards,...seed]).filter(r=>(r.title+' '+r.meta+' '+r.text).toLowerCase().includes(key));
+  const book=(corpus||[]).filter(r=>(!shelfFamily||r.family===shelfFamily)&&(shelfScope!=='reading'||r.reading)&&(shelfScope!=='recent'||r.recent));
+  if(shelfScope==='recent')book.sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
+  const papers=book.map(r=>({title:r.title,meta:`${r.date} · ${r.family} · ${t(story.find(s=>s.id===r.family).title)}`,url:`https://arxiv.org/abs/${r.reading?.version||r.recent||r.id}`,text:[r.id,r.method,r.reading?.method||''].join(' ')}));
+  const rows=(shelfScope==='cards'?cards:shelfScope==='seed'?seed:papers).filter(r=>(r.title+' '+r.meta+' '+r.text).toLowerCase().includes(key));
   const slice=rows.slice(shelfPage*20,shelfPage*20+20);
-  return `<p class="hint">${rows.length} ${tr('matching records (curated and seed entries may overlap)','条匹配记录（精读与种子索引可能重叠）')}</p><ul class="shelf">${slice.map(v=>`<li><a href="${esc(v.url)}">${esc(v.title)}</a><br><small>${esc(v.meta)}</small></li>`).join('')}</ul><div class="tools">${btn('prev-page',tr('Previous','上一页'),shelfPage===0?'disabled':'')} ${shelfPage+1}/${Math.max(1,Math.ceil(rows.length/20))} ${btn('next-page',tr('Next','下一页'),(shelfPage+1)*20>=rows.length?'disabled':'')}</div>`;
+  return `<p class="hint">${rows.length} ${tr('matching records in this collection','条记录符合当前集合与筛选')}</p><ul class="shelf">${slice.map(v=>`<li><a href="${esc(v.url)}">${esc(v.title)}</a><br><small>${esc(v.meta)}</small></li>`).join('')}</ul><div class="tools">${btn('prev-page',tr('Previous','上一页'),shelfPage===0?'disabled':'')} ${shelfPage+1}/${Math.max(1,Math.ceil(rows.length/20))} ${btn('next-page',tr('Next','下一页'),(shelfPage+1)*20>=rows.length?'disabled':'')}</div>`;
 }
 async function loadArchive(){
   if(archive||loading||archiveError)return;
@@ -230,11 +303,13 @@ async function loadArchive(){
   finally{loading=false;if(tab==='library')render();}
 }
 function library(){
-  void loadArchive();
-  return heading('08',tr('Evidence library','证据文献库'),tr('The curated record explains a mechanism and its limits. The larger seed index is for discovery; inclusion is not an endorsement or an independent replication.','精读条目解释机制及其局限。更大的种子索引用于发现文献，不代表认同其结论或已独立复现。'))+
+  const bookScope=['survey','reading','recent'].includes(shelfScope);
+  if(bookScope)void loadSurvey();else if(shelfScope==='seed')void loadArchive();
+  return heading('§11',tr('Paper library','论文库'),tr('Browse the workbook by its primary F family, or narrow to ten selected papers per family. The 32 case notes and 333-entry discovery seed are supplementary collections, not additional papers.','按工作簿主族浏览 376 篇，或只看每族十篇的选读。32 条案例与 333 条种子是补充入口，不能与主库相加。'))+sourceLinks()+
   `<div class="links"><a href="${repo}EVIDENCE.md">${tr('Search & audit method','检索与审阅方法')}</a><a href="data/visits.csv">${tr('Per-URL ledger (CSV)','逐链接审计表（CSV）')}</a><a href="${repo}docs/routes.${lang()}.md">${tr('Offline casebook','离线案例手册')}</a></div>
-  <div class="tools"><label>${tr('Search','搜索')} <input id="search" type="search" value="${esc(query)}" placeholder="MoLT / KV / 共享"></label><label>${tr('Collection','集合')} <select id="scope">${options([['all',tr('Both collections','两个集合')],['cards',tr('Curated','精读')],['seed',tr('Discovery','种子索引')]],shelfScope)}</select></label></div>
-  ${archiveError?`<p role="alert">${tr('Could not load the discovery index','无法载入种子索引')}: ${esc(archiveError)} ${btn('retry',tr('Retry','重试'))}</p>`:loading?`<p>${tr('Loading discovery index…','正在载入种子索引…')}</p>`:''}<div id="results">${filterRows()}</div>`;
+  <div class="tools"><label>${tr('Search','搜索')} <input id="search" type="search" value="${esc(query)}" placeholder="MoLT / KV / F08"></label><label>${tr('Collection','集合')} <select id="scope">${options([['survey',tr('Survey · 376','综述 · 376')],['reading',tr('Reading selection · 130','精选 · 130')],['recent',tr('Recent releases · 43','近期增量 · 43')],['cards',tr('Case notes · 32','案例 · 32')],['seed',tr('Discovery seed · 333','种子索引 · 333')]],shelfScope)}</select></label>
+  ${bookScope?`<label>${tr('Family','主族')} <select id="shelf-family">${options([['',tr('All families','全部技术族')],...story.filter(s=>/^F\d\d$/.test(s.id)).map(s=>[s.id,`${s.id} · ${t(s.title)}`])],shelfFamily)}</select></label>`:''}</div>
+  ${bookScope&&!reader?surveyStatus():shelfScope==='seed'&&archiveError?`<p role="alert">${tr('Could not load the discovery index','无法载入种子索引')}: ${esc(archiveError)} ${btn('retry',tr('Retry','重试'))}</p>`:shelfScope==='seed'&&loading?`<p>${tr('Loading discovery index…','正在载入种子索引…')}</p>`:''}<div id="results">${filterRows()}</div>`;
 }
 function render(){
   const focus=document.activeElement;
@@ -248,7 +323,7 @@ function render(){
   const nav=document.querySelector('#nav');
   nav.setAttribute('aria-label',tr('Atlas chapters','图谱章节'));
   nav.innerHTML=Object.entries(chapters).map(([id,p])=>`<a href="#${id}" ${id===tab?'aria-current="page"':''}>${t(p)}</a>`).join('');
-  main.innerHTML=({overview,map:researchMap,directions:researchDirections,frontier:frontierModels,lab,library})[tab]();
+  main.innerHTML=({overview,survey:illustrated,map:researchMap,directions:researchDirections,frontier:frontierModels,lab,library})[tab]();
   if(tab==='map'&&keyOpen)main.querySelector('.route-key').open=true;
   const chart=main.querySelector('.tree-paper .chart');
   if(chart&&treeScroll!==undefined)chart.scrollLeft=treeScroll;
@@ -261,7 +336,7 @@ function render(){
   else if(focusedHref)Array.from(document.querySelectorAll('#nav a,.switcher a')).find(el=>el.getAttribute('href')===focusedHref)?.focus({preventScroll:true});
 }
 function navigate(){
-  const previous=tab;
+  const previous=tab, previousSection=section;
   stop();const route=readRoute(location.hash);
   tab=route?.tab||'overview';
   if(tab==='map'){
@@ -271,8 +346,10 @@ function navigate(){
   }
   if(tab==='lab'){labFamily=route.family||byId[selected].family;step=0;}
   if(tab==='frontier')model=route.model;
+  if(tab==='survey'){section=route.section;plate=0;}
+  if(tab==='library'&&route.family){shelfFamily=route.family;shelfScope='survey';shelfPage=0;query='';}
   render();
-  if(previous&&previous!==tab){main.focus({preventScroll:true});window.scrollTo(0,0);}
+  if(previous&&(previous!==tab||(tab==='survey'&&section!==previousSection))){main.focus({preventScroll:true});window.scrollTo(0,0);}
 }
 function handle(key,val){
   if(key==='play'){
@@ -305,6 +382,7 @@ function handle(key,val){
     if(key==='prev-page')shelfPage--;
     if(key==='next-page')shelfPage++;
     if(key==='retry')archiveError=undefined;
+    if(key==='retry-survey')surveyError='';
   }
   render();
 }
@@ -315,6 +393,9 @@ main.addEventListener('input',e=>{
   if(e.target.id==='search'){query=e.target.value;shelfPage=0;document.querySelector('#results').innerHTML=filterRows();}
 });
 main.addEventListener('change',e=>{
+  if(e.target.id==='survey-section')location.hash=`survey/${e.target.value}`;
+  if(e.target.id==='survey-plate'){plate=Number(e.target.value);render();}
+  if(e.target.id==='shelf-family'){shelfFamily=e.target.value;shelfPage=0;render();}
   if(e.target.id==='scrub')handle('tick',e.target.value);
   if(e.target.id==='route')location.hash=`lab/${e.target.value}`;
   if(e.target.id==='scope'){shelfScope=e.target.value;shelfPage=0;render();}

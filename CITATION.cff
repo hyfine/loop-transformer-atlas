@@ -5,8 +5,8 @@ authors:
   - name: "Loop Transformer Atlas contributors"
 repository-code: "https://github.com/hyfine/loop-transformer-atlas"
 url: "https://hyfine.github.io/loop-transformer-atlas/"
-date-released: 2026-11-26
-version: "2026.11.26"
+date-released: 2026-11-27
+version: "2026.11.27"
 keywords:
   - recurrent depth
   - looped transformers

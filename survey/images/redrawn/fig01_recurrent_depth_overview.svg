@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700"><defs><marker id="ah1F3A5F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F3A5F"/></marker><marker id="ah2BB3A3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2BB3A3"/></marker><marker id="ah1C8577" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1C8577"/></marker><marker id="ahEE8A2A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EE8A2A"/></marker><marker id="ah5B6B7F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6B7F"/></marker><marker id="ahD64545" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D64545"/></marker><marker id="ah3A6EA5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3A6EA5"/></marker><marker id="ah22313F" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#22313F"/></marker></defs><rect width="1200" height="700" fill="#FFFFFF"/>
+<text x="40" y="52" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="26" fill="#1F3A5F" font-weight="bold" text-anchor="start">循环 Transformer：同一组参数，反复更新隐状态</text>
+<text x="40" y="82" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#5B6B7F" font-weight="normal" text-anchor="start">Looped / Recurrent-Depth Transformer 概念示意 —— 深度由“重复次数”而不是“层数”决定</text>
+<rect x="40" y="110" width="300" height="420" rx="14" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="190" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="middle">标准 Transformer</text>
+<text x="190" y="160" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#5B6B7F" font-weight="normal" text-anchor="middle">每层一组独立参数</text>
+<rect x="80" y="452" width="220" height="32" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="190.0" y="473.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#22313F" font-weight="normal" text-anchor="middle">输入嵌入</text>
+<rect x="80" y="410" width="220" height="34" rx="10" fill="#DCE6F2" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="190.0" y="432.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle">第 1 层 · θ₁</text>
+<rect x="80" y="370" width="220" height="34" rx="10" fill="#D3DFEE" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="190.0" y="392.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle">第 2 层 · θ₂</text>
+<rect x="80" y="330" width="220" height="34" rx="10" fill="#C9D8EA" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="190.0" y="352.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle">第 3 层 · θ₃</text>
+<rect x="80" y="290" width="220" height="34" rx="10" fill="#BFD0E6" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="190.0" y="312.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle">第 4 层 · θ₄</text>
+<rect x="80" y="250" width="220" height="34" rx="10" fill="#B5C9E2" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="190.0" y="272.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle">第 5 层 · θ₅</text>
+<rect x="80" y="210" width="220" height="34" rx="10" fill="#ABC1DE" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="190.0" y="232.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle">第 6 层 · θ₆</text>
+<rect x="80" y="168" width="220" height="32" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="190.0" y="189.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="bold" text-anchor="middle">LM Head → 输出</text>
+<text x="190" y="515" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="middle">深度 = 层数 = 参数组数</text>
+<rect x="370" y="110" width="790" height="420" rx="14" fill="#FFFFFF" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="765" y="142" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="middle">循环 Transformer（Prelude – 共享核心 × R – Coda）</text>
+<rect x="395" y="300" width="110" height="60" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="450.0" y="335.04" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#22313F" font-weight="normal" text-anchor="middle">输入 tokens</text>
+<rect x="535" y="290" width="120" height="80" rx="10" fill="#EAF1FB" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="595.0" y="325.59000000000003" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle"><tspan x="595.0" dy="0">Prelude P</tspan><tspan x="595.0" dy="18.900000000000002">嵌入 / 前置层</tspan></text>
+<rect x="720" y="270" width="190" height="120" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="2.2"/>
+<text x="815.0" y="324.96" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1C8577" font-weight="bold" text-anchor="middle"><tspan x="815.0" dy="0">共享块 F<tspan baseline-shift="sub" font-size="72%">θ</tspan></tspan><tspan x="815.0" dy="21.6">（若干层，同一组 θ）</tspan></text>
+<rect x="975" y="290" width="160" height="80" rx="10" fill="#EAF1FB" stroke="#9FB3CB" stroke-width="1.5"/>
+<text x="1055.0" y="325.59000000000003" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="14" fill="#1F3A5F" font-weight="normal" text-anchor="middle"><tspan x="1055.0" dy="0">Coda C + LM Head</tspan><tspan x="1055.0" dy="18.900000000000002">读出预测</tspan></text>
+<line x1="505" y1="330" x2="531" y2="330" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="655" y1="330" x2="716" y2="330" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<text x="686" y="320" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#EE8A2A" font-weight="bold" text-anchor="middle">e</text>
+<line x1="910" y1="330" x2="971" y2="330" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<path d="M 880 268 C 900 200, 730 200, 750 262" fill="none" stroke="#EE8A2A" stroke-width="3" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="815" y="205" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#EE8A2A" font-weight="bold" text-anchor="middle">重复 R 次（参数不变）</text>
+<path d="M 600 372 C 600 450, 760 450, 790 394" fill="none" stroke="#EE8A2A" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ahEE8A2A)" stroke-linecap="round"/>
+<text x="640" y="452" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#EE8A2A" font-weight="normal" text-anchor="start">输入注入：每轮重新喂入 e</text>
+<rect x="860" y="430" width="120" height="40" rx="10" fill="#fff" stroke="#C7D1DC" stroke-width="1.5"/>
+<text x="920.0" y="454.86" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#22313F" font-weight="normal" text-anchor="middle">初始状态 h₀</text>
+<path d="M 860 450 C 835 450, 840 420, 845 394" fill="none" stroke="#5B6B7F" stroke-width="1.8" marker-end="url(#ah5B6B7F)" stroke-linecap="round"/>
+<text x="765" y="505" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="17" fill="#1F3A5F" font-weight="bold" text-anchor="middle">hₖ₊₁ = F<tspan baseline-shift="sub" font-size="72%">θ</tspan>(hₖ, e)，  k = 0, 1, …, R−1</text>
+<rect x="395" y="170" width="210" height="40" rx="10" fill="#FFF2E4" stroke="#EE8A2A" stroke-width="1.5"/>
+<text x="500.0" y="194.86" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#9A4E0B" font-weight="normal" text-anchor="middle">循环次数 R → 控制计算量</text>
+<rect x="395" y="220" width="210" height="40" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="500.0" y="244.86" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="13.5" fill="#1C8577" font-weight="normal" text-anchor="middle">权重共享 θ → 控制参数量</text>
+<rect x="40" y="560" width="1120" height="110" rx="14" fill="#F1F4F8" stroke="#C7D1DC" stroke-width="1.2"/>
+<text x="60" y="588" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="start">展开视角（unrolled）</text>
+<circle cx="90" cy="630" r="20" fill="#fff" stroke="#1F3A5F" stroke-width="1.8"/>
+<text x="90" y="636" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="middle">h₀</text>
+<circle cx="350" cy="630" r="20" fill="#fff" stroke="#1F3A5F" stroke-width="1.8"/>
+<text x="350" y="636" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="middle">h₁</text>
+<circle cx="610" cy="630" r="20" fill="#fff" stroke="#1F3A5F" stroke-width="1.8"/>
+<text x="610" y="636" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="middle">h₂</text>
+<circle cx="900" cy="630" r="20" fill="#fff" stroke="#1F3A5F" stroke-width="1.8"/>
+<text x="900" y="636" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="middle">h<tspan baseline-shift="sub" font-size="72%">R</tspan></text>
+<rect x="150" y="608" width="140" height="44" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="220.0" y="635.76" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1C8577" font-weight="bold" text-anchor="middle">F<tspan baseline-shift="sub" font-size="72%">θ</tspan></text>
+<rect x="410" y="608" width="140" height="44" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="480.0" y="635.76" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1C8577" font-weight="bold" text-anchor="middle">F<tspan baseline-shift="sub" font-size="72%">θ</tspan></text>
+<rect x="720" y="608" width="140" height="44" rx="10" fill="#E3F5F2" stroke="#2BB3A3" stroke-width="1.5"/>
+<text x="790.0" y="635.76" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="16" fill="#1C8577" font-weight="bold" text-anchor="middle">F<tspan baseline-shift="sub" font-size="72%">θ</tspan></text>
+<line x1="110" y1="630" x2="146" y2="630" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="290" y1="630" x2="326" y2="630" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="370" y1="630" x2="406" y2="630" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="550" y1="630" x2="586" y2="630" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<text x="665" y="637" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="22" fill="#5B6B7F" font-weight="normal" text-anchor="middle">⋯</text>
+<line x1="860" y1="630" x2="876" y2="630" stroke="#5B6B7F" stroke-width="2" marker-end="url(#ah5B6B7F)"/>
+<line x1="220" y1="596" x2="220" y2="605" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)"/>
+<line x1="480" y1="596" x2="480" y2="605" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)"/>
+<line x1="790" y1="596" x2="790" y2="605" stroke="#EE8A2A" stroke-width="2" marker-end="url(#ahEE8A2A)"/>
+<line x1="220" y1="596" x2="790" y2="596" stroke="#EE8A2A" stroke-width="2"/>
+<text x="505" y="590" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#EE8A2A" font-weight="normal" text-anchor="middle">e 注入每一轮</text>
+<text x="960" y="626" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="start">有效深度 = 块层数 × R</text>
+<text x="960" y="650" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="15" fill="#1F3A5F" font-weight="bold" text-anchor="start">参数量保持不变</text>
+<text x="40" y="682" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Source Han Sans SC, sans-serif" font-size="12.5" fill="#8A97A6" font-weight="normal" text-anchor="start">本文绘制（概念示意）。记号：e 为前置层输出的输入嵌入，F<tspan baseline-shift="sub" font-size="72%">θ</tspan> 为被重复调用的共享块。</text>
+</svg>

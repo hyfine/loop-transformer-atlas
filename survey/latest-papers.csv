@@ -1,0 +1,44 @@
+family,arxiv_id,method,date,version_id,title,cited_by,openalex_id,checked,selection
+F02,2611.29171,Recurrence-Generalization,2026-11-22,2611.29171v1,What Makes Recurrence Generalize Across Lengths?,0,https://openalex.org/W7239367200,2026-11-27,survey representative; recent release
+F03,2611.22426,InfuseLoop,2026-11-17,2611.22426v1,InfuseLoop: Cross-Trajectory Latent Injection for Scalable Parallel Looped Transformers,0,https://openalex.org/W7235836683,2026-11-27,recent release
+F03,2611.34923,MoLT,2026-11-25,2611.34923v1,Mixture-of-Loops Transformer,,,2026-11-27,survey representative; recent release
+F04,2611.33952,DuoMI,2026-11-25,2611.33952v1,DuoMI: Dual Mutual Information Regularization for Expert Reuse in Looped Transformers,,,2026-11-27,survey representative; recent release
+F04,2611.34276,Matched-Budget-MoE,2026-11-25,2611.34276v1,Scaling Looped MoE Language Models under Matched Budgets: Information Flow and Parameter Allocation,,,2026-11-27,survey representative; recent release
+F04,2611.34821,LoopTitan,2026-11-25,2611.34821v1,LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts?,,,2026-11-27,survey representative; recent release
+F05,2611.16265,Rectified-Loop,2026-11-12,2611.16265v2,Rectified Looped Transformer,0,https://openalex.org/W7225991429,2026-11-27,recent release supplement
+F05,2611.29704,Loop-Count-Schedules,2026-11-22,2611.29704v1,Loop-Count Schedules in Looped Transformers: An Empirical Study,0,https://openalex.org/W7239387983,2026-11-27,survey representative; recent release
+F05,2611.31513,Fixed-Point-Perspective,2026-11-23,2611.31513v1,How to build and train your recurrent-depth model: A fixed-point perspective,0,https://openalex.org/W7239804736,2026-11-27,survey representative; recent release
+F06,2611.12293,Depth-Candidates,2026-11-09,2611.12293v1,Depth as a Candidate Source: Portfolio Allocation for Recurrent Test-Time Scaling in Large Language Models,0,https://openalex.org/W7225710168,2026-11-27,recent release
+F06,2611.31481,SwiftLoop,2026-11-23,2611.31481v1,SwiftLoop: Selective Refinement for Adaptive Implicit Reasoning in Looped Transformers,0,https://openalex.org/W7239815671,2026-11-27,recent release
+F06,2611.33722,FLUENT,2026-11-25,2611.33722v1,Practice Makes Fluent: Learning to Use Earlier Predictions in Looped Models,,,2026-11-27,survey representative; recent release
+F07,2611.31094,LoopRes,2026-11-23,2611.31094v2,Unlocking the Power of Loops in Pretrained LLMs with Loop Residuals,0,https://openalex.org/W7239365538,2026-11-27,recent release
+F08,2611.13378,Looped-CED,2026-11-09,2611.13378v1,Looping Deeper Without Growing the KV Cache: Recurrent Depth for Causal Encoder-Decoders,0,https://openalex.org/W7225805151,2026-11-27,recent release
+F08,2611.19446,KV-Replay,2026-11-14,2611.19446v1,Architectures and KV Replay for Depth-Recurrent Language Models,0,https://openalex.org/W7235759762,2026-11-27,recent release supplement
+F08,2611.19649,LoopFill,2026-11-14,2611.19649v1,LoopFill: Pipelined Multi-Token Speculative Decoding for Looped Transformers,0,https://openalex.org/W7235420317,2026-11-27,recent release supplement
+F08,2611.19896,LoopSkim,2026-11-15,2611.19896v1,LoopSkim: Lossless Multi-Depth Speculative Decoding for Looped Language Models,0,https://openalex.org/W7235054931,2026-11-27,recent release supplement
+F08,2611.22728,LoopZip,2026-11-17,2611.22728v2,LoopZip: Visual Token Compression for Efficient Looped Vision-Language Models,0,https://openalex.org/W7235924220,2026-11-27,recent release supplement
+F08,2611.22757,LoopPrune,2026-11-17,2611.22757v2,LoopPrune: Recurrent Pruning for Looped Diffusion Transformers,0,https://openalex.org/W7236054180,2026-11-27,recent release supplement
+F08,2611.24301,LoopCache,2026-11-18,2611.24301v1,LoopCache: Accelerating Long-Context Self-Speculative Decoding for Looped Transformers,0,https://openalex.org/W7236687098,2026-11-27,recent release
+F08,2611.24576,Late-Entry,2026-11-18,2611.24576v1,Late Entry in Looped Language Models,0,https://openalex.org/W7236703951,2026-11-27,recent release supplement
+F08,2611.25369,Fold-the-Loop,2026-11-19,2611.25369v2,Fold the Loop: Decoding-Time KV Memory for Looped Vision-Language Models,0,https://openalex.org/W7237276049,2026-11-27,recent release supplement
+F08,2611.29092,SRFT-KV,2026-11-21,2611.29092v1,One Million Tokens in 20GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon,0,https://openalex.org/W7239412979,2026-11-27,recent release supplement
+F08,2611.30205,PackLoop,2026-11-23,2611.30205v1,PackLoop: Row-Packed Self-Speculative Decoding for Looped Language Models under Concurrency,0,https://openalex.org/W7239366099,2026-11-27,recent release supplement
+F08,2611.33896,Floodgates,2026-11-25,2611.33896v1,Looped Models are Fast Multi-Token Predictors,,,2026-11-27,survey representative; recent release
+F08,2611.34492,FlyingStart,2026-11-25,2611.34492v1,FlyingStart: Learned Cross-Token Warm Starts for Fixed-Point Decoding in Recurrent-Depth Language Models,,,2026-11-27,survey representative; recent release
+F09,2611.31939,ELGO,2026-11-24,2611.31939v1,Beyond the Last Loop: Reinforcement Learning with a Teacher Extrapolated from the Model Itself,0,https://openalex.org/W7239847409,2026-11-27,survey representative; recent release
+F09,2611.32452,Beyond-Last-Loop,2026-11-24,2611.32452v1,The Teacher Is Already Inside: Self-Distilling Looped Language Models Beyond Their Last Loop,0,https://openalex.org/W7239822491,2026-11-27,survey representative; recent release
+F09,2611.33468,Depth-Preferences,2026-11-24,2611.33468v1,Learning from Recurrence: Internalizing Depth-Induced Preferences in Looped Language Models,,,2026-11-27,survey representative; recent release
+F10,2611.21921,Latent-Fact-Composition,2026-11-16,2611.21921v1,Latent Fact Composition under Next-Token Training,0,https://openalex.org/W7236090354,2026-11-27,recent release
+F10,2611.28808,Fact-Availability,2026-11-21,2611.28808v1,When do stored facts become available in looped transformers?,0,https://openalex.org/W7239435758,2026-11-27,survey representative; recent release
+F11,2611.17309,Classical-Energies,2026-11-12,2611.17309v2,"Classical Energies Learn to Reason 1,000x Faster than Looped Models",0,https://openalex.org/W7226001426,2026-11-27,survey representative; recent release
+F12,2611.14947,LoopMR,2026-11-11,2611.14947v1,One Block Is Enough: LoopMR for Accelerated MRI Reconstruction,0,https://openalex.org/W7226012371,2026-11-27,recent release supplement
+F12,2611.19827,Multimodal-Reuse,2026-11-15,2611.19827v1,When Does Reusing Layers Help Multimodal Embeddings?,0,https://openalex.org/W7235476912,2026-11-27,recent release supplement
+F12,2611.26275,dLoop,2026-11-19,2611.26275v1,dLoop: Looped Diffusion Language Models via Recurrent Latent Refinement,0,https://openalex.org/W7237235865,2026-11-27,recent release supplement
+F12,2611.26752,Depth-Linked-Tokens,2026-11-19,2611.26752v1,Depth-Linked Residual Tokens for Multimodal Retrieval and Generation,0,https://openalex.org/W7238787938,2026-11-27,recent release supplement
+F12,2611.30844,DyLoMo-DiT,2026-11-23,2611.30844v1,DyLoMo-DiT: Dynamic Looped Mixture-of-Experts Diffusion Transformers,0,https://openalex.org/W7239397646,2026-11-27,recent release supplement
+F12,2611.31977,Distill-to-Loop,2026-11-24,2611.31977v1,Distill to Loop: Turning Pretrained Diffusion Transformers into Looped Models with Adjustable Depth,0,https://openalex.org/W7239759242,2026-11-27,recent release supplement
+F12,2611.32067,LoopDVR,2026-11-24,2611.32067v1,LoopDVR: Looped Transformer for Efficient Dense Visual Recognition,0,https://openalex.org/W7239757676,2026-11-27,recent release supplement
+F12,2611.32175,LoopFit,2026-11-24,2611.32175v1,LoopFit: Retrofitting Pretrained Diffusion Transformers with Recurrent Refinement,0,https://openalex.org/W7239793801,2026-11-27,survey representative; recent release
+F12,2611.33948,Where-to-Approximate,2026-11-25,2611.33948v1,Where to Approximate: Understanding and Accelerating Looped Multi-View Reconstruction,,,2026-11-27,survey representative; recent release
+F12,2611.34199,Loop4D,2026-11-25,2611.34199v1,Loop4D: Embodied World Modeling with 4D VAEs and Looped Diffusion Transformers,,,2026-11-27,survey representative; recent release
+F13,2611.28285,Dual-Loop-Markov,2026-11-20,2611.28285v1,"Specialized Large Language Models for Markovian Reasoning: Structural Cache Compression, Transition Pretraining, and Dual-Loop Transformers",0,https://openalex.org/W7239438225,2026-11-27,recent release
