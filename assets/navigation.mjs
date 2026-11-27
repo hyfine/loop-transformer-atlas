@@ -11,7 +11,13 @@ export function readRoute(hash){
   const [page,key,id,...rest]=hash.replace(/^#/,'').split('/');
   if(rest.length)return null;
   if(page==='survey'&&!id&&(!key||story.some(s=>s.id===key)))return {tab:'survey',section:key||'digest'};
-  if(page==='library'&&!id&&key&&story.some(s=>s.id===key&&/^F\d\d$/.test(key)))return {tab:'library',family:key};
+  if(page==='library'&&key){
+    const family=key==='all'?'':key;
+    if(family&&!story.some(s=>s.id===family&&/^F\d\d$/.test(family)))return null;
+    if(id&&!['survey','reading','recent','cards','seed'].includes(id))return null;
+    if(family&&['cards','seed'].includes(id))return null;
+    return id?{tab:'library',family,scope:id}:{tab:'library',family};
+  }
   const view=Object.hasOwn(aliases,page)?aliases[page]:page;
   if(Object.hasOwn(views,view)){
     const route=routes.find(r=>r.id===key);

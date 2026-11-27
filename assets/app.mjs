@@ -347,7 +347,7 @@ function navigate(){
   if(tab==='lab'){labFamily=route.family||byId[selected].family;step=0;}
   if(tab==='frontier')model=route.model;
   if(tab==='survey'){section=route.section;plate=0;}
-  if(tab==='library'&&route.family){shelfFamily=route.family;shelfScope='survey';shelfPage=0;query='';}
+  if(tab==='library'){shelfFamily=route.family||'';shelfScope=route.scope||'survey';shelfPage=0;query='';}
   render();
   if(previous&&(previous!==tab||(tab==='survey'&&section!==previousSection))){main.focus({preventScroll:true});window.scrollTo(0,0);}
 }
@@ -395,10 +395,14 @@ main.addEventListener('input',e=>{
 main.addEventListener('change',e=>{
   if(e.target.id==='survey-section')location.hash=`survey/${e.target.value}`;
   if(e.target.id==='survey-plate'){plate=Number(e.target.value);render();}
-  if(e.target.id==='shelf-family'){shelfFamily=e.target.value;shelfPage=0;render();}
+  if(e.target.id==='shelf-family'||e.target.id==='scope'){
+    if(e.target.id==='shelf-family')shelfFamily=e.target.value;
+    else{shelfScope=e.target.value;if(['cards','seed'].includes(shelfScope))shelfFamily='';}
+    shelfPage=0;
+    history.replaceState(null,'',`#library/${shelfFamily||'all'}/${shelfScope}`);render();
+  }
   if(e.target.id==='scrub')handle('tick',e.target.value);
   if(e.target.id==='route')location.hash=`lab/${e.target.value}`;
-  if(e.target.id==='scope'){shelfScope=e.target.value;shelfPage=0;render();}
 });
 document.querySelector('#language').addEventListener('click',()=>{
   zh=!zh;const u=new URL(location.href);if(zh)u.searchParams.set('lang','zh');else u.searchParams.delete('lang');

@@ -33,6 +33,9 @@ for(const w of works){
     assert.deepEqual(readRoute(`#${view}/${w.family}/${w.id}`),{tab:'map',view,work:w.id});
 }
 assert.deepEqual(readRoute('#swimlanes'),readRoute('#lanes'));
+assert.deepEqual(readRoute('#library/all/recent'),{tab:'library',family:'',scope:'recent'});
+assert.deepEqual(readRoute('#library/F04/reading'),{tab:'library',family:'F04',scope:'reading'});
+assert.equal(readRoute('#library/F04/seed'),null);
 assert.equal(readRoute('#tree/A/dory'),null);
 for(const d of directions){
   [d.title,d.changed,d.observed,d.test].forEach(bilingual);
