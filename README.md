@@ -8,6 +8,8 @@
 
 [**Read the illustrated survey →**](https://hyfine.github.io/loop-transformer-atlas/#survey/digest) · [Original Chinese Markdown](survey/Loop_Transformer_Survey_zh_illustrated.md) · [Download the workbook](survey/Loop_Transformer_Landscape.xlsx) · [Archive notes](survey/README.md)
 
+**WeChat edition (中文):** [Read the full illustrated article in your browser](https://hyfine.github.io/loop-transformer-atlas/wechat/公众号正文.html) · [Open the original article in WeChat](https://mp.weixin.qq.com/s/Poxa25iG-8ZYJcdpjBVsDg) · [Publication files and artwork](wechat/README.md)
+
 [![Six loop designs: tied transitions, block vs layer repetition, token routing, gated checkpoint conversion, cross-loop KV memory and latent world-state refinement.](assets/methods.svg)](https://hyfine.github.io/loop-transformer-atlas/#map)
 
 Read the panels as alternatives, not a pipeline: **B** changes *which layers run again*, **C** changes *which tokens run again*, and **E** changes *what the next pass can read*. [Explore the six methods →](https://hyfine.github.io/loop-transformer-atlas/#map)

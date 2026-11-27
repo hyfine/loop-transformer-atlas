@@ -103,7 +103,9 @@ for(const name of docs){
   for(const m of md.matchAll(/(?:\]\(|(?:src|href)=")([^)"\s]+)[)"]/g)){
     const u=m[1];
     if(u.startsWith('https://hyfine.github.io/loop-transformer-atlas/')){
-      assert(readRoute(new URL(u).hash),u);
+      const url=new URL(u),file=decodeURIComponent(url.pathname.slice('/loop-transformer-atlas/'.length));
+      if(file)assert(existsSync(join(root,file)),`${name}: missing Pages file ${u}`);
+      else assert(readRoute(url.hash),u);
     }else if(!/^[a-z]+:/i.test(u)){
       const [file,frag]=u.split('#'), target=file?resolve(root,dirname(name),file):join(root,name);
       assert(existsSync(target),`${name}: missing ${u}`);

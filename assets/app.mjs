@@ -72,7 +72,8 @@ function overview(){
   const tags = ['molt','glm','loopres','loopcache','sense','arloop','dory'];
   return `<div class="split"><div>${kicker('RESEARCH ATLAS / VOL. 07')}<h1>${tr('One block.<br><em>Many depths.</em>','一组权重，<br><em>多轮计算。</em>')}</h1>
   <p class="lede">${tr('A Transformer can spend more compute before it writes its next token. Follow what changes inside the loop, what stays shared, and what one more pass actually costs.','Transformer 可以在写出下一个 token 前多算几轮。沿着环路看清：什么在变化，什么保持共享，再算一轮究竟要付出什么。')}</p>
-  <div class="tools"><a class="primary" href="#survey/digest">${tr('Start the illustrated survey →','从图解综述开始 →')}</a><a href="#survey/families">${tr('Jump to the 13 families','跳到十三个技术族')}</a></div>${sourceLinks()}</div>
+  <div class="tools"><a class="primary" href="#survey/digest">${tr('Start the illustrated survey →','从图解综述开始 →')}</a><a href="#survey/families">${tr('Jump to the 13 families','跳到十三个技术族')}</a></div>
+  <div class="tools"><strong>${tr('WeChat edition (中文)','微信公众号版')}</strong><a href="wechat/公众号正文.html">${tr('Read the illustrated article','点击阅览图文全文')}</a><a href="https://mp.weixin.qq.com/s/Poxa25iG-8ZYJcdpjBVsDg">${tr('Read the original in WeChat','在手机微信中阅读原文')} ↗</a></div>${sourceLinks()}</div>
   <div class="plate">${kicker('01 / DEPTH COUNTER')}<img src="assets/circuit.svg" alt="${tr('Prelude, recurrent core with feedback, and coda','前段编码、带状态反馈的共享核心与输出尾段')}">
   <div class="tools">${tr('Core visits','核心访问次数')} ${[1,2,4].map(r=>btn('round',`×${r}`,`data-value="${r}" aria-pressed="${r===rounds}"`)).join('')}</div>
   <div class="numbers"><span><b>32</b><small>${tr('distinct layers','独立层数')}</small></span><span><b>${4+24*rounds+4}</b><small>${tr('layer executions','执行层次')}</small></span><span><b>×${rounds}</b><small>${tr('middle block','中间块')}</small></span></div>

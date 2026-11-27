@@ -1,0 +1,769 @@
+{
+  "source_sha256": "b11114f971b5492b067b8bd813b25d98c1b3c410f94a764cef9b6f39daf18a13",
+  "survey": [
+    {
+      "order": 1,
+      "source": "images/illustrated/g0_cover.png",
+      "src": "assets/survey/01-g0_cover.png",
+      "size": [
+        3200,
+        1120
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g0_cover.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g0_cover.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "6b163870d8574d92d7b89cbd4f7015d1a580016450675795d72a495e753679ee"
+    },
+    {
+      "order": 2,
+      "source": "images/redrawn/fig01_recurrent_depth_overview.png",
+      "src": "assets/survey/02-fig01_recurrent_depth_overview.png",
+      "size": [
+        2400,
+        1400
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig01_recurrent_depth_overview.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig01_recurrent_depth_overview.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "a2e8daca9f680d8130c25b616b1c2af9b1200968bda3c605b5a634a9319db84b"
+    },
+    {
+      "order": 3,
+      "source": "images/redrawn/fig02_loop_granularity.png",
+      "src": "assets/survey/03-fig02_loop_granularity.png",
+      "size": [
+        2400,
+        1744
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig02_loop_granularity.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig02_loop_granularity.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "a6347824919225486d38ab3aee1bc0a821c358ba7931193cc27dbea73f040b2e"
+    },
+    {
+      "order": 4,
+      "source": "images/illustrated/g1_loop_structures.png",
+      "src": "assets/survey/04-g1_loop_structures.png",
+      "size": [
+        3000,
+        1520
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g1_loop_structures.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g1_loop_structures.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "6366f42f1d417bb4ee3c9bbead08ec0e120d065de73707f342920ea74b8b4f4f"
+    },
+    {
+      "order": 5,
+      "source": "images/illustrated/g2_timeline.png",
+      "src": "assets/survey/05-g2_timeline.png",
+      "size": [
+        3000,
+        1960
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g2_timeline.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g2_timeline.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "1fa11aabee1b461a8bd7db55ffd32054e7a4e824abe8954dc22e08c840b12fb4"
+    },
+    {
+      "order": 6,
+      "source": "images/illustrated/g3_papers_per_quarter.png",
+      "src": "assets/survey/06-g3_papers_per_quarter.png",
+      "size": [
+        3000,
+        1280
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g3_papers_per_quarter.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g3_papers_per_quarter.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "7603f742ad59ac13489eba9a6727b427cb8636b400c2ccb3bf2780af64c23a93"
+    },
+    {
+      "order": 7,
+      "source": "images/illustrated/g4_family_tree.png",
+      "src": "assets/survey/07-g4_family_tree.png",
+      "size": [
+        3000,
+        2674
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g4_family_tree.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g4_family_tree.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "e4ba44016bfcb7aef690dfce684f7d669923a9ace8ee3dfdd340690469915ce8"
+    },
+    {
+      "order": 8,
+      "source": "images/illustrated/g5_lineage.png",
+      "src": "assets/survey/08-g5_lineage.png",
+      "size": [
+        3920,
+        3612
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g5_lineage.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g5_lineage.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "0fbb060a68baafc83d49c405caf7ac2bb71191caf4c6baab223639262020703d"
+    },
+    {
+      "order": 9,
+      "source": "images/illustrated/g6_swimlane_global.png",
+      "src": "assets/survey/09-g6_swimlane_global.png",
+      "size": [
+        3200,
+        2048
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g6_swimlane_global.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g6_swimlane_global.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "013104791a4ac5b7cf0b572356e36f5816913868e237d399afef01dcc1bcba7a"
+    },
+    {
+      "order": 10,
+      "source": "images/illustrated/g7a_swimlane_2025_2026H1.png",
+      "src": "assets/survey/10-g7a_swimlane_2025_2026H1.png",
+      "size": [
+        3200,
+        1672
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g7a_swimlane_2025_2026H1.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g7a_swimlane_2025_2026H1.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "27b2302779015623445a831d0e171ad7212b36728ee29c82a0bf2dcc19a27aa6"
+    },
+    {
+      "order": 11,
+      "source": "images/illustrated/g7b_swimlane_2026H2.png",
+      "src": "assets/survey/11-g7b_swimlane_2026H2.png",
+      "size": [
+        3200,
+        1784
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g7b_swimlane_2026H2.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g7b_swimlane_2026H2.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "08af3fa93f3c76e0d4ce62f5041306b93f2e1b22a00d05152542797ef722e102"
+    },
+    {
+      "order": 12,
+      "source": "images/illustrated/g8_cross_lane.png",
+      "src": "assets/survey/12-g8_cross_lane.png",
+      "size": [
+        3200,
+        1640
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g8_cross_lane.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g8_cross_lane.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "dc4e624c7941edf6fe5559ca9027846a280774d71a2ed73fafd5b76ee8bf9ea2"
+    },
+    {
+      "order": 13,
+      "source": "images/illustrated/g9_taxonomy_stack.png",
+      "src": "assets/survey/13-g9_taxonomy_stack.png",
+      "size": [
+        3200,
+        1880
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g9_taxonomy_stack.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g9_taxonomy_stack.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "50d8fce17246770c099009e4c4e52fbea6ad64e055d2a7f1232de76c60b43efd"
+    },
+    {
+      "order": 14,
+      "source": "images/illustrated/f6_01_foundations.png",
+      "src": "assets/survey/14-f6_01_foundations.png",
+      "size": [
+        3000,
+        1200
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_01_foundations.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_01_foundations.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "389377a0c0add74caa94ad5668d9732f897bedc4de7bd4161e5b5c76de384b6b"
+    },
+    {
+      "order": 15,
+      "source": "images/redrawn/fig03_ut_act.png",
+      "src": "assets/survey/15-fig03_ut_act.png",
+      "size": [
+        2400,
+        1200
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig03_ut_act.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig03_ut_act.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "5fd07437c570f28b3ccff9d8f2aa80b3f2c959155615d8a3e2054b1c382f9304"
+    },
+    {
+      "order": 16,
+      "source": "images/illustrated/f6_02_theory.png",
+      "src": "assets/survey/16-f6_02_theory.png",
+      "size": [
+        3000,
+        1440
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_02_theory.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_02_theory.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "398e779a9016c7fd97719af3098489357993ca21b8da0f66ea3091d9e84fd9d4"
+    },
+    {
+      "order": 17,
+      "source": "images/illustrated/f6_03_pretraining.png",
+      "src": "assets/survey/17-f6_03_pretraining.png",
+      "size": [
+        3000,
+        1280
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_03_pretraining.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_03_pretraining.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "f69311c720bc8ba8d75523eb4b9e4ed37823bc6d18a08da6398785fd49a3b1f3"
+    },
+    {
+      "order": 18,
+      "source": "images/redrawn/fig04_huginn_prelude_core_coda.png",
+      "src": "assets/survey/18-fig04_huginn_prelude_core_coda.png",
+      "size": [
+        2400,
+        1200
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig04_huginn_prelude_core_coda.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig04_huginn_prelude_core_coda.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "8ffd53e35bacf24bd609e979f05b5cd5d2c1136c691e786b9e6de9a4069fc32f"
+    },
+    {
+      "order": 19,
+      "source": "images/external/molt_attention_visibility.png",
+      "src": "assets/survey/19-molt_attention_visibility.png",
+      "size": [
+        1500,
+        690
+      ],
+      "mode": "atlas-redraw",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/external/molt_attention_visibility.png",
+      "credit": "发布插图：Atlas 独立示意三种跨轮信息通路。原文所述四联原图见作者链接。",
+      "url": "https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_attention_visibility.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "47fdd2667992133ab1a7571e33fbedf27be8ff407feff8736396f9688e5ac523"
+    },
+    {
+      "order": 20,
+      "source": "images/illustrated/f6_04_looped_moe.png",
+      "src": "assets/survey/20-f6_04_looped_moe.png",
+      "size": [
+        3000,
+        1200
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_04_looped_moe.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_04_looped_moe.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "a6d202e10ed96ad1aca654d4884db6b1435cf55290c1f4defb59f771d38f92ef"
+    },
+    {
+      "order": 21,
+      "source": "images/redrawn/fig05_looped_moe_matched_budget.png",
+      "src": "assets/survey/21-fig05_looped_moe_matched_budget.png",
+      "size": [
+        2400,
+        1280
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig05_looped_moe_matched_budget.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig05_looped_moe_matched_budget.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "166838b2e897c986164f6dc6a9168cd12a881c63dd914f7d85ab5d9f81e6b179"
+    },
+    {
+      "order": 22,
+      "source": "images/illustrated/f6_05_stability.png",
+      "src": "assets/survey/22-f6_05_stability.png",
+      "size": [
+        3000,
+        1520
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_05_stability.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_05_stability.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "4b635f68aa615c059153731d68a0be2fbd1c507a72a046e9c3865b62df40ee18"
+    },
+    {
+      "order": 23,
+      "source": "images/redrawn/fig06_training_free_ode.png",
+      "src": "assets/survey/23-fig06_training_free_ode.png",
+      "size": [
+        2400,
+        1240
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig06_training_free_ode.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig06_training_free_ode.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "7e104404cc44d42c5ac7a7fb61c12e17d8218bd23253064699a07ce59228f5f4"
+    },
+    {
+      "order": 24,
+      "source": "images/illustrated/f6_06_adaptive.png",
+      "src": "assets/survey/24-f6_06_adaptive.png",
+      "size": [
+        3000,
+        1280
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_06_adaptive.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_06_adaptive.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "17e6eced406f24e16f4604172068de361bfa516c929d37edf042b0c32c21552b"
+    },
+    {
+      "order": 25,
+      "source": "images/illustrated/f6_07_retrofit.png",
+      "src": "assets/survey/25-f6_07_retrofit.png",
+      "size": [
+        3000,
+        1680
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_07_retrofit.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_07_retrofit.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "17574c1ad56c01088be239877d87d359912ec16c0279c1bbfe84dabf8cecbdc1"
+    },
+    {
+      "order": 26,
+      "source": "images/illustrated/f6_08_inference.png",
+      "src": "assets/survey/26-f6_08_inference.png",
+      "size": [
+        3000,
+        2120
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_08_inference.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_08_inference.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "cf68047e3283175e8b2b3765ef2e5863de7ce158e75cdb4804e1e0a6b139764f"
+    },
+    {
+      "order": 27,
+      "source": "images/redrawn/fig07_plt_gain_cost.png",
+      "src": "assets/survey/27-fig07_plt_gain_cost.png",
+      "size": [
+        2400,
+        1320
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig07_plt_gain_cost.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/redrawn/fig07_plt_gain_cost.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "c8203579643134d75915afaca1f153e2efd4cef27b474108821710915fd1a148"
+    },
+    {
+      "order": 28,
+      "source": "images/illustrated/f6_09_posttrain.png",
+      "src": "assets/survey/28-f6_09_posttrain.png",
+      "size": [
+        3000,
+        1440
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_09_posttrain.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_09_posttrain.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "be7c67880c877bdf40d6c055bd71ed2b6517bfef19d6ea14a532b7c7ed9daca5"
+    },
+    {
+      "order": 29,
+      "source": "images/illustrated/f6_10_interpretability.png",
+      "src": "assets/survey/29-f6_10_interpretability.png",
+      "size": [
+        3000,
+        1400
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_10_interpretability.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_10_interpretability.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "b003bc71b27e44a0889518f92728feb018cb6bd755bf0d29eb11722cb7707c82"
+    },
+    {
+      "order": 30,
+      "source": "images/illustrated/f6_11_tiny_recursive.png",
+      "src": "assets/survey/30-f6_11_tiny_recursive.png",
+      "size": [
+        3000,
+        1280
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_11_tiny_recursive.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_11_tiny_recursive.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "af4bd2a8dcd7ec7f0aac762776edf969f37a163182bc7066ada1099f40461b89"
+    },
+    {
+      "order": 31,
+      "source": "images/illustrated/f6_12_applications.png",
+      "src": "assets/survey/31-f6_12_applications.png",
+      "size": [
+        3000,
+        1400
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_12_applications.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_12_applications.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "7ab570aacb5e1c4a678d31b6a9575f4c6a6c4b95bbb2c2bc410c412d956b647b"
+    },
+    {
+      "order": 32,
+      "source": "images/illustrated/f6_13_related.png",
+      "src": "assets/survey/32-f6_13_related.png",
+      "size": [
+        3000,
+        1400
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_13_related.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/f6_13_related.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "c92c1b9fd4849ce0480a49bd2ef037f1f0016bb9c5845e5d6e8726ce3d687d87"
+    },
+    {
+      "order": 33,
+      "source": "images/illustrated/g10_industry_routes.png",
+      "src": "assets/survey/33-g10_industry_routes.png",
+      "size": [
+        3200,
+        1720
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g10_industry_routes.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g10_industry_routes.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "35f383206b5dfa9b8c6267632825968eae7debde0f690b10b2ed96ceff3413d3"
+    },
+    {
+      "order": 34,
+      "source": "images/external/glm54_architecture.png",
+      "src": "assets/survey/34-glm54_architecture.png",
+      "size": [
+        1080,
+        450
+      ],
+      "mode": "atlas-redraw",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/assets/glm54-loop.svg",
+      "credit": "发布插图：Atlas 依据智谱架构说明独立重绘；不是发布方原图。上方保留原版图说。",
+      "url": "https://z.ai/blog/glm-5.4",
+      "license": "",
+      "license_url": "",
+      "sha256": "3e2bc229d47aa02ef6ac8517c40644d2781f8bb7cc2301418c9c1452c9deba85"
+    },
+    {
+      "order": 35,
+      "source": "images/external/sensenova_loop_architecture.jpg",
+      "src": "assets/survey/35-sensenova_loop_architecture.jpg",
+      "size": [
+        1600,
+        817
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/external/sensenova_loop_architecture.jpg",
+      "credit": "OpenSenseNova 官方架构图；保留图解版提供的尺寸。",
+      "url": "https://github.com/OpenSenseNova/SenseNova-Loop/blob/e19d54117b23e83b6719f1d17bba381b8396b3a5/assets/hero.png",
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "sha256": "3597cd63b9e86aa340a5c4890c6c367cb0c44fcb7bfb2b8f1e6c466e8b15beec"
+    },
+    {
+      "order": 36,
+      "source": "images/external/sensenova_loop_scaling_zh.png",
+      "src": "assets/survey/36-sensenova_loop_scaling_zh.png",
+      "size": [
+        1600,
+        906
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/external/sensenova_loop_scaling_zh.png",
+      "credit": "OpenSenseNova 官方 Loop Scaling 实验图；保留图解版提供的尺寸。",
+      "url": "https://github.com/OpenSenseNova/SenseNova-Loop/blob/e19d54117b23e83b6719f1d17bba381b8396b3a5/assets/loop_scaling_zh_latest.png",
+      "license": "Apache 2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "sha256": "edb958f348556dc28a26fc62df41167ea3d8e814ff5001de36209b0b69af8f34"
+    },
+    {
+      "order": 37,
+      "source": "images/external/dory_architecture.jpg",
+      "src": "assets/survey/37-dory_architecture.jpg",
+      "size": [
+        1223,
+        1185
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/external/dory_architecture.jpg",
+      "credit": "Fishman 等，Dory1.0-4B，Figure 2；图解版所附裁切图。",
+      "url": "https://arxiv.org/abs/2611.03998v1",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "148a2778bbae496a257512bdaba138a89b6d61e00b19a2d0c76081c52b4f38de"
+    },
+    {
+      "order": 38,
+      "source": "images/external/ouro_looplm_architecture.jpg",
+      "src": "assets/survey/38-ouro_looplm_architecture.jpg",
+      "size": [
+        1014,
+        436
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/external/ouro_looplm_architecture.jpg",
+      "credit": "Zhu 等，Scaling Latent Reasoning via Looped Language Models，Figure 3；图解版所附裁切图。",
+      "url": "https://arxiv.org/abs/2510.25741",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sha256": "3c75179fda1538c269d39d3e37877d71bc53a1c40b13e4ee5c912585795cd498"
+    },
+    {
+      "order": 39,
+      "source": "images/external/molt_architecture.png",
+      "src": "assets/survey/39-molt_architecture.png",
+      "size": [
+        1080,
+        470
+      ],
+      "mode": "atlas-redraw",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/assets/umolt-memory.svg",
+      "credit": "发布插图：Atlas 依据 U-MoLT 的记忆／读出分工独立重绘。原图见作者链接。",
+      "url": "https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "cebfc1f3a7f3d4e17cad19c88beb648b1b50a457a6b005fef899903a8df34e79"
+    },
+    {
+      "order": 40,
+      "source": "images/illustrated/g11_quadrant.png",
+      "src": "assets/survey/40-g11_quadrant.png",
+      "size": [
+        3000,
+        1920
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g11_quadrant.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g11_quadrant.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "217fc25923339e64f614eae67032687e6a1cb1370ab1be6779ddd375896e5c7f"
+    },
+    {
+      "order": 41,
+      "source": "images/illustrated/g12_decision_flow.png",
+      "src": "assets/survey/41-g12_decision_flow.png",
+      "size": [
+        3200,
+        2600
+      ],
+      "mode": "unchanged",
+      "art_url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g12_decision_flow.png",
+      "credit": "图解版原作者绘制；保留原图尺寸与配色。",
+      "url": "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/images/illustrated/g12_decision_flow.png",
+      "license": "",
+      "license_url": "",
+      "sha256": "b4bcdbb47e76c1c20cf2c6d1229c467669693c0366e535d188783cd718cc0120"
+    }
+  ],
+  "animations": [
+    {
+      "src": "assets/01-loop.gif",
+      "poster": "assets/01-loop.png",
+      "after": "images/redrawn/fig01_recurrent_depth_overview.png",
+      "title": "共享核的两条输入",
+      "frames": 28,
+      "stops": [
+        "01  固定输入 e",
+        "02  回到同一块",
+        "03  尾段读出",
+        "04  展开检查"
+      ],
+      "refs": [
+        "https://arxiv.org/abs/2502.05171v2"
+      ],
+      "sha256": "edac5290bafee9e2b26a9cb8fa1f5b6f0d197f6f2d23ba05571e4bcf0d2deac6",
+      "poster_sha256": "eaa0b202abc38b9f6b3d2caa83f8dd2da64a6dd46bd92d18f5e40a2f0a9baa85"
+    },
+    {
+      "src": "assets/02-timeline.gif",
+      "poster": "assets/02-timeline.png",
+      "after": "images/illustrated/g2_timeline.png",
+      "title": "六个阶段，六次问题转换",
+      "frames": 18,
+      "stops": [
+        "2015–2017  前身",
+        "2018–2022  奠基",
+        "2023–2024  理论",
+        "2025  规模化",
+        "2026 上半年  对照",
+        "2026 下半年  落地"
+      ],
+      "refs": [
+        "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/Loop_Transformer_Survey_zh_illustrated.md",
+        "https://arxiv.org/abs/1807.03819",
+        "https://arxiv.org/abs/2502.05171v2"
+      ],
+      "sha256": "f38b9274f29b53792bbab25c8481280fd92b1cd9e56a403adb1f91e6a2026e79",
+      "poster_sha256": "3f44458264a44dd440afe36b49520c063362590e2e0e8b51ccd3a3e7f994a217"
+    },
+    {
+      "src": "assets/03-family-tree.gif",
+      "poster": "assets/03-family-tree.png",
+      "after": "images/illustrated/g4_family_tree.png",
+      "title": "同一棵树的四个入口",
+      "frames": 12,
+      "stops": [
+        "模型层  /  F03",
+        "训练层  /  F05",
+        "推理层  /  F08",
+        "理解与应用层  /  F11"
+      ],
+      "refs": [
+        "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/Loop_Transformer_Survey_zh_illustrated.md",
+        "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/Loop_Transformer_Landscape.xlsx"
+      ],
+      "sha256": "e42559714529eda1eec4785dd0462a095245d74ed0444a73a79d513a986ca9c9",
+      "poster_sha256": "5e3dbeb285bd7542b474f4cd517e3d475a7848676743f0b5ef3a034e5497b20b"
+    },
+    {
+      "src": "assets/04-lineage.gif",
+      "poster": "assets/04-lineage.png",
+      "after": "images/illustrated/g5_lineage.png",
+      "title": "这些线，分别意味着什么？",
+      "frames": 38,
+      "stops": [
+        "01  ACT → Universal Transformer",
+        "02  Huginn ⇢ Ouro",
+        "03  PLT → LoopCoder-v2",
+        "04  Loopie ⇢ SMELT",
+        "05  HRM → TRM",
+        "06  读回图例"
+      ],
+      "refs": [
+        "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/Loop_Transformer_Survey_zh_illustrated.md",
+        "https://arxiv.org/abs/1807.03819",
+        "https://arxiv.org/abs/2606.18023v1",
+        "https://arxiv.org/abs/2607.16051v3",
+        "https://arxiv.org/abs/2609.01343v3"
+      ],
+      "sha256": "05c0b1d8377e4f6a7f36f34ebf2f2eaa029e477c6b0ba03c1c9293fe74413da6",
+      "poster_sha256": "64b59d69bf4ae6337cba0f9ad07d66c6aeaaa1fadde063a64cf1d6618b4e46e1"
+    },
+    {
+      "src": "assets/05-swimlanes.gif",
+      "poster": "assets/05-swimlanes.png",
+      "after": "images/illustrated/g6_swimlane_global.png",
+      "title": "横读一族，纵读一个时期",
+      "frames": 15,
+      "stops": [
+        "01  看早期比例",
+        "02  看模型层",
+        "03  看训练层",
+        "04  单独读 F08",
+        "05  看理解与应用"
+      ],
+      "refs": [
+        "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/Loop_Transformer_Landscape.xlsx",
+        "https://github.com/hyfine/loop-transformer-atlas/blob/c9535fb/survey/Loop_Transformer_Survey_zh_illustrated.md"
+      ],
+      "sha256": "b5731445303a1d7422e7bf365d5dbdee8aff05600194d710f0d620135db07b6b",
+      "poster_sha256": "bbab4d8f35eae8eecd2ae0f29f63b3912a7cb4dddca7cc912f231f1b6e4b65e1"
+    }
+  ],
+  "cover": "assets/cover.png",
+  "qr": "assets/07-atlas-qr.png",
+  "atlas": "https://hyfine.github.io/loop-transformer-atlas/"
+}

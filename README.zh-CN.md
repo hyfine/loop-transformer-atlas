@@ -8,6 +8,8 @@
 
 [**从图解综述开始 →**](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/digest) · [中文 Markdown 原件](survey/Loop_Transformer_Survey_zh_illustrated.md) · [下载工作簿](survey/Loop_Transformer_Landscape.xlsx) · [原件归档说明](survey/README.md)
 
+**微信公众号版：** [点击阅览图文全文（网页版）](https://hyfine.github.io/loop-transformer-atlas/wechat/公众号正文.html) · [在手机微信中阅读公众号原文](https://mp.weixin.qq.com/s/Poxa25iG-8ZYJcdpjBVsDg) · [完整素材与排版工具](wechat/README.md)
+
 [![六种循环方法：共享变换、逐块与逐层重访、按 token 分配深度、门控改造检查点、跨轮 KV 记忆，以及世界状态细化。](assets/methods.svg)](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#map)
 
 六幅图是不同方法，不是一个模型的六个步骤：**B** 改变「哪些层再算」，**C** 改变「哪些 token 再算」，**E** 改变「下一遍能读到什么」。[在交互地图中对照六种方法 →](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#map)
