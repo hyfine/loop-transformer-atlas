@@ -8,7 +8,9 @@
 
 [**从图解综述开始 →**](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#survey/digest) · [中文 Markdown 原件](survey/Loop_Transformer_Survey_zh_illustrated.md) · [下载工作簿](survey/Loop_Transformer_Landscape.xlsx) · [原件归档说明](survey/README.md)
 
-[![前段编码输入，动态反馈边将变化的状态送回同一个共享核，最后由尾段读出。](assets/circuit.svg)](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B)
+[![六种循环方法：共享变换、逐块与逐层重访、按 token 分配深度、门控改造检查点、跨轮 KV 记忆，以及世界状态细化。](assets/methods.svg)](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#map)
+
+六幅图是不同方法，不是一个模型的六个步骤：**B** 改变「哪些层再算」，**C** 改变「哪些 token 再算」，**E** 改变「下一遍能读到什么」。[在交互地图中对照六种方法 →](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#map)
 
 循环 Transformer **沿深度**复用同一变换：权重可以不变，激活状态却在每轮变化。它不是智能体反复调用大模型，也不是生成更长的文字思维链。[SenseNova-Loop-9B 配置](https://huggingface.co/sensenova/SenseNova-Loop-9B/blob/main/config.json)很适合作为起点：**32 个独立层，执行 56 层次**。多出的 24 次执行来自重访中间块，而不是多保存了 24 层参数。
 
@@ -33,7 +35,7 @@
 | 十分钟建立直觉 | [算例、技术史与四组受控实验](docs/guide.zh.md) |
 | 掌握全局 | [研究地图](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#map)：家族树、泳道和时间轨迹可切换，保留当前作品。「分类速查」解释每类看什么对照、为什么归到这里。 |
 | 看十一月在解决什么问题 | [前沿技术方向](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#directions)：跨轮传什么、如何改造检查点、怎样少存或少搬 KV、怎样分配轮数。每个方向都列出已有证据和下一步验证方法。 |
-| 对照 §7.3 的模型架构图 | [GLM-5.4](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/glm) · [SenseNova-Loop-9B](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/sense) · [Dory1.0-4B](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/dory) · [Ouro](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/ouro) · [MoLT](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#frontier/molt)。可放大每张图，沿反馈路径看权重如何复用，再核对实验条件。SenseNova 另附轮数扩展实验图。 |
+| 对照 §7.3 的模型原图 | [GLM-5.4](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#models/glm) · [SenseNova-Loop-9B](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#models/sense) · [Dory1.0-4B](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#models/dory) · [Ouro](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#models/ouro) · [MoLT](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#models/molt)。可放大原图，就地展开该模型的综述原文与图注，再核对实验条件。SenseNova 另附轮数扩展实验图。 |
 | 跟踪一次代表性计算流程 | [A · 共享层能做什么](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/A) · [B · 训练循环模型](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/B) · [C · 决定循环几轮](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/C) · [D · 给已有模型加循环](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/D) · [E · 降低循环推理开销](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/E) · [F · 细化图、动作或世界状态](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#lab/F) |
 | 寻找论文、实现与权重 | [检索文献库](https://hyfine.github.io/loop-transformer-atlas/?lang=zh#library) · [一手资料手册](docs/routes.zh.md) · [逐链接访问记录](data/visits.csv) |
 

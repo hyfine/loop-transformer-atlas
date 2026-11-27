@@ -3,11 +3,13 @@ import {routes} from '../data/routes.mjs';
 import {directions,dossiers} from '../data/frontier.mjs';
 import {chapters,views,readRoute} from './navigation.mjs';
 import {story,layers} from '../data/story.mjs';
+import modelNotes from '../data/survey-model-notes.mjs';
 
 const repo = 'https://github.com/hyfine/loop-transformer-atlas/blob/main/';
 const dates = [...works].sort((a,b)=>a.date.localeCompare(b.date) || a.name.localeCompare(b.name));
 const families = Object.fromEntries(routes.map(r=>[r.id,r]));
 const byId = Object.fromEntries(works.map(w=>[w.id,w]));
+const caseName = id=>id==='molt'?'MoLT':byId[id].name;
 const main = document.querySelector('main');
 let zh = new URL(location.href).searchParams.get('lang') === 'zh';
 let tab, mapView='tree', selected='huginn', labFamily='B', model='glm', step=0, timer, rounds=2;
@@ -21,10 +23,16 @@ const lang = ()=>zh?'zh':'en';
 const routeWorks = id=>dates.filter(w=>w.family===id);
 const year = w=>w.date.slice(0,4);
 const linkType = url=>{
-  const h = new URL(url).hostname;
-  if(h==='github.com') return tr('Repository','代码库');
-  if(h==='huggingface.co') return url.includes('/config.json')?tr('Configuration','模型配置'):tr('Model card / collection','模型卡／集合');
-  return h==='arxiv.org'?'arXiv':h;
+  const {hostname:h,pathname:p} = new URL(url);
+  if(h==='github.com') return p.includes('/blob/')?tr('Author’s figure on GitHub','GitHub 作者图档'):tr('Code · GitHub','代码库 · GitHub');
+  if(h==='huggingface.co'){
+    if(p.endsWith('/config.json'))return tr('Model configuration · HF','模型配置 · HF');
+    return p.startsWith('/collections/')?tr('Checkpoint collection · HF','检查点集合 · HF'):tr('Model card · HF','模型卡 · HF');
+  }
+  if(h==='arxiv.org')return p.startsWith('/html/')?tr('Full paper · arXiv','论文全文 · arXiv'):tr('Paper record · arXiv','论文条目 · arXiv');
+  if(h==='z.ai')return tr('Release article · Z.ai','技术博客 · Z.ai');
+  if(h.endsWith('.github.io'))return tr('Project website','项目主页');
+  return h;
 };
 const sources = w=>`<div class="links">${w.links.map(u=>`<a href="${esc(u)}">${esc(linkType(u))} ↗</a>`).join('')}</div>`;
 const btn = (key,label,attrs='')=>`<button type="button" data-do="${key}" ${attrs}>${label}</button>`;
@@ -71,7 +79,7 @@ function overview(){
   <small>${tr('4 + 24R + 4. R=2 is the released','4 + 24R + 4。R=2 对应实际发布的')} <a href="#tree/B/sense">SenseNova-Loop-9B</a>${tr('; the other settings are arithmetic examples, not measured models.','；其他设置仅演示计算关系，并非实测模型。')}</small></div></div>
   <section>${heading('02',tr('Read the field as an argument','沿着研究问题读全景'),tr('The survey starts with one repeated update, follows six historical phases, locates 376 papers in thirteen families, and only then turns to models, trends and engineering choices. Choose your reading time.','先理解一次重访，再看六个阶段如何产生新问题，用四层十三族定位 376 篇论文；最后才讨论模型、趋势和工程选型。可按阅读时间选入口。'))}<a class="survey-cover" href="#survey/digest"><img src="survey/images/illustrated/g0_cover.png" alt="${tr('Illustrated survey: 376 papers, 13 families and 17 model or industry records','图解版封面：376 篇论文、13 个技术族、17 项模型或工业实践')}"></a>${storyPaths()}
   <div class="story-strip">${sectionOrder.map(s=>storyLink(s.id,`${s.number} · ${t(s.title)}`)).join('')}</div></section>
-  <section>${heading('03',tr('Frontier notebook','前沿手记'),tr('November 2026 · New mechanisms and releases, not a leaderboard.','2026 年 11 月 · 按新机制与新发布选录，不按跑分排名。'))}<div class="tools"><a href="#directions">${tr('Compare research directions →','对照最新技术方向 →')}</a><a href="#frontier/glm">${tr('Inside GLM-5.4 →','深读 GLM-5.4 →')}</a></div><div class="grid">${tags.map(id=>{const w=byId[id];return `<a class="card" style="--accent:${families[w.family].color}" href="${dossiers.some(d=>d.id===id)?'#frontier/'+id:mapHref('tree',id)}"><span class="meta">${w.date} · ${esc(w.venue)}</span><h3>${w.name} ↗</h3><p>${t(w.finding)}</p></a>`}).join('')}</div></section>`;
+  <section>${heading('03',tr('Frontier notebook','前沿手记'),tr('November 2026 · New mechanisms and releases, not a leaderboard.','2026 年 11 月 · 按新机制与新发布选录，不按跑分排名。'))}<div class="tools"><a href="#directions">${tr('Compare research directions →','对照最新技术方向 →')}</a><a href="#models/glm">${tr('Inside GLM-5.4 →','深读 GLM-5.4 →')}</a></div><div class="grid">${tags.map(id=>{const w=byId[id];return `<a class="card" style="--accent:${families[w.family].color}" href="${dossiers.some(d=>d.id===id)?'#models/'+id:mapHref('tree',id)}"><span class="meta">${w.date} · ${esc(w.venue)}</span><h3>${w.name} →</h3><p>${t(w.finding)}</p></a>`}).join('')}</div></section>`;
 }
 
 const plateEnglish={
@@ -92,7 +100,7 @@ const plateEnglish={
 };
 const sourceArt=Object.fromEntries([
   ['molt_attention_visibility.png','https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_attention_visibility.png'],
-  ...dossiers.flatMap(d=>d.figures.filter(f=>f.diagram).map(f=>[f.file,f.source]))
+  ...dossiers.flatMap(d=>d.figures.filter(f=>f.image).map(f=>[f.file,f.image]))
 ]);
 async function loadSurvey(){
   if(reader||surveyLoading||surveyError)return;
@@ -120,14 +128,14 @@ function illustrated(){
     graphic=`<div class="plate survey-figure"><div class="tools"><label>${tr('Illustration','图版')} <select id="survey-plate">${options(part.figures.map((v,n)=>[String(n),`${n+1}/${part.figures.length} · ${label(v)}`]),String(plate))}</select></label></div>
     <figure><a href="${src}"><img src="${src}" alt="${esc(label(f))}"></a><figcaption><b>${esc(label(f))}</b>${zh&&f.caption&&!credit?` · ${esc(f.caption)}`:''}</figcaption></figure>
     <div class="links"><a href="${src}">${tr('Full-size image','打开原尺寸图片')} ↗</a>${f.svg?`<a href="survey/${f.svg}">${tr('Editable vector','可编辑矢量版')} ↗</a>`:''}${credit?`<a href="${esc(credit)}">${tr('Atlas redraw here · see publisher’s original','本站独立示意 · 查看发布方原图')} ↗</a>`:''}
-    ${section==='industry'?dossiers.filter(d=>d.figures.some(fig=>f.file===`images/external/${fig.file}`)).map(d=>`<a href="#frontier/${d.id}">${tr('Read the model case','阅读对应模型深读')} →</a>`).join(''):''}</div></div>`;
+    ${section==='industry'?dossiers.filter(d=>d.figures.some(fig=>f.file===`images/external/${fig.file}`)).map(d=>`<a href="#models/${d.id}">${t(chapters.models)} · ${esc(caseName(d.id))} →</a>`).join(''):''}</div></div>`;
   }
   const familyNotes=field?(corpus||[]).filter(r=>r.family===section&&r.reading):[];
   const appendix=section==='families'||section==='taxonomy'?familyPicker():'';
-  const supplement={lineage:'#map',lanes:'#lanes',industry:'#frontier',trends:'#directions',sources:'#library'}[section];
+  const supplement={lineage:'#map',lanes:'#lanes',industry:'#models',trends:'#directions',sources:'#library'}[section];
   return `${intro}${appendix}${graphic}<p class="inspector"><b>${tr('Reading check','阅读提示')}:</b> ${esc(t(ch.test))}</p>
     ${field?`<h3>${tr('Ten papers to read','本族十篇选读')}</h3><ul class="reading-papers">${familyNotes.map(r=>`<li><time>${r.date}</time> <a href="https://arxiv.org/abs/${r.reading.version}">${esc(r.reading.method)}</a> · ${esc(r.title)}</li>`).join('')}</ul><a href="#library/${section}">${tr('Browse every indexed paper in this family','查看本族全部索引论文')} →</a>`:''}
-    ${supplement?`<div class="tools"><a href="${supplement}">${tr('Open the companion interactive view','打开配套交互视角')} →</a></div>`:''}
+    ${supplement?`<div class="tools"><a href="${supplement}">${t(chapters[supplement.slice(1)]||views[supplement.slice(1)])} →</a></div>`:''}
     <details class="survey-text"><summary>${tr('Read this entire source section · Chinese, figures and tables','展开本节中文原文、完整图版与表格')}</summary><div lang="zh-CN">${part.html}</div></details>
     <div class="chapter-ends">${i?storyLink(story[i-1].id,'← '+t(story[i-1].title)):''}${i<story.length-1?storyLink(story[i+1].id,t(story[i+1].title)+' →'):''}</div>${sourceLinks()}`;
 }
@@ -242,7 +250,7 @@ function researchMap(){
   return heading('04–06',t(chapters.map),tr('Classify the question, not the model: Huginn asks how to train a repeated block (B); MoR asks which tokens should revisit it (C); LoopCache asks how to read less memory during decoding (E). Switch views without losing your selected work.','按研究问题分类，而不是给模型贴标签：Huginn 问怎样训练共享块（B），MoR 问哪些 token 应该再算一轮（C），LoopCache 问解码时怎样少读缓存（E）。切换下方视角会保留当前作品。'))+
     `<p class="hint">${tr('This interactive overlay covers 32 case notes in six A–F reading lenses. For all 376 papers use the survey taxonomy and its timeline.','本交互叠图覆盖 32 条案例，按 A–F 六个提问视角阅读。综述的全量 376 篇采用四层十三族口径。')} ${storyLink('taxonomy')} · ${storyLink('lanes')}</p>`+guide+switcher(tr('Map views','地图视角'),Object.entries(views).map(([v,label])=>[mapHref(v),t(label),v===mapView]))+
     `<div class="map-view" aria-label="${t(views[mapView])}">${({tree,lanes,time:trajectory})[mapView]()}</div>`+
-    inspector(w)+`<div class="links"><a href="#lab/${w.family}">${tr('Trace a representative mechanism','查看该类的代表流程')} →</a>${dossiers.some(d=>d.id===w.id)?`<a href="#frontier/${w.id}">${tr('Read the full model case','阅读该模型深读')} →</a>`:''}</div>`;
+    inspector(w)+`<div class="links"><a href="#lab/${w.family}">${tr('Trace a representative mechanism','查看该类的代表流程')} →</a>${dossiers.some(d=>d.id===w.id)?`<a href="#models/${w.id}">${tr('Read the full model case','阅读该模型深读')} →</a>`:''}</div>`;
 }
 
 function researchDirections(){
@@ -254,21 +262,22 @@ function researchDirections(){
       <div class="links">${d.refs.map(id=>`<a href="${esc(byId[id].links[0])}">${esc(byId[id].name)} ↗</a>`).join('')}${d.extra?`<a href="${esc(d.extra[1])}">${esc(d.extra[0])} ↗</a>`:''}</div></article>`).join('')}</div>`;
 }
 
-function frontierModels(){
+function modelCases(){
   const d=dossiers.find(item=>item.id===model), w=byId[d.id];
   const block=(label,copy)=>`<div><h4>${label}</h4><p>${t(copy)}</p></div>`;
-  const name=row=>row.id==='molt'?'MoLT':byId[row.id].name;
   const figures=d.figures.map(f=>{
-    const src=esc(f.diagram||`survey/images/external/${f.file}`), title=esc(t(f.title));
-    return `<figure data-plate="${f.number}"><a href="${src}" aria-label="${tr('Enlarge: ','放大：')}${title}"><img src="${src}" alt="${title}" decoding="async"></a>
+    const src=esc(f.image||`survey/images/external/${f.file}`), title=esc(t(f.title));
+    return `<figure data-plate="${f.number}"><a href="${src}" aria-label="${tr('Enlarge: ','放大：')}${title}"><img src="${src}" alt="${title}" decoding="async"${f.image?' data-hosted referrerpolicy="no-referrer"':''}></a>
+      ${f.image?`<p role="status" hidden>${tr('The publisher’s image could not be loaded. Use the source or the offline schematic below.','发布方原图未能加载。可从下方打开图源，或查看离线示意图。')}</p>`:''}
       <figcaption><strong>${tr('Fig. ','图 ')}${f.number} · ${title}</strong><p>${esc(t(f.caption))}</p>
-      <div class="links"><span>${esc(t(f.credit))}</span><a href="${src}">${tr('Full size','查看大图')} ↗</a>
-      <a href="${esc(f.source)}">${f.diagram?tr('Publisher’s original figure','发布方原图'):tr('Figure source','图源')} ↗</a></div></figcaption></figure>`;
+      <p>${esc(t(f.credit))}</p><div class="links"><a href="${src}">${tr('Full-size original','放大原图')} ↗</a>
+      <a href="${esc(f.source)}">${tr('Source: ','图源：')}${esc(linkType(f.source))} ↗</a>${f.offline?`<a href="${esc(f.offline)}">${tr('Atlas schematic (offline)','本站示意图（离线）')}</a>`:''}</div></figcaption></figure>`;
   }).join('');
-  return heading('§7.3',t(chapters.frontier),tr('Read the five architectures side by side: where do the weights repeat, what passes between visits, and when does the model read a prediction? Each figure is paired with the comparison its authors actually ran.','对照阅读五种架构：权重在哪里重用，两遍之间传递什么，什么时候读出预测？每张图都配有读图说明，并区分作者实际做过的实验。'))+
-    switcher(tr('Choose a model','选择模型'),dossiers.map(row=>[`#frontier/${row.id}`,name(row),row.id===model]))+
-    `<article class="plate dossier"><div class="meta">${w.date} · ${t(d.role)}</div><h2>${name(d)}</h2><p class="lede">${t(d.question)}</p>
+  return heading('§7.3',t(chapters.models),tr('Read the five architectures side by side: where do the weights repeat, what passes between visits, and when does the model read a prediction? Each figure is paired with the comparison its authors actually ran.','对照阅读五种架构：权重在哪里重用，两遍之间传递什么，什么时候读出预测？每张图都配有读图说明，并区分作者实际做过的实验。'))+
+    switcher(tr('Choose a model','选择模型'),dossiers.map(row=>[`#models/${row.id}`,caseName(row.id),row.id===model]))+
+    `<article class="plate dossier"><div class="meta">${w.date} · ${t(d.role)}</div><h2>${caseName(d.id)}</h2><p class="lede">${t(d.question)}</p>
       <div class="survey-figure case-figures">${figures}</div>
+      <details class="survey-text"><summary>${tr('Read the original §7.3 notes and captions (Chinese)','展开 §7.3 对本模型的原文与图注')}</summary><div lang="zh-CN">${modelNotes[d.figures[0].file]}</div></details>
       <ol class="model-path" aria-label="${tr('Forward path','一次前向路径')}">${d.path.map(s=>`<li>${t(s)}</li>`).join('')}</ol><div class="case-grid">
       ${block(tr('01 · What changes between passes?','01 · 轮次之间什么在变？'),d.state)}
       ${block(tr('02 · What is trained, stored or recomputed?','02 · 学什么、存什么、重算什么？'),d.budget)}
@@ -276,7 +285,7 @@ function frontierModels(){
       ${block(tr('04 · What cannot be inferred?','04 · 哪些结论不能推出？'),d.limit)}</div>
       <p class="hint">${t(d.locator)}</p>${sources(w)}<div class="links"><a class="boxlink" href="${mapHref('tree',w.id)}">${tr('Locate this work on the map','在地图中定位该模型')} →</a>
       <a class="boxlink" href="#survey/industry">${tr('Read the illustrated survey · §7','回到图解综述 · §7')} →</a></div></article>
-    <section><h3>${tr('Compare the experiments, not the headlines','五个案例究竟在比较什么？')}</h3><div class="compare-scroll"><table class="comparison"><thead><tr>${[tr('Case','案例'),tr('Starting point','起点'),tr('Repeated work','重复哪部分'),tr('Comparison behind the claim','证据的比较口径')].map(s=>`<th scope="col">${s}</th>`).join('')}</tr></thead><tbody>${dossiers.map(row=>`<tr><th scope="row"><a href="#frontier/${row.id}">${name(row)}</a></th><td>${t(row.comparison)}</td><td>${t(row.schedule)}</td><td>${t(row.control)}</td></tr>`).join('')}</tbody></table></div></section>`;
+    <section><h3>${tr('Compare the experiments, not the headlines','五个案例究竟在比较什么？')}</h3><div class="compare-scroll"><table class="comparison"><thead><tr>${[tr('Case','案例'),tr('Starting point','起点'),tr('Repeated work','重复哪部分'),tr('Comparison behind the claim','证据的比较口径')].map(s=>`<th scope="col">${s}</th>`).join('')}</tr></thead><tbody>${dossiers.map(row=>`<tr><th scope="row"><a href="#models/${row.id}">${caseName(row.id)}</a></th><td>${t(row.comparison)}</td><td>${t(row.schedule)}</td><td>${t(row.control)}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
 
 function lab(){
@@ -332,12 +341,12 @@ function render(){
   const treeScroll=main.querySelector('.tree-paper .chart')?.scrollLeft;
   const keyOpen=main.querySelector('.route-key')?.open;
   document.documentElement.lang=zh?'zh-CN':'en';
-  document.title=`${tab==='map'?t(views[mapView])+' · ':''}${t(chapters[tab])} · Loop Transformer Atlas`;
+  document.title=`${tab==='map'?t(views[mapView])+' · ':tab==='models'?caseName(model)+' · ':''}${t(chapters[tab])} · Loop Transformer Atlas`;
   document.querySelector('#language').textContent=tr('中文','English');
   const nav=document.querySelector('#nav');
   nav.setAttribute('aria-label',tr('Atlas chapters','图谱章节'));
   nav.innerHTML=Object.entries(chapters).map(([id,p])=>`<a href="#${id}" ${id===tab?'aria-current="page"':''}>${t(p)}</a>`).join('');
-  main.innerHTML=({overview,survey:illustrated,map:researchMap,directions:researchDirections,frontier:frontierModels,lab,library})[tab]();
+  main.innerHTML=({overview,survey:illustrated,map:researchMap,directions:researchDirections,models:modelCases,lab,library})[tab]();
   if(tab==='map'&&keyOpen)main.querySelector('.route-key').open=true;
   const chart=main.querySelector('.tree-paper .chart');
   if(chart&&treeScroll!==undefined)chart.scrollLeft=treeScroll;
@@ -350,7 +359,7 @@ function render(){
   else if(focusedHref)Array.from(document.querySelectorAll('#nav a,.switcher a')).find(el=>el.getAttribute('href')===focusedHref)?.focus({preventScroll:true});
 }
 function navigate(){
-  const previous=tab, previousSection=section;
+  const previous=tab, previousSection=section, previousModel=model;
   stop();const route=readRoute(location.hash);
   tab=route?.tab||'overview';
   if(tab==='map'){
@@ -359,11 +368,14 @@ function navigate(){
     if(!route.work)history.replaceState(null,'',mapHref(mapView));
   }
   if(tab==='lab'){labFamily=route.family||byId[selected].family;step=0;}
-  if(tab==='frontier')model=route.model;
+  if(tab==='models'){
+    model=route.model;
+    if(location.hash!==`#models/${model}`)history.replaceState(null,'',`#models/${model}`);
+  }
   if(tab==='survey'){section=route.section;plate=0;}
   if(tab==='library'){shelfFamily=route.family||'';shelfScope=route.scope||'survey';shelfPage=0;query='';}
   render();
-  if(previous&&(previous!==tab||(tab==='survey'&&section!==previousSection))){main.focus({preventScroll:true});window.scrollTo(0,0);}
+  if(previous&&(previous!==tab||(tab==='survey'&&section!==previousSection)||(tab==='models'&&model!==previousModel))){main.focus({preventScroll:true});window.scrollTo(0,0);}
 }
 function handle(key,val){
   if(key==='play'){
@@ -400,6 +412,11 @@ function handle(key,val){
   }
   render();
 }
+main.addEventListener('error',e=>{
+  if(!e.target.matches?.('img[data-hosted]'))return;
+  e.target.closest('figure').querySelector('[role=status]').hidden=false;
+  e.target.closest('a').remove();
+},true);
 main.addEventListener('click',e=>{const el=e.target.closest('[data-do]');if(el)handle(el.dataset.do,el.dataset.value);});
 main.addEventListener('keydown',e=>{const el=e.target.closest('svg [role=button]');if(el&&['Enter',' '].includes(e.key)){e.preventDefault();handle(el.dataset.do,el.dataset.value);}});
 main.addEventListener('input',e=>{

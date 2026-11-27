@@ -7,6 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {routes} from '../data/routes.mjs';
 import {works} from '../data/works.mjs';
 import {directions,dossiers} from '../data/frontier.mjs';
+import notes from '../data/survey-model-notes.mjs';
 import {readRoute,views} from '../assets/navigation.mjs';
 import {layers,story} from '../data/story.mjs';
 
@@ -42,17 +43,29 @@ for(const d of directions){
   assert(d.refs.length&&d.refs.every(id=>works.some(w=>w.id===id)),d.refs);
   if(d.extra)assert.equal(new URL(d.extra[1]).protocol,'https:');
 }
+assert.deepEqual(Object.keys(notes),dossiers.map(d=>d.figures[0].file),'Every case has its §7.3 passage');
+const hostedFigures={
+  glm:'https://z-ai-bj.oss-cn-beijing.aliyuncs.com/prompts-rich-media-resources/5.4-blog/image.png',
+  molt:'https://raw.githubusercontent.com/hustvl/MoLT/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png'
+};
 for(const d of dossiers){
   assert(works.some(w=>w.id===d.id));
   [d.role,d.question,...d.path,d.state,d.budget,d.result,d.limit,d.locator,d.comparison,d.schedule,d.control].forEach(bilingual);
   assert(d.figures.length,`Missing architecture: ${d.id}`);
+  const passage=notes[d.figures[0].file];
+  assert.doesNotMatch(passage,/<(?:img|script|iframe|object)\b/i);
+  assert.deepEqual([...passage.matchAll(/图 (7-\d+)：/g)].map(m=>m[1]),d.figures.map(f=>f.number));
   for(const f of d.figures){
     [f.title,f.caption,f.credit].forEach(bilingual);
     assert.equal(new URL(f.source).protocol,'https:');
-    assert(existsSync(join(root,f.diagram||`survey/images/external/${f.file}`)),f.file);
+    assert.equal(f.image,hostedFigures[d.id],`Primary image for ${d.id}`);
+    if(f.image)assert(existsSync(join(root,f.offline)),f.offline);
+    else assert(existsSync(join(root,'survey/images/external',f.file)),f.file);
   }
-  assert.deepEqual(readRoute(`#frontier/${d.id}`),{tab:'frontier',model:d.id});
+  assert.deepEqual(readRoute(`#models/${d.id}`),{tab:'models',model:d.id});
+  assert.deepEqual(readRoute(`#frontier/${d.id}`),readRoute(`#models/${d.id}`));
 }
+assert.deepEqual(readRoute('#frontier'),readRoute('#models/glm'));
 execFileSync(process.execPath,['scripts/casebook.mjs','--check'],{cwd:root});
 execFileSync(process.execPath,['--check','assets/app.mjs'],{cwd:root});
 const chapters=JSON.parse(read('data/survey-reader.json')), corpus=JSON.parse(read('data/survey-library.json'));

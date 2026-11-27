@@ -3,7 +3,7 @@ import {works} from '../data/works.mjs';
 import {dossiers} from '../data/frontier.mjs';
 import {story} from '../data/story.mjs';
 
-export const chapters = {overview:['Start here','阅读起点'],survey:['Illustrated survey','图解综述'],map:['Interactive map','交互地图'],lab:['Mechanism lab','方法实验室'],frontier:['Model cases','模型深读'],directions:['Frontiers','前沿方向'],library:['Paper library','论文库']};
+export const chapters = {overview:['Start here','阅读起点'],survey:['Illustrated survey','图解综述'],map:['Interactive map','交互地图'],lab:['Mechanism lab','方法实验室'],models:['Model cases','模型深读'],directions:['Research directions','研究方向'],library:['Paper library','论文库']};
 export const views = {tree:['Family tree','家族树'],lanes:['Swimlanes','泳道'],time:['Timeline','时间轨迹']};
 const aliases = {'family-tree':'tree',swimlanes:'lanes',trajectory:'time'};
 
@@ -25,7 +25,7 @@ export function readRoute(hash){
     return {tab:'map',view,work:id||route?.example};
   }
   if(page==='lab'&&!id&&(!key||routes.some(r=>r.id===key)))return {tab:'lab',family:key};
-  if(page==='frontier'&&!id&&(!key||dossiers.some(d=>d.id===key)))return {tab:'frontier',model:key||dossiers[0].id};
+  if((page==='models'||page==='frontier')&&!id&&(!key||dossiers.some(d=>d.id===key)))return {tab:'models',model:key||dossiers[0].id};
   if(!key&&(!page||Object.hasOwn(chapters,page)))return {tab:page||'overview'};
   return null;
 }

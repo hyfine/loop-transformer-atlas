@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 634" role="img" aria-labelledby="title desc">
+  <title id="title">Six ways to spend another pass</title>
+  <desc id="desc">Six independent examples from the atlas. A Universal Transformer applies the same transition to successive states. Huginn repeats a block; Loopie repeats each layer. MoR routes only selected tokens deeper. GLM-5.4 gates updates to a pretrained block. MoLT passes prefix KV between visits. LoopWM refines the latent state before advancing world time. Arrows and labels remain visible without motion.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#17363c"/><stop offset="1" stop-color="#101925"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#405a62"/></pattern>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 6 3 0 6Z" fill="#acc7cd"/></marker>
+    <rect id="card" class="card" width="448" height="158" rx="12"/>
+    <rect id="layerA" width="39" height="25" rx="5" fill="#235058" stroke="#74dfde"/>
+    <rect id="layerB" width="39" height="25" rx="5" fill="#483a36" stroke="#ffbc75"/>
+    <path id="gate" d="M294 112v15H170v-12" pathLength="100"/>
+    <path id="refine" d="M282 98v30H136v-26" pathLength="100"/>
+  </defs>
+  <style>
+    text{font-family:system-ui,sans-serif;fill:#eef5f5}
+    .card{fill:#152731;stroke:#49616a}
+    .eyebrow,.letter,.micro{font-family:ui-monospace,monospace}
+    .eyebrow{fill:#a8c3c6;font-size:14px;letter-spacing:2px}
+    .letter{fill:var(--accent);font-size:23px;font-weight:bold}
+    .heading{font-weight:650;font-size:22px}
+    .micro{fill:#bfd2d5;font-size:14px}
+    .node{fill:#1b303a;stroke:var(--accent);stroke-width:1.5}
+    .label{font-size:17px;text-anchor:middle}
+    .wire,.trace{fill:none;stroke-linejoin:round;stroke-linecap:round}
+    .wire{stroke:#acc7cd;stroke-width:2;marker-end:url(#arrow)}
+    .trace{stroke:var(--accent);stroke-width:4;stroke-dasharray:8 112;animation:travel 3.6s linear infinite;animation-delay:var(--delay,0s)}
+    @keyframes travel{from{stroke-dashoffset:8}to{stroke-dashoffset:-112}}
+    @media(prefers-reduced-motion:reduce){.trace{display:none}}
+  </style>
+  <rect width="960" height="634" rx="16" fill="url(#bg)"/>
+  <rect width="960" height="634" rx="16" fill="url(#grid)" opacity=".55"/>
+  <text class="eyebrow" x="26" y="29">LOOP TRANSFORMER ATLAS  /  FIELD GUIDE</text>
+  <text x="24" y="69" font-size="34" font-weight="700">Six ways to spend another pass</text>
+
+  <g transform="translate(24 92)" style="--accent:#74dfde">
+    <use href="#card"/><text class="letter" x="16" y="32">A</text><text class="heading" x="49" y="32">Share a transition</text>
+    <text class="micro" x="17" y="56">Universal Transformer · tied across depth</text>
+    <g class="wire"><path d="M54 99H102"/><path d="M158 99H205"/><path d="M239 99H286"/><path d="M342 99H390"/></g>
+    <rect class="node" x="106" y="80" width="52" height="38" rx="7"/><rect class="node" x="290" y="80" width="52" height="38" rx="7"/>
+    <g class="label"><text x="35" y="105">h₀</text><text x="132" y="105">Fθ</text><text x="222" y="105">h₁</text><text x="316" y="105">Fθ</text><text x="408" y="105">h₂</text></g>
+    <path d="M132 123v7h184v-7" fill="none" stroke="#74dfde"/><text class="micro" x="224" y="150" text-anchor="middle">same weights, new state</text>
+    <path class="trace" d="M54 99H102 M158 99H205 M239 99H286 M342 99H390" pathLength="100"/>
+  </g>
+  <g transform="translate(488 92)" style="--accent:#ffbc75;--delay:-.6s">
+    <use href="#card"/><text class="letter" x="16" y="32">B</text><text class="heading" x="49" y="32">Choose what repeats</text>
+    <text class="micro" x="17" y="56">Same layer count, different execution order</text>
+    <text x="17" y="93" font-size="16">Huginn · block</text><text x="17" y="132" font-size="16">Loopie · layer / MoE</text>
+    <g transform="translate(184 74)">
+      <use href="#layerA"/><use href="#layerB" x="59"/><use href="#layerA" x="118"/><use href="#layerB" x="177"/>
+      <use href="#layerA" y="39"/><use href="#layerA" x="59" y="39"/><use href="#layerB" x="118" y="39"/><use href="#layerB" x="177" y="39"/>
+      <g class="label"><text x="20" y="19">A</text><text x="79" y="19">B</text><text x="138" y="19">A</text><text x="197" y="19">B</text>
+        <text x="20" y="58">A</text><text x="79" y="58">A</text><text x="138" y="58">B</text><text x="197" y="58">B</text></g>
+      <path class="wire" d="M0 32h219"/><path class="trace" d="M0 32h219" pathLength="100"/>
+    </g>
+  </g>
+  <g transform="translate(24 262)" style="--accent:#bdadff;--delay:-1.2s">
+    <use href="#card"/><text class="letter" x="16" y="32">C</text><text class="heading" x="49" y="32">Route tokens by depth</text>
+    <text class="micro" x="17" y="56">MoR · only selected positions revisit the stack</text>
+    <g class="micro"><text x="18" y="92">token 1</text><text x="18" y="115">token 2</text><text x="18" y="138">token 3</text></g>
+    <g class="wire"><path d="M95 87H171"/><path d="M95 110H271"/><path d="M95 133H371"/></g>
+    <g fill="#bdadff"><circle cx="96" cy="87" r="4"/><circle cx="96" cy="110" r="4"/><circle cx="96" cy="133" r="4"/><circle cx="194" cy="110" r="4"/><circle cx="194" cy="133" r="4"/><circle cx="294" cy="133" r="4"/></g>
+    <g class="micro"><text x="181" y="92">exit</text><text x="281" y="115">exit</text><text x="381" y="138">exit</text></g>
+    <path class="trace" d="M96 87H163 M96 110H263 M96 133H363" pathLength="100"/>
+  </g>
+  <g transform="translate(488 262)" style="--accent:#ff96ac;--delay:-1.8s">
+    <use href="#card"/><text class="letter" x="16" y="32">D</text><text class="heading" x="49" y="32">Convert a checkpoint</text>
+    <text class="micro" x="17" y="56">GLM-5.4 · gate the write, not the visit</text>
+    <text class="label" x="46" y="99">prefix</text><text class="label" x="401" y="99">suffix</text>
+    <path class="wire" d="M78 93h36"/><path class="wire" d="M221 93h29"/><path class="wire" d="M331 93h37"/>
+    <rect class="node" x="119" y="75" width="102" height="36" rx="7"/><text class="label" x="170" y="99">28 layers</text>
+    <rect class="node" x="255" y="75" width="76" height="36" rx="7"/><text class="label" x="293" y="99">+ βΔ</text>
+    <use class="wire" href="#gate"/><use class="trace" href="#gate"/>
+    <text class="micro" x="224" y="149" text-anchor="middle">visit the same block twice</text>
+  </g>
+  <g transform="translate(24 432)" style="--accent:#a5df7d;--delay:-2.4s">
+    <use href="#card"/><text class="letter" x="16" y="32">E</text><text class="heading" x="49" y="32">Pass memory, not a residual</text>
+    <text class="micro" x="17" y="56">MoLT-KV · read earlier positions across loops</text>
+    <g class="micro"><text x="18" y="96">pass r</text><text x="18" y="136">pass r+1</text></g>
+    <rect class="node" x="113" y="73" width="81" height="31" rx="6"/><text class="label" x="154" y="95">j &lt; t</text>
+    <rect class="node" x="294" y="115" width="56" height="31" rx="6"/><text class="label" x="322" y="137">t</text>
+    <path class="wire" d="M195 89h26l41 41h27"/><path class="trace" d="M195 89h26l41 41h27" pathLength="100"/>
+    <text class="micro" x="265" y="93">prefix KV</text>
+  </g>
+  <g transform="translate(488 432)" style="--accent:#83b5ff;--delay:-3s">
+    <use href="#card"/><text class="letter" x="16" y="32">F</text><text class="heading" x="49" y="32">Refine a world state</text>
+    <text class="micro" x="17" y="56">LoopWM · hold the action and time step fixed</text>
+    <text class="label" x="56" y="102">state + aₜ</text><path class="wire" d="M107 96h34"/>
+    <rect class="node" x="146" y="77" width="121" height="38" rx="7"/><text class="label" x="207" y="102">dynamics</text>
+    <path class="wire" d="M268 96h56"/><text class="label" x="376" y="102">state t+1</text>
+    <use class="wire" href="#refine"/><use class="trace" href="#refine"/>
+    <text class="micro" x="209" y="149" text-anchor="middle">inner refinement</text>
+  </g>
+  <text x="25" y="617" fill="#cfdddd" font-size="15">Read each panel independently. A–F are research questions, not six stages of one model.</text>
+</svg>

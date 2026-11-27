@@ -14,6 +14,8 @@ The November 26, 2026 source edition contains 376 papers, 13 primary families, 1
 
 资料包原有的 41 个正文图位均可离线打开，34 组 PNG／SVG 保持原样。下表区分原作者授权图片与本站重新绘制的示意图；不将“网页可读”视为“允许重新发布”。工作簿只去除了身份元数据，未改动表内内容。
 
+The [Model cases page](https://hyfine.github.io/loop-transformer-atlas/#models) shows all six §7.3 originals. It loads the GLM and U-MoLT architectures from their publishers; the separately labeled atlas schematics remain available offline. Each case includes the Chinese §7.3 passage and captions from this archive.
+
 ## External art / 外部图源
 
 | Public file | Credit, changes and applicable terms |

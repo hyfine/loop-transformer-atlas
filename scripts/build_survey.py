@@ -69,6 +69,19 @@ def compile_chapter(key, text):
     return {"id": key, "figures": figures, "html": str(soup)}
 
 
+def model_notes(md):
+    section = md.split("\n### 7.3 ", 1)[1].split("\n### 7.4 ", 1)[0]
+    notes = {}
+    plate = re.compile(r"^!\[[^\]]*\]\(images/external/([^)\n]+)\)$", re.M)
+    for block in re.split(r"\n(?=\*\*)", section)[1:]:
+        first = plate.search(block)
+        if not first or first[1] in notes:
+            raise ValueError(f"Missing or duplicate model architecture in §7.3: {block.splitlines()[0]}")
+        # The case already displays the figures; keep their captions, links and accompanying prose.
+        notes[first[1]] = READER.render(plate.sub("", block)).strip()
+    return notes
+
+
 def products():
     md = (SOURCE / "Loop_Transformer_Survey_zh_illustrated.md").read_text()
     sections = {"digest": []}
@@ -104,7 +117,7 @@ def products():
     assert len(set(figures)) == len(figures) == 41 and len({r["id"] for r in corpus}) == 376
     assert {r["family"] for r in corpus} <= sections.keys()
     assert sum("reading" in row for row in corpus) == len(selected)
-    return {"survey-reader": chapters, "survey-library": corpus}
+    return {"survey-reader.json": chapters, "survey-library.json": corpus, "survey-model-notes.mjs": model_notes(md)}
 
 
 if __name__ == "__main__":
@@ -112,8 +125,9 @@ if __name__ == "__main__":
     p.add_argument("--check", action="store_true")
     args = p.parse_args()
     for name, obj in products().items():
-        target = ROOT / "data" / f"{name}.json"
-        data = json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "\n"
+        target = ROOT / "data" / name
+        encoded = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+        data = f"export default {encoded};\n" if target.suffix == ".mjs" else encoded + "\n"
         if args.check:
             if target.read_text() != data:
                 raise SystemExit(f"Out of date: {target.name}")

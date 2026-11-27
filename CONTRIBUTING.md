@@ -10,7 +10,7 @@ For a new record, supply the primary paper or release, the indexed preprint/rele
 
 ## Local preview and validation
 
-The primary reader follows the [illustrated edition](survey/README.md). Keep source Markdown and its relative image paths intact. Edit the bilingual framing in [story.mjs](data/story.mjs); regenerate chapter HTML and the workbook search index using `python3 scripts/build_survey.py` (Python 3.9+, `markdown-it-py`, `beautifulsoup4`, `openpyxl`). `python3 scripts/build_survey.py --check` checks for drift. These packages are not browser dependencies. Retain the manifest and do not publish document identities or unlicensed original art.
+The primary reader follows the [illustrated edition](survey/README.md). Keep source Markdown and its relative image paths intact. Edit the bilingual framing in [story.mjs](data/story.mjs); regenerate chapter HTML, the §7.3 per-model notes and the workbook search index using `python3 scripts/build_survey.py` (Python 3.9+, `markdown-it-py`, `beautifulsoup4`, `openpyxl`). `python3 scripts/build_survey.py --check` checks for drift. These packages are not browser dependencies. Retain the manifest and do not publish document identities or unlicensed original art.
 
 From the repository root, with Node 20+ and Python 3:
 

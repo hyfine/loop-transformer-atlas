@@ -33,10 +33,11 @@ export const dossiers = [
   {
     id:'glm', role:pair('Flagship · publisher disclosure|旗舰模型 · 发布方技术披露'),
     figures:[{
-      number:'7-2',file:'glm54_architecture.png',diagram:'assets/glm54-loop.svg',
+      number:'7-2',file:'glm54_architecture.png',offline:'assets/glm54-loop.svg',
+      image:'https://z-ai-bj.oss-cn-beijing.aliyuncs.com/prompts-rich-media-resources/5.4-blog/image.png',
       title:pair('Two visits to the 28-layer middle block|重访中间的 28 层'),
-      caption:pair('Follow the state across the top: layers 1–26 run once, 27–54 run twice, and 55–78 run once. The lower arrows carry attention history, not a second set of weights. On pass two, the query reads both the first pass’s sparse prefix and a new 128-token local window.|沿上排读状态：第 1–26 层走一次，第 27–54 层走两遍，第 55–78 层走一次。下方箭头传递的是注意力历史，不是另一套权重。第二遍的查询同时读取首遍选出的稀疏前缀和本遍新建的 128-token 局部窗口。'),
-      credit:pair('Atlas schematic after Z.ai’s architecture disclosure|本站依据智谱技术披露独立绘制'),source:'https://z-ai-bj.oss-cn-beijing.aliyuncs.com/prompts-rich-media-resources/5.4-blog/image.png'
+      caption:pair('Start at Input Embedding and follow the layer numbers: L1–26 → L27–54 twice → L55–78. Damp Gate 1 writes x₁ = x₀ + β₁(h₁ − x₀); the second gate blends the next proposal. In the Two-Bank Sparse MLA inset, pass two reuses the first visit’s top-k indices and reads its sparse prefix alongside a fresh 128-token window. The two banks are not two copies of the block.|从 Input Embedding 沿层号读：L1–26 → L27–54 两遍 → L55–78。Damp Gate 1 按 x₁ = x₀ + β₁(h₁ − x₀) 写回，第二个门再混入下一遍的更新。看 Two-Bank Sparse MLA 局部图：第二遍复用首遍的 top-k 索引，同时读取首遍稀疏前缀与本遍新建的 128-token 滑窗。双库指两组 KV，不是两套块权重。'),
+      credit:pair('Z.ai · original architecture figure from the GLM-5.4 release article|Z.ai · GLM-5.4 官方技术博客架构原图'),source:'https://z.ai/blog/glm-5.4'
     }],
     question:pair('How can a pretrained 750B-scale model revisit its middle layers without destabilizing the layers that follow?|750B 规模的已有模型重访中间层，怎样不打乱后续层的输入？'),
     path:[pair('GLM-5 base|GLM-5 基座'),pair('28 layers · pass 1|28 层 · 第一遍'),pair('Same 28 · pass 2|同一组 28 层 · 第二遍'),pair('Remaining layers|后续层')],
@@ -70,7 +71,7 @@ export const dossiers = [
     figures:[{
       number:'7-5',file:'dory_architecture.jpg',title:pair('Looped nGPT: input injection and normalization|循环 nGPT：输入注入与归一化'),
       caption:pair('Start at (a): the upper arrow injects the same input u on every visit; the return arrow carries the newly computed state. Panel (b) expands the stack: three sliding-window attention/MLP pairs for each full-attention/MLP pair. Panels (c)–(e) show the attention, SwiGLU and residual blending inside one visit, not three extra loops.|先看 (a)：上方箭头每遍注入同一个输入 u，回边传递刚算出的状态。(b) 展开层栈：每三对滑窗注意力／MLP 配一对全注意力／MLP。(c)–(e) 分别放大单遍内部的注意力、SwiGLU 与残差混合，并不是再多算三轮。'),
-      credit:pair('Fishman et al. · paper Fig. 2 · CC BY 4.0|Fishman 等 · 论文图 2 · CC BY 4.0'),source:'https://arxiv.org/abs/2611.03998v1'
+      credit:pair('Fishman et al. · paper Fig. 2 · CC BY 4.0|Fishman 等 · 论文图 2 · CC BY 4.0'),source:'https://arxiv.org/html/2611.03998v1#S1.F2'
     }],
     question:pair('Can one checkpoint offer several compute budgets without keeping a new history cache for every pass?|一份权重能否服务多种算力预算，而不为每遍计算再存一份历史缓存？'),
     path:[pair('Encode input x|编码输入 x'),pair('Normalize state + x|归一化状态与 x 之和'),pair('Shared block × R|共享块 × R'),pair('Read final state|读出最终状态')],
@@ -98,9 +99,11 @@ export const dossiers = [
   },{
     id:'molt',role:pair('Research architecture · paper and code|研究架构 · 论文与代码'),
     figures:[{
-      number:'7-7',file:'molt_architecture.png',diagram:'assets/umolt-memory.svg',title:pair('U-MoLT separates memory construction from prediction|U-MoLT：将构建记忆与预测读出分开'),
-      caption:pair('Trace the two outgoing paths from the encoder. One supplies the next loop with memory from earlier positions. The other supplies a causal cross-attention decoder with encoder-derived KV for prediction. There is no arrow from the decoder back to the encoder: omitting an unused intermediate readout does not erase the loop’s memory.|从编码器沿两条出边读图：一条把较早位置的记忆留给下一轮；另一条给因果交叉注意力解码器提供从编码端投影的 KV，用于预测。解码器没有回到编码器的反馈边，因此省去未使用的中间读出，不会丢掉下一轮需要的记忆。'),
-      credit:pair('Atlas schematic after Zhu et al. · U-MoLT, paper Fig. 4|本站依据 Zhu 等论文图 4 独立绘制'),source:'https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png'
+      number:'7-7',file:'molt_architecture.png',offline:'assets/umolt-memory.svg',
+      image:'https://raw.githubusercontent.com/hustvl/MoLT/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png',
+      title:pair('U-MoLT separates memory construction from prediction|U-MoLT：将构建记忆与预测读出分开'),
+      caption:pair('Start in (a): the encoder builds memory for the next loop and supplies the decoder when a prediction is needed. In (b), the MoLA encoder mixes local KV with memory KV from strictly earlier positions (j < t). In (c), each decoder layer projects encoder outputs into KV and reads them causally (j ≤ t). Only the encoder feeds the next loop, so an unused decoder readout can be skipped.|先看 (a)：编码器为下一轮构建记忆，需要预测时才交给解码器读出。(b) 放大编码端的 MoLA：本地 KV 可以和严格来自较早位置（j < t）的跨轮记忆一起读取。(c) 中，解码器各层从编码输出投影 KV，再做因果交叉注意力（j ≤ t）。反馈来自编码端，因此可以跳过不用的中间解码读出。'),
+      credit:pair('Zhu et al. · U-MoLT, paper Fig. 4 · original from the authors’ repository|Zhu 等 · U-MoLT 论文图 4 · 作者仓库原图'),source:'https://github.com/hustvl/MoLT/blob/1313b83adf05f666726bf009014f5f50ae345b23/assets/molt_architecture.png'
     }],
     question:pair('Must a token wait for its own previous-loop state, or can it read the useful history from other positions instead?|当前 token 必须等自己上一轮的状态吗？能否改从较早位置读取需要的信息？'),
     path:[pair('Restart from embedding|从嵌入重启'),pair('Read prefix memory KV|读取前缀记忆 KV'),pair('Build encoder memory|构建编码侧记忆'),pair('Decode when needed|按需解码读出')],
